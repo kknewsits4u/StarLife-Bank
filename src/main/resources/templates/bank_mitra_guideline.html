@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title >[[${title}]]</title>
+</head>
+<body>
+  
+   <section>
+
+   
+    <div class="bank_mitra_guideline_container">
+      
+      <h1>General guideline for Bank CSP (Customer Service Point)</h1>
+      <h2>1. Eligibility</h2>
+      <p>Must have completed necessary training as prescribed by the bank.</p>
+      <p>Should have a valid Aadhaar card, PAN card, and other required KYC documents.</p>
+      <p>hould possess basic financial and digital literacy.</p>
+      <h2>2. Infrastructure Requirements</h2>
+      <p>A secure and designated service location.</p>
+      <p>Computer/laptop with internet connectivity.</p>
+      <p>Biometric device for authentication (as required by the bank).</p>
+      <p>Printer and scanner for document processing.</p>
+      <p>CCTV surveillance (if mandated by the bank).</p>
+
+      <h2>3. Key Responsibilities</h2>
+      <p>Facilitate account opening, deposits, and withdrawals.</p>
+      <p>Process money transfers and government scheme benefits.</p>
+      <p>Offer loan application support (if authorized).</p>
+      <p>Ensure proper customer verification (KYC compliance).</p>
+      <p>Maintain transaction records and issue receipts.</p>
+      <h2>4. Compliance & Security</h2>
+      <p>Follow RBI and bank guidelines strictly.</p>
+      <p>Do not share customer data or passwords.</p>
+      <p>Verify customers through biometric authentication or OTP.</p>
+      <p>Avoid fraudulent activities—strict penalties apply.</p>
+      <h2>5. Customer Service Standards</h2>
+      <p>Provide accurate information on banking services.</p>
+      <p>Maintain professionalism and integrity.</p>
+      <p>Assist customers with digital banking literacy.</p>
+      <p>Resolve complaints or escalate issues promptly.</p>
+      <h2>6. Financial & Technical Aspects</h2>
+      <p>Ensure cash availability for daily transactions.</p>
+      <p>Use bank-approved software for transactions.</p>
+      <p>Regularly update systems and security measures.</p>
+       
+      <div class="checkbox_div">
+        <input type="checkbox" title="checkbox" id="checkbox_guide" required >
+        <label for="checkbox_guide">Accept all terms & conditions.</label>
+      </div>
+   
+       <button  type="button" class="btn  guide_proceed_btn" onclick="window.location.href='/bank_mitra_register'"  ><p>Proceed   </p><ion-icon name="arrow-forward-circle-outline"></ion-icon>
+
+         <div class="innerdiv"></div>
+       </button>
+
+     </div>
+        
+   
+   
+   </section>
+
+</body>
+</html>

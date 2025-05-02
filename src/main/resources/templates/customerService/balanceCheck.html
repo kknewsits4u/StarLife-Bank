@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="customerService/CustomerDashborad::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+     <section>
+
+         <div class="container-fluid border border-primary  maincontainerr">
+           
+           <h1>CHECK YOUR BALANCE</h1>
+
+           <div th:if="${session.wrongAtmPin}" th:classAppend="${session.wrongAtmPin.type}"  class="alert" role="alert"   style="width: 100%;" >
+            <p>[[${session.wrongAtmPin.message}]]</p>
+         </div>
+           
+          <form action="#" th:action="@{/customer/customerDashboard/checkBalanceProcess}" method="post">
+                <div class="formDiv">
+                  <input type="text" name="accountNo" class="form-control" placeholder="Account Number">
+                  <h1>Or</h1>
+                  <input type="text" name="atmNumber" class="form-control" placeholder="ATM number" >
+                   <h1>Or</h1>
+                  <input type="text" name="userId" class="form-control" placeholder="User Id">
+                  
+                  <input type="password" name="atmPin" class="form-control" placeholder="Enter ATM pin" required>
+                  
+                  <button type="submit" class="btn btn-primary btn-block">Check Balance</button>
+              </div>
+        </form>
+
+         </div>
+    </section>	
+</body>
+</html>

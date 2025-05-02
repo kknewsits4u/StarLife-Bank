@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+   <section>
+         <div class="customerSupportMianDiv">
+                     
+               <div class="customerSupportInner">
+                    <div class="imgDiv">
+                         <div class="cover"></div>
+                         <img src="https://i.pinimg.com/564x/17/f2/30/17f2300d155ca92f7c5279d7859ac03e.jpg" alt="custSupp1">
+                         <img src="https://i.pinimg.com/564x/5d/ca/2b/5dca2bdb4497640be1bd1512cc34bc73.jpg" alt="custImg">
+                    </div>
+                    <h1>YOU CAN CONTACT WITH US VIA CALL & CHAT</h1>
+                    <div class="iconContainer">
+                         <a href="http://wa.me/919368238692">
+                         <div class="whatsappicon"><img src="/image/whatsappIcon.png" alt="whatsappicon"></div></a>
+                         <a href="tel:9368238692">
+                         <div class="callIcon"><img src="/image/phoneIcon copy.png" alt="phoneicon"></div></a>
+                    </div>
+
+
+                    <div class="chatIcon">
+                         <div class="chatInner"  >
+
+                         
+                              <div class="queryInput" onclick="showChatBot()"><h3>Search Anything ?</h3></div>
+                              <!-- <img src="/image/gudda.png" alt=""> -->
+                         </div>
+                    </div>
+               </div>
+               
+
+
+               <div class="chatDiv">
+                    <img src="/image/gudda.png" alt="">
+                    <div class="chatDivInner">
+                         <div class="serchBar">
+                              <input type="text" placeholder="Ask Something !!">
+                              <a href="#"><div class="sentQueryDiv"></div></a>
+                         </div>
+                    </div>
+               </div>
+         </div>
+   </section>
+
+</body>
+</html>

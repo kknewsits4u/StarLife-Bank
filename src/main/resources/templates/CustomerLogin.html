@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <head>
+      <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeJu3gqAAAAAMOIhkOf4eaHa4EsEyEziN4oRjnr"></script>
+      <!-- Your code -->
+    </head>
+	<title th:text="${title}"></title>
+</head>
+<body>
+   <section>
+    <div class="container">
+       <div class="nestedContainer" >
+        <div class="left">
+          <div class="logo">
+            <div class="logo-shape"></div>
+            <div class="logo-shape"></div>
+            <div class="logo-shape">
+              <div class="logo-shape-i"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <h1>Unity Bank</h1>
+          <div class="decor decor1"></div>
+          <div class="decor decor2"></div>
+          <div class="decor decor3"></div>
+          <div class="decor decor4"></div>
+          <div class="decor decor5"></div>
+          <div class="footer-links">
+            <span>About</span>
+            <span>Privacy</span>
+            <span>Terms of use</span>
+            <span>FAQ</span>
+          </div>
+        </div>
+        <div class="right">
+          <form th:action="@{/dologin}" action="#" method="post">
+          <h2>Log in</h2>
+          <div class="input-group">
+            <label>Customer Id</label>
+            <input type="text" name="username"   placeholder="Ex:- SLB45789"  required  >
+          </div>
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter your password" required  >
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="consent" title="consent" checked  required  >
+            <label>Keep me logged in</label>
+          </div>
+            <div class="timerr" >
+              <button class="login-btn"   type="submit">Log in</button>
+            </div>
+        </form>
+        <div class="Consent_ForgotPasswordDiv ">
+
+          <a href="" th:href="@{/home/forgetPasswordPage}">Forget password</a>
+        </div>
+        </div>
+       </div>
+    </div>
+   </section>
+</body>
+</html>

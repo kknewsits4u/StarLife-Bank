@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="BankMitraServices/BankMitraHome::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+  <section >
+    <div class="container-fluid  bankmitraupadate">
+      <form action=""  th:action="@{/bank_mitra/updateBankMitraImage}"  method="post"  enctype="multipart/form-data" >
+      <div class="updateImageAndName">
+        <div class="heading_div">
+           UPDATE YOUR IMAGE
+        </div>
+        <div class="updateImageAndNameContainer">
+          <div class="updateImageAndNameleft">
+             <div class="updateImageAndNameImage">
+              <ion-icon name="image-outline"></ion-icon>
+             </div>
+             <div class="form-group inputDiv">
+              <input type="file" name="filename"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group inputDiv">
+              <button class="btn btn-primary" type="submit">Upload Now </button>
+            </div>
+
+          </div>
+          <div class="updateImageAndNameright">
+            <div class="updateImageAndNameImage2">
+                <img th:src="'/image/'+${session.bankmitra1.bimage}" alt="profileImage">
+            </div>
+            <div class="updateImageAndNameHeading">Your Current Image</div>
+          </div>
+        </div>
+
+
+      
+      </div>
+    </form>
+    </div>
+
+
+   
+
+  </section>
+
+
+ 
+</body>
+</html>

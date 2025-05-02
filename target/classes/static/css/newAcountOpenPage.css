@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+html
+body{
+	margin:0;
+	padding:0;
+}
+
+.accountAlert{
+	width: 62vw;
+}
+
+.newAcMnCtnr{
+	display:flex;
+	justify-content:center;
+	margin-top:7vw;
+}
+
+
+.openAccRow{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:0.7vw;
+	width:98%;
+	height:fit-content;
+	border:1px solid rgb(23,144,241);
+	box-shadow:inset 1px 1px 10px rgb(23,144,241);
+	border-radius:10px;
+}
+.openAccRowInner{
+	width:100%;
+	height:100%;
+	border:1px solid rgb(23,144,241);
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	border-radius:10px;
+}
+
+.openYourAc{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:fit-content;
+	white-space:nowrap;
+	gap:1.5vw;
+}
+
+.openYourAc h1{
+	font-size:3vw;
+	color:rgb(23,144,241);
+}
+
+
+.OpenAccountDiv{
+	box-shadow:0.1px 0.1px 10px rgb(23,144,241);
+	border-radius:10px;
+	margin-top:1vw;
+}
+

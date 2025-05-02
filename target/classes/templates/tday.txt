@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+   <section>
+   
+      <div class="mainDiv">
+          <div class="screenSlider">
+                <img src="/image/—Pngtree—3d rendered illustration image benefits_5576655.jpg" alt="" />  
+           </div>
+        
+            <div class="TaglineDIV">
+              <h2>A Banking</h2>
+              <h1>Always bring ahead</h1>
+              <button>Explare Now</button>
+           </div>
+           
+             <div class="dotDivContainer">
+             <div class="dotContainer">
+                <div class="dotDiv active"></div>
+                <div class="dotDiv"></div>
+                <div class="dotDiv"></div>
+                <div class="dotDiv"></div>
+                <div class="dotDiv"></div>
+             </div>
+           </div>
+                              
+            <div class="servicess">
+                <div class="ServiceDivLogo">
+                    <div class="servicemainLogoDiv" onclick="kris()" ><img src="/image/startBankLogo.png" alt="" /></div>
+                    <div class="DownloadAppPlayStore"><img src="/image/googl-download-removebg-preview (1).png" alt="" /></div>
+                </div>
+             <div class="servicesFeaturee">
+                     <div class="serviceFeatureCardd">
+                            <div class="srvsFimgDivv">
+                              <img src="https://i.pinimg.com/236x/51/5f/90/515f90750dda9c2329873150a37c83c7.jpg" alt="" />
+                            </div>
+                            <div class="srvsFddetailss">
+                                <h1>Mobile Banking</h1>
+                                <button class="btn btn-block">Start Today</button>
+                            </div>
+                     </div>
+                     <div class="serviceFeatureCardd">
+                            <div class="srvsFimgDivv">
+                              <img src="https://i.pinimg.com/236x/f1/69/cc/f169cc2d764034cd9a66639c9cb6d556.jpg" alt="" />
+                            </div>
+                            <div class="srvsFddetailss">
+                                <h1>Internet Banking</h1>
+                                <button class="btn btn-block">Use Now</button>
+                            </div>
+                     </div>
+                       <div class="serviceFeatureCardd">
+                            <div class="srvsFimgDivv">
+                              <img src="/image/visa image.jpg" alt="" />
+                            </div>
+                            <div class="srvsFddetailss">
+                                <h1>DEBIT CARD SERVICES</h1>
+                                <button class="btn btn-block">Order Now</button>
+                            </div>
+                     </div>
+                       <div class="serviceFeatureCardd">
+                            <div class="srvsFimgDivv">
+                              <img src="https://i.pinimg.com/564x/5e/5e/f4/5e5ef43aab10e0a53871a6ee20e8ff99.jpg" alt="" />
+                            </div>
+                            <div class="srvsFddetailss">
+                                <h1>Customer Support</h1>
+                                <button class="btn btn-block">Take Guidance</button>
+                            </div>
+                     </div>
+               </div> 
+               
+            </div>
+        
+              
+            <div class="homepageSection2">
+                  <div class="openAccountOuterDiv">
+                      <h1>Open new account online</h1>
+                       
+                      <a href="" th:href="@{/home/Open_new_accountt}" >
+                         <div class="openAccountinnerIcon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                         </div>
+                      </a>
+                  </div>
+                  <div class="balAndStatement">
+                        <div class="balanceCard">
+                             <img src="/image/checkbal.jpg" alt="" />
+                             <h3>Check Balance</h3>
+                        </div>
+                        <div class="statementCard">
+                              <img src="/image/checkstate.jpg" alt="" />
+                             <h3>View Statement</h3>
+                        </div>
+                  </div>       
+             </div>
+          
+           <div class="bookingsAndInsurenceOuter">
+                  <div class="bookingsAndInsurenceInner">
+                         <div class="bookingdiv">                           
+                                 <h1>Ticket Booking</h1>
+                                 <div class="ticketBookingContentDiv">
+                                       <div class="ticketBookingFirstRow">
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/aeroplane-removebg-preview.png" alt="" /></div>
+                                                  <h6>Flight Tickets</h6>
+                                             </div>
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/bus-removebg-preview (1).png" alt="" /></div>
+                                                  <h6>Bus Tickets</h6>
+                                             </div>
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/train-removebg-preview (1).png" alt="" /></div>
+                                                  <h6>Train Tickets</h6>
+                                             </div>
+                                               
+                                       </div>
+                                       <div class="ticketBookingSecondRow">
+                                               <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/movieIcn.png" alt="" /></div>
+                                                  <h6>Movie Tickets</h6>
+                                             </div>
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/eventIcon.png" alt="" /></div>
+                                                  <h6>Event Tickets</h6>
+                                             </div>
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/hotelIcon.png" alt="" /></div>
+                                                  <h6>Hotels Booking</h6>
+                                             </div>
+                                       </div>
+                                 </div>                  
+                         </div> 
+                         <div class="insurenceDiv">
+                                 <h1>Loans And Offers</h1>
+                                  <div class="loansArenaDiv">
+                                        <div class="loansArenaFirstRow">
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/goldIcon.png" alt="" /></div>
+                                                  <h6>Loan on Gold</h6>
+                                             </div>
+                                              <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/personalLoanIcon (2).png" alt="" /></div>
+                                                  <h6>Personal Loan</h6>
+                                             </div>                                             
+                                        </div>
+                                        <div class="loansArenaSecondRow">
+                                              <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/aeroplane-removebg-preview.png" alt="" /></div>
+                                                  <h6>Free Credit Score</h6>
+                                             </div>
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/visa image.jpg" alt="" /></div>
+                                                  <h6>Credit Card Loan</h6>
+                                             </div>                                     
+                                        </div>
+                                 </div>
+                         </div>
+                  </div>
+           </div>
+      
+          <!-- premium services  start here   ..............................  -->
+           
+           <div class="premiumServicesOuter ">
+              <div class="premiumServicesInner">
+                   <div class="premiumServicesInnermost">
+                        <div class="premiumImagDiv"><img src="/image/glbalmeeting-removebg-preview (1).png" alt="" /></div>
+                        
+                        
+                        <div class="preiumCardsDiv">
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="/image/Untitled design.jpg" alt="" /></div>
+                                      	<h5>Link Aadhar Card</h5>
+                                </div> 
+                           </div>
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="/image/adhar.png" alt="" /></div>
+                                      	<h5>Check Aadhar Status</h5>
+                                </div> 
+                           </div>
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="/image/pan-card-removebg-preview (1).png" alt="" /></div>
+                                      	<h5>Link Pan Card</h5>
+                                </div> 
+                           </div>
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="https://i.pinimg.com/564x/ce/7d/1e/ce7d1e56a2196210f7164499ba936ff1.jpg" alt="" /></div>
+                                      	<h5>Online E-Kyc</h5>
+                                </div> 
+                           </div>
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="https://sanskritiias.com/uploaded_files/images/npci.jpg" alt="" /></div>
+                                      	<h5>NPCI LINK</h5>
+                                </div> 
+                           </div>
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="https://khetigaadi.com/news/wp-content/uploads/2022/03/MicrosoftTeams-image56.jpeg" alt="" /></div>
+                                      	<h5>Apply Online KCC</h5>
+                                </div> 
+                           </div>
+                        </div>
+                   </div>
+              </div>
+           
+           
+           </div>
+           
+           
+           <!-- our other branches and locations ......................................... -->
+           
+           <div class="locationDiv">
+                <div class="locaImgDiv">
+                    <img src="https://canarabank.com/assets/images/branch.webp" alt="" />
+                </div>
+                <div class="locTextDiv">
+                    <h1>Our other</h1>
+                    <h2>Branches</h2>
+                </div>
+           </div>
+           <!--footer goes here ..........................................................-->
+          
+          <div class="footer">
+            <div class="mainfooter">
+                <div class="left">
+                   <h1>QUICK ACCESS</h1>
+                   <ul>
+                   	<li><a href="">CAREERS</a></li>
+                   	<li><a href="">CUSTOMER EDUCATION</a></li>
+                   	<li><a href="">COOPERATE BANKING</a></li>
+                   	<li><a href="">PENSIONRS PORTAL</a></li>
+                   	<li><a href="">CALENDER</a></li>
+                   	<li><a href="">HOLIDAY LIST</a></li>
+                   	<li><a href="">VACANT LOCKERS</a></li>
+                   </ul>
+                   
+                   <h1>CUSTOMER SERVICES</h1>
+                   <ul>
+                   	<li><a href="">COMPLAINTS</a></li>
+                   	<li><a href="">DOWNLOAD CENTER</a></li>
+                   	<li><a href="">CONSULTANCY SERVICES</a></li>
+                   	<li><a href="">BROWSER COMPLIBILITY</a></li>
+                   	<li><a href="">SCREEN READER ACCESSIBILITY</a></li>
+                   </ul>
+                </div>
+                <div class="rightPart">
+                    <h1>ONLINE SERVICES</h1>
+                   <ul>
+                   	<li><a href="">ONLINE ACCOUNT OPENING</a></li>
+                   	<li><a href="">GST INVOICE PORTAL</a></li>
+                   	<li><a href="">ONLINE SERVICE REQUEST</a></li>
+                   	<li><a href="">E BIKRAY</a></li>
+                   	<li><a href="">OUR FRENCHISE</a></li>
+                   	<li><a href="">INTERNATIONAL SERVICE</a></li>
+                   	<li><a href="">BECOME A BANK MITRA</a></li>
+                   </ul>
+                   
+                   <h1>IMPORT LINKS</h1>
+                   <ul>
+                   	<li><a href="">RBI KAHTA HAI</a></li>
+                   	<li><a href="">RBI MONETARY MUSEUM</a></li>
+                   	<li><a href="">E-VOTING</a></li>
+                   	<li><a href="">PRADHAN MANTRI JAN DHAN YOJNA</a></li>
+                   	<li><a href="">PRIVACY POLICY FOR LOAN RECOVERY</a></li>
+                   </ul>
+                </div>
+                
+                <div class="socialLinksDiv">
+                    <div class="subNewsLetterDiv">
+                        <h1>Subscribe for our NewsLetter</h1>
+                        <input type="email"  class="form-control" value="starlifebank1@gmail.com"/>
+                    </div>
+                    <div class="socialIconsDiv">
+                        <h1>Follow us</h1>
+                        <div class="allsocialIconsContainer">
+                                <div class="mainSocialIconBurgerFooter"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt=""></div>
+                                <div class="mainSocialIconBurgerFooter"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt=""></div>
+                                <div class="mainSocialIconBurgerFooter"><img src="/image/xsocialIcon-removebg-preview.png" alt=""></div>
+                                <div class="mainSocialIconBurgerFooter"><img src="/image/telesocialicon-removebg-preview.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+      </div>
+            
+   
+   </section>
+
+</body>
+</html>

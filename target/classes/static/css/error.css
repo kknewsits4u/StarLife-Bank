@@ -1,0 +1,11 @@
+.errorpageMain{
+  position: relative;
+}
+
+.errorpageMain img{
+  position: absolute;
+}
+
+.containerr{
+  background: rgb(255,255,255);
+}

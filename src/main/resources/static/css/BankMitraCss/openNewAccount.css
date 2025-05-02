@@ -1,0 +1,132 @@
+.newAccount_main_container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: fit-content;
+  min-height: calc(100vh - 7vw);
+  background: rgb(255,255,255);
+  box-shadow: 0 3px 5px rgb(0,0,0,0.3), 0 -3px 5px rgb(0,0,0,0.3);
+  border-radius: 15px;
+}
+
+.accountAlert{
+  width: 100%;
+  margin:-2vw 0;
+}
+form{
+  width: 100%;
+  height: fit-content;
+}
+
+.addProduct_container{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  min-height: calc(100vh - 7vw);
+}
+
+.addProduct_container .add_item_detail_card{
+  position: relative;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+
+/*   left part / details part ............................................. */
+
+.addProduct_container_left h1{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  line-height: 50px;
+  background-color: var(--blue);
+  color: rgb(255,255,255);
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.detail_line{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+}
+
+
+
+.detail_line span{
+  color: rgb(0,0,0);
+  font-weight: 700;
+}
+
+.detail_line button {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(255,255,255);
+}
+
+.add_image_div{
+  width: 100%;
+  height: calc(100% - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--blue);
+  border-radius: inherit;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+.add_image_div ion-icon{
+  width: 100%;
+  height: 100%;
+  --ionicon-stroke-width: 6px;
+  color: var(--blue);
+  opacity: 0.6;
+}
+.chooseImage_btn{
+  width: 100%;
+  height: 90px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(255,255,255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  border-radius: inherit;
+}
+
+.chooseImage_btn label{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.chooseImage_btn label input{
+  display: none;
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org" th:replace="customerService/CustomerDashborad::Layout(~{::section})">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title th:text="${title}"></title>
+</head>
+
+<body>
+   <section>
+
+      <div class="container-fluid border border-primary  maincontainerr"  th:if="${session.npciNotDone}">
+
+
+         <h1 style="font-size: 2.5vw;">NPCI : PROCEED FOR CONNECT ACCOUNT WITH NPCI</h1>
+         <div class="linkadharmain">
+            <div class="alert alert-warning" role="alert" th:if="${session.npciNotAlert}">
+                You need to activate NPCI.
+            </div>
+            <form action="#" th:action="@{/customer/customerDashboard/npci_process}" method="post">
+               <input type="text" placeholder="Enter your account no : 1545451070XXXXXX" class="form-control" name="accountNo" required>
+               <input type="text" placeholder="Enter you userid : SLB12345" class="form-control" name="userId">
+               <button class="btn btn-primary btn-block" type="submit">ACTIVATE</button>
+            </form>
+         </div>
+      </div>
+
+
+      <div class="container-fluid border border-primary  maincontainerr" th:if="${session.statuschecker}">
+         <h1>ENTER YOUR ACCOUNT NUMBER</h1>
+         <div class="linkadharmain  " style="margin-top: 4vw;">
+            <div class="alert alert-primary" role="alert" th:if="${session.npcidoneAlert}">
+               NPCI activated successfully |||
+            </div>
+            <form action="#" th:action="@{/customer/customerDashboard/checkNpciStatus}" method="post">
+               <input type="text" placeholder="Enter your account no : 1545451070XXXXXX" class="form-control" name="accountNo" required>
+               <button class="btn btn-primary btn-block" type="submit">CHECK STATUS</button>
+            </form>
+         </div>
+      </div>
+
+
+
+
+      <div class="container-fluid border border-primary  maincontainerr" th:if="${session.npciStatus}">
+         <div class="successImagediv"><img src="https://i.pinimg.com/564x/ef/1a/c3/ef1ac3efc97430d7802f538b05906b35.jpg"
+               alt="righticon"></div>
+         <h1 style="text-align: center; margin-top: 4vw;">NPCI is activated successfully with your npci authority !!!
+         </h1>
+      </div>
+
+   </section>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="BankMitraServices/BankMitraHome::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+  <section >
+    <div class="container-fluid  bankmitraupadate">
+      <form action="" th:action="@{/bank_mitra/updateDetails}"  method="post">
+      <div class="updateImageAndName">
+        <div class="heading_div">
+           Update Your Details
+        </div>
+        <div class="allInputField">
+          <div class="form-group inputDiv">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:value="${session.bankmitra1.email}">
+          </div>
+          <div class="form-group inputDiv">
+            <label for="exampleInputEmail1">Update Your Name</label>
+            <input type="text"  name="fullname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:value="${session.bankmitra1.fullname}" >
+          </div>
+          <div class="form-group inputDiv">
+            <label for="exampleInputEmail1">Father's Name </label>
+            <input type="text" name="fathername" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:value="${session.bankmitra1.fathername}"    >
+          </div>
+          <div class="form-group inputDiv">
+            <label for="exampleInputEmail1">Mother's Name</label>
+            <input type="text" name="mothername" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:value="${session.bankmitra1.mothername}" >
+          </div>
+          <div class="inputDivInner">
+
+        
+          <div class="form-group inputDiv">      
+              <label for="exampleInputEmail1">Pan Card No.</label>
+              <input type="text" name="panno" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:value="${session.bankmitra1.panno}" >
+          </div>
+          <div class="form-group inputDiv">
+            <label for="exampleInputEmail1">Phone No.</label>
+            <input type="text" name="phoneno" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" th:value="${session.bankmitra1.phoneno}"  >
+          </div>
+        </div>
+        <div class="form-group inputDiv">
+           <button class="btn btn-primary" type="submit" > Update Now </button>
+        </div>
+
+        </div>
+       
+      </div>
+    </form>
+    </div>
+
+
+   
+
+  </section>
+
+
+ 
+</body>
+</html>

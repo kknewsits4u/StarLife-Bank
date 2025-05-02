@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="BankMitraServices/BankMitraHome::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+  <section>
+    <div class="ekyc_container">
+        <div class="heading_div">
+             Enter Your Adhar Number
+        </div>
+        
+        <div  th:if="${session.otpProcess}" class="alert  messagee" th:classappend="${session.otpProcess.type}"  role="alert">          
+         <p>[[${session.otpProcess.message}]]</p>
+       </div>
+
+
+
+        <form action=""  th:action="@{/bank_mitra/doKyc/otp}"  method="post">
+           <div class="adhar_number_inputs">
+            <input type="text" class="form-control" placeholder="XXXX" maxlength="4" required  name="adharpart1"  >
+            <input type="text" class="form-control" placeholder="XXXX" maxlength="4" required   name="adharpart2" >
+            <input type="text" class="form-control" placeholder="XXXX" maxlength="4" required  name="adharpart3"   >
+           </div>
+
+           <div class="eyc_btn_div">
+            <button class="btn btn-primary" type="submit">Proceed</button>
+            <button class="btn btn-danger" type="reset">Reset</button>
+           </div>
+        </form>
+      <!--  th:if="${session.otpSendDone}"  -->
+       <form action=""  th:action="@{/bank_mitra/doKyc/process}"  method="post"  th:if="${session.otpSendDone}"  >
+          <div class="adhar_number_inputs_otp">
+           <input type="text" class="form-control" placeholder="0" maxlength="1"  required  name="otp1" >
+           <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp2"  >
+           <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp3"  >
+           <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp4"  >
+           <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp5"  >
+           <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp6"  >
+          </div>
+
+          <div class="eyc_btn_div2">
+           <button class="btn btn-primary" type="submit">Validate Otp And Proceed</button>
+          </div>
+       </form>
+
+    </div>
+  </section>
+
+
+ 
+</body>
+</html>

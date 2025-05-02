@@ -1,0 +1,696 @@
+@media(max-width:1024px){
+
+/* user dashboard  responsive ................................ */
+
+
+.main{
+  height: fit-content;
+}
+
+.row1MainContentDiv, .row1MainContentDiv h2{
+  font-size: 1.3vw;
+}
+
+
+
+.leftSide{	
+	height:90vh;
+}
+
+
+.admiinHomeAllDiv{
+	height:3.2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.admiinHomeAllDiv h1{
+	font-size:1.1vw;
+}
+.admiinHomeAllDiv h1 a{
+	color:rgb(23,144,241);
+	text-decoration:none;
+}
+
+.active{
+	box-shadow:inset 1px 1px 10px rgb(23,144,241);
+	
+	border:1px solid rgb(23,144,241);
+	background-color:rgb(23,144,241);
+}
+
+.active h1 a{
+   color:white;
+}
+
+.rightSide{
+	width:81vw;
+	height:86vh;
+	overflow-y:scroll;
+    position:relative;
+}
+
+.rightSide::-webkit-scrollbar {
+  display: none; 
+}
+
+.row1{
+	width:100%;
+    height:fit-content;
+}
+
+.row1MainContentDiv{
+	display:flex;
+	
+}
+.accountholderDiv{
+	width:100%;
+	height:5vw;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.accountholderDiv h1{
+	color:rgb(23,144,241);
+	font-size:3vw;
+}
+
+
+
+.dashleft, .dashright{
+	width:50%;
+	height:fit-content;
+	padding:1vw;
+	
+}
+
+.otherdetails{
+	display:flex;
+	justify-content:space-between;
+	color:#A66E38;
+	margin-top:1vw;
+	border-right:0.1vw solid #654520;
+}
+.dashright .otherdetails{
+	border-right:none;
+}
+.otherDeLeft{
+	width:40%;
+}
+.otherDeLeft h2, .otherDeRight h2{
+	font-size: 1.2vw;
+	color: rgb(23,144,241);
+}
+.otherDemid{
+	width:10%;
+}
+.otherDeRight{
+	width:40%;
+}
+
+.dashleft h3{
+	color:rgb(23,144,241);
+}
+
+.dashleft h3 span{
+	color:pink;
+	margin-left:2vw;
+}
+
+
+
+
+.card{
+  width: 30vw;
+  height: 18vw;
+}
+
+.atmbankname h1{
+  font-size: 2vw;
+}
+
+
+
+.atmichidiv img{
+  width: 6vw;
+  height: 4vw;
+}
+
+.atmNumDiv{
+  margin-top: 1vw;
+  font-size: 1.8vw;
+}
+
+.validUpto{
+  font-size: 1.8vw;
+}
+
+.cardHolder p{
+
+  font-size: 1.8vw;
+
+}
+.debitcardDiv{
+  width: 70%;
+  height: fit-content;
+  margin-top: 2vw;
+  border-radius: 10px;
+  border: 0.1vw solid rgb(23,144,241);
+  box-shadow: 1px 1px 5px rgb(23,144,241);
+  padding:1vw ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.debitcardDiv form{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+}
+
+@media(max-width:768px){
+
+  .maincontainerr, .newAcMnCtnr, .moneyTransMain, .updatepinmain, .debitcardMain, .viewstatementmain{
+     padding-top: 10vw;
+  } 
+
+  .newAcMnCtnr h1{
+    font-size: 7vw;
+  }
+  .newAcMnCtnr{
+    padding:10vw 4vw;
+  }
+  
+  .header{
+    height: 15vw;
+  }
+  .logoDiv{
+    font-size: 5vw;
+    padding:1vw  4vw;
+  }
+  .spinnerDiv{
+    display: block;
+    font-size:6vw;
+    color: rgb(255,255,255);
+    text-shadow: 0 0 5px rgb(0,0,0);
+  }
+  .navList{
+    display: none;
+  }
+  
+  .adminPageMainDiv{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding-top: 10vw;
+    position: relative;
+  }
+  
+
+  .leftSide{	
+    width:70%;
+    display: flex;
+    position: absolute;
+    left: -100%;
+    top: 12vw;    
+    z-index: 100;
+    background: rgb(255,255,255);
+    transition: 0.5s;
+    height: 85vh;
+  }
+  
+  .appIcon{
+
+    width:25vw;
+    height:25vw;
+    margin-top: 5vw;
+  }
+
+  .admiinHomeAllDiv{
+    width:90%;
+    height:8vw;
+    font-size:2.5vw;
+    margin-top: 3vw;
+  }
+  
+  .admiinHomeAllDiv h1{
+    font-size:3vw;
+  }
+  
+  .rightSide{
+    width:100%;
+    min-height:calc(100vh - 30vw);
+  }
+  
+  .sideBarSlider{
+    display:block;
+    color: rgb(250, 167, 83);
+    font-size: 6vw;
+    margin-right: 3vw;
+    position: absolute;
+    top: 1vw;
+    left: 5vw;
+    transition: 0.5s;
+  }
+  
+  .main{
+    min-height:78vh;
+    padding-top: 10vw;
+  }
+  
+  .row1MainContentDiv{
+    flex-direction: column;
+    margin-top: 3vw;
+    padding: 2vw;
+  }
+  .accountholderDiv{
+    height:fit-content;
+  }
+  
+  .accountholderDiv h1{
+    font-size:6vw;
+  }
+  
+  .dashleft, .dashright{
+    width:100%;
+    height:fit-content;
+    padding:1vw;
+  }
+  
+  .otherdetails{
+    margin-top:0;
+    font-size: 3.5vw;
+    border: none;
+  }
+  
+  .dashright .otherdetails{
+    border-right:none;
+  }
+  
+  .otherDeLeft{
+    width:50%;
+  }
+  .otherDeLeft h2, .otherDeRight h2{
+    font-size: 3.5vw;
+    color: rgb(0,0,0);
+  }
+  
+  .otherDeRight{
+    width:50%;
+  }
+  
+  .updateDetailsDiv{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    box-shadow: 1px 1px 5px rgb(23,141,241), -1px -1px 5px rgb(23,141,241);
+    border-radius: 10px;
+  }
+  
+  .updateDetailsDiv a{
+    text-decoration: none;
+    color: rgb(23,141,241);
+    width: 100%;
+    text-align: center;
+    padding-top: 2vw;
+  
+  }
+  
+  .updateDetailsDiv a h1{
+    font-size: 5vw;
+  }
+  
+  
+  
+  /*   generate atm card    */
+  
+  .debitcardMain{
+    max-height:83vh;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  .notGenerateDebitCardDiv{
+    height: 30%;
+    margin-top: 50px;
+  }
+
+  .notGenerateDebitCardDiv h1{
+    margin-top: 10vw;
+    font-size: 4vw;
+  }
+  .notGenerateDebitCardDiv form{
+    width: 100%;
+  }
+  
+  .notGenerateDebitCardDiv form button{
+    margin-top: 1.5vw;
+    font-size: 4vw;
+    width: 100%;
+    font-family: verdana;
+  }
+  
+  /* check balance  */
+  .maincontainerr h1 , .updatepinmain h1, .debitcardMain h1 , .moneyTransMain h1{
+    font-size: 8vw;
+    margin-top: 2vw;
+  }
+  
+  form{
+    width: 100%;
+  }
+  .formDiv{
+    width:100%;
+    gap: 3vw;
+    padding: 10vw;
+  }
+  .formDiv h1{
+    font-size: 6vw;
+    color: rgb(23,141,241);
+  }
+
+  .successImagediv{
+    height: 25vw;
+    width: 25vw;
+    margin-top: 3vw;
+  }
+  
+  .maincontainerr h2{
+    font-size:5rem;
+  }
+  
+  
+  .adDiv{
+    gap: 5vw;
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+
+  
+  .sendmoney, .investMoney{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 2vw 5vw;
+  }
+  
+  
+  .formDiv button{
+    font-size: 4vw;
+    font-weight: 700;
+  }
+  
+  /* debit card */
+  
+  .debitcardDiv{
+    padding:3vw ;
+    gap: 2vw;
+    width: 80%;
+  }
+  
+  .debitcardDiv h1{
+    font-size: 4.5vw;
+  }
+  
+  .debitcardDiv form{
+    width: 100%;
+  }
+  
+  .debitcardDiv .card{
+    width: 90%;
+    height: 35vw;
+    padding: 3vw;
+    display: flex;
+  }
+  .debitcardDiv button{
+    margin-top: 4vw;
+  }
+  
+  .atmbankname{
+    text-align: end;
+    width: 100%;
+  }
+  .atmbankname h1{
+    font-size: 4vw;
+  }
+  
+  .atmichidiv img{
+    width: 10vw;
+    height: 7vw;
+  }
+  
+  .atmNumDiv{
+    margin-top: 1.5vw;
+    gap: 2vw;
+    font-size: 4vw;
+  }
+  
+  .validUpto{
+    font-size: 3vw;
+  }
+  
+  
+  .cardHolder p{
+    font-size: 3vw;
+  }
+  
+  
+  /* update atm pin  */
+  
+  .updatePinDiv{
+    width: 80%;
+    padding: 3vw;
+    height: fit-content;
+  }
+  
+  .updatePinDiv input{
+    margin-top: 4vw;
+  }
+  .updatePinDiv button{
+    margin-top: 10vw;
+  }
+  
+  .updatePinDiv form{
+    width: 100%;
+  }
+  
+  
+  /*  money transfer */
+  
+  
+  .graphicsDiv{
+    justify-content: space-between;
+  }
+  
+  .firstimageDiv, .midimagediv{
+    height: 15vw;
+    width: 15vw;
+  }
+  
+  .midimagediv{
+    width:20vw;
+  }
+  
+  .formDivv{
+    width: 100%;
+    margin-top:5vw;
+  }
+  
+  .formDivv input{
+    width:70%;
+    margin-top: 4vw;
+  }
+  
+  .formDivv button{
+    margin-top: 4vw;
+    width: 70%;
+  }
+  
+  
+  /*  view statement */
+  
+  .viewstatementmain{
+    height: fit-content;
+    min-height: 83vh;
+  }
+  
+  .viewstatementmain h2{
+    /* change */
+    font-size: 6vw;
+  }
+  
+  .dateWiseFilter{
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .dateWiseFilterRow{
+    width: 80%;
+  }
+  
+  .dateWiseFilterRow h1{
+    font-size: 4vw;
+    font-weight: 500;
+
+  }
+  
+  .dateWiseFilterRow input{
+
+    font-size: 4vw;
+  }
+  
+  .dateWiseFilterRow button{
+    font-size: 4vw;
+  }
+  
+  
+  .specificTimeFilter{
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .specificTimeFilter button{
+    width: 38%;
+    font-size: 3.5vw;
+  }
+  
+  
+  .statementHeader{
+    padding: 3vw 2vw;
+    border-radius: 5px;
+    gap: 10px;
+    border: 1px solid rgb(23,141,241);
+  }
+  
+  
+  .statementHeaderOuter, .statementHeaderItems{
+    margin-bottom: 1vw;
+    border-radius: 5px;
+    padding: 2vw;
+    width: fit-content;
+  }
+  
+  .statementHeaderOuter .item , .statementHeaderItems .item{
+    width:40vw;
+    padding:1vw;
+    padding-left: 2vw;
+    font-size: 3vw;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  }
+
+/*  media query for  max width 400px    .................................... */
+
+@media(max-width:400px){
+
+.adminPageMainDiv{
+  padding-top: 10vw;
+}
+
+.leftSide{	
+  top: 15vw;
+}
+
+.appIcon{
+	width:35vw;
+	height:35vw;
+}
+.admiinHomeAllDiv{
+	height:12vw;
+	font-size:4vw;
+}
+
+.admiinHomeAllDiv h1{
+	font-size:4vw;
+}
+
+.main{
+  min-height:83vh;
+}
+
+.debitcardDiv{
+  gap: 4vw;
+  width: 90%;
+}
+
+.debitcardDiv h1{
+  font-size: 4.5vw;
+}
+
+.debitcardDiv form{
+  width: 100%;
+}
+
+.debitcardDiv .card{
+  height: fit-content;
+}
+
+.atmichidiv img{
+  width: 10vw;
+  height: 7vw;
+}
+
+.atmNumDiv{
+  margin-top: 2vw;
+  font-size: 4.5vw;
+}
+
+
+.cardHolder p{
+  font-size: 3.5vw;
+}
+
+
+
+
+/* check balance  */
+.maincontainerr h1 , .updatepinmain h1, .debitcardMain h1 , .moneyTransMain h1{
+  font-size: 5vw;
+}
+
+
+
+/*  view statement */
+
+
+.viewstatementmain h2{
+  font-size: 8.5vw;
+}
+
+.dateWiseFilterRow h1{
+  font-size: 6vw;
+}
+
+.dateWiseFilterRow input{
+  font-size: 6vw;
+}
+
+.dateWiseFilterRow button{
+  font-size: 6vw;
+}
+
+.specificTimeFilter button{
+  font-size: 5vw;
+}
+
+.statementHeaderOuter .item , .statementHeaderItems .item{
+  font-size: 4vw;
+}
+
+
+}

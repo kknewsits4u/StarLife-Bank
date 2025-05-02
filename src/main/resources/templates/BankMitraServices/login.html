@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      >
+<head>
+	<meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="#" th:href="@{/css/BankMitraCss/register.css}" >
+  <link rel="stylesheet" href="#" th:href="@{/css/mediaQuery.css}" >
+	<title >[[${title}]]</title>
+</head>
+<body>
+ <section>
+
+  <div class="bank_mitra_register_container">
+    <h1>STAR LIFE BANK PVT. LTD. </h1>
+
+
+      <div class="form_div">
+
+             <div  th:if="${session.fileAlert}" class="alert  messagee" th:classappend="${session.fileAlert.type}"  role="alert">
+                <p th:text="${session.fileAlert.message}"></p>
+              </div>
+               <div class="fileUploaderBoxOuter">
+                  <div class="fileUploaderBoxInner">
+                    <div class="headingDiv">
+                       <h2>Login Process</h2>
+                    </div>
+                    <div class="formFiled">
+                       <form action="#" th:action="@{/dologin}"  enctype='multipart/form-data'
+                       method="post">
+                       
+                        <input type="text" class="form-control" placeholder="Bank CSP id" aria-label="Add Detail" aria-describedby="basic-addon1"  name="username">
+                        <input type="text" class="form-control" placeholder="Password" aria-label="Add Detail" aria-describedby="basic-addon1"  name="password">
+                     
+                        <button class="btn btn-primary btn-block"  type="submit" >
+                                        LOGIN
+                        </button>
+ 
+                       </form>
+
+                         <P>If you don't have account ? <a th:href="@{/bank_mitra_register}">Register Here</a> </P>
+
+
+                    </div>
+
+                  </div>
+               </div>
+
+      </div>
+
+  </div>
+
+ </section>
+</body>
+</html>

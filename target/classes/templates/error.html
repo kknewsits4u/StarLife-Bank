@@ -1,0 +1,27 @@
+ <!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body> 
+
+  <!-- css in error.css file  -->
+ <section>
+           <div class="container-fluid containerr d-flex justify-content-center p-4">
+               <div class="row messageContainer errorpageMain">
+                  <div class="col-sm-6 mesContaLeft"><img src="#" th:src="@{https://www.dahlia.tech/images/Illustation.svg}" alt="" /></div>
+
+                  <div class="col-sm-6 mesContaERight" style="display: flex; flex-direction: column; align-items: center;  justify-content:center; ">
+                    <h1 style="font-size: 6vw; text-align: center; color: rgb(247, 207, 4); text-shadow: 1px 1px 5px black;">Some error</h1>
+                    <h1 style="font-size: 6vw; margin-top: 1.5vw; color: rgb(247, 207, 4); text-shadow: 1px 1px 3px black;">Occured !!!!!</h1>
+                    <a href="#" style="text-decoration: none; font-size: 5vw;" th:href="@{/home}"><div style="height: fit-content; width: fit-content; padding: 1vw 5vw; border: 0.1vw solid rgb(23,144,241); margin-top: 1.5vw; border-radius: 10vw;  box-shadow: 1px 1px 10px rgb(23,144,241);" class="errorPageGoToHomeDiv ">Go to home </div></a>
+                 </div>
+
+               </div>
+           </div>
+    </section>	
+</body>
+</html>  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+       th:replace="AdminServices/AdminHomepage::Layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+  <section>
+       <div class="customer-container"  >
+              <div  class="customer-profile-div" >
+                  <div class="profile-container" >
+                    <img  th:src="@{'/image/'+${bankmitra.bimage}}"  alt="profile-image">  
+                  </div>
+              </div>
+              <div class="customer-details-div"  >
+                   <p><span>Name</span>: <span>[[${bankmitra.fullname}]]</span></p>
+                   <p><span>Email</span>: <span>[[${bankmitra.email}]]</span></p>
+                   <p><span>Phone</span>: <span>[[${bankmitra.phoneno}]]</span></p>
+                   <p><span>Account no.</span>: <span>[[${bankmitra.accountno}]]</span></p>
+                   <p><span>Father name</span>: <span>[[${bankmitra.fathername}]]</span></p>
+                   <p><span>Mother Name</span>: <span>[[${bankmitra.mothername}]]</span></p>
+                   <p><span>Role</span>: <span>[[${bankmitra.role}]]</span></p>
+                   <p><span>Adhar number</span>: <span>[[${bankmitra.addharno}]]</span></p>
+                  
+              </div>
+              <div class="btn-div" >
+                <a th:href="@{/admin/bankmitra/{id}/remove(id=${bankmitra.id})}"
+                >
+                <button  type="button"  class="removeBtn" >Remove</button></a>
+                <a th:href="@{/admin/bankmitra/{id}/block(id=${bankmitra.id})}"
+                >
+                <button  type="button"  class="removeBtn" >Block</button></a>
+              </div>
+             
+       </div>
+  </section>
+</body>
+</html>

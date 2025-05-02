@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="customerService/CustomerDashborad::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+     <section>
+         <div class="container-fluid border border-primary balanceFetched maincontainerr">
+           
+           <h1>Balance fetched Succesfully !!</h1>
+           
+          <div class="successImagediv"><img src="https://i.pinimg.com/564x/ef/1a/c3/ef1ac3efc97430d7802f538b05906b35.jpg" alt="righticon"></div>
+          
+          <h2> ₹ [[${balance}]]</h2>
+
+          <div class="adDiv">
+               <a href=""><div class="sendmoney">SEND MONEY</div></a>
+               <a href=""><div class="investMoney">INVEST NOW</div></a>
+          </div>
+         </div>
+    </section>	
+</body>
+</html>

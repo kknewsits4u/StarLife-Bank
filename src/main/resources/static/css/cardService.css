@@ -1,0 +1,128 @@
+.maincontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content:start;
+  align-items: center;
+  margin-top: 6.2vw;
+  width: 100%;
+  height: fit-content;
+  border: 0.2vw solid rgb(23,144,241);
+  box-shadow: inset 5px 5px 50px rgb(23,144,241);
+  z-index: 50;
+  position: relative;
+}
+
+
+.imageContainerr{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 28vw;
+}
+.imageContainerr img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.cardnavigation{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 2.5vw;
+  background-color: rgba(23,144,241,.556);
+  position: sticky;
+  top: 6.5vw;
+}
+
+.contentDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+ width: 100vw;
+ height: fit-content;
+}
+.cardContainer{
+  display: flex;
+  justify-content:center;
+  align-items: start;
+  width: 80vw;
+  height: fit-content;
+  flex-wrap:wrap ;
+  padding: 0 2vw;
+  border: 0.1vw solid red;
+}
+.rightAdvertisement{
+  display: flex;
+  justify-content:center;
+  align-items: start;
+  width: 20vw;
+  height: 100vh;
+  flex-wrap:wrap ;
+  padding: 0 2vw;
+  border: 0.1vw solid rgb(6, 26, 246);
+  margin-left: 1vw;
+  background:#f09595;
+}
+
+.atmCardParent{
+  display: flex;
+  flex-direction: column;
+  justify-content:start;
+  align-items: center;
+  height: 25vw;
+  width: 20vw;
+  border: 0.1vw solid rgb(23,144,241);
+  margin: 2vw;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
+}
+
+.atmCardDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content:start;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+}
+.atmCardDiv img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.atmCardDetails{
+  width: 100%;
+  height: 35%;
+  padding: 1vw;
+}
+
+.atmCardDetails p{
+  font-size: .8vw;
+  color: rgb(23,144,241);
+  font-weight: 500;
+}
+
+.atmCardButton{
+  width: 100%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:0 0.3vw;
+}
+
+.atmCardButton a{
+  text-decoration: none;
+}
+.atmCardOrderButton{
+  color: white;
+  font-size: 1.5vw;
+  font-weight: 700;
+}

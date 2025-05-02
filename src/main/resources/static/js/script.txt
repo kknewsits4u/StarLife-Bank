@@ -1,0 +1,1210 @@
+/**
+ * 
+ */
+
+/*password hide show js start here */
+
+var flag=0;
+
+function k(){
+	
+      let passwordInput11  =document.querySelector(".passwordInput1");
+      let eye=document.querySelector(".eyeIconDivi");
+	  
+	if(flag == 0){
+		eye.classList.add("fa-eye");
+		passwordInput11.setAttribute("type", "text");
+		console.log(0);
+		flag=1;
+	}
+	else{
+		eye.classList.remove("fa-eye");
+		passwordInput11.setAttribute("type", "password");
+		console.log(1);
+		flag =0;
+	}
+}
+
+/*password hide show js end here */
+
+
+/*password refresh system js start */
+
+var refresh = document.querySelector(".refreshDiv");
+
+refresh.addEventListener("click" , refreshPassword);
+
+function refreshPassword(){
+	var flag =true;
+	if(flag == true){
+		var re = "720";
+		    refresh.style.transform =`rotate(${re}deg)`;
+			console.log("done");
+			flag=true;
+	}
+	
+}
+
+
+/* floating login and profile div script ... */
+
+
+var formStatus = 1;
+const openSignDivForm=()=>{
+	
+	let userImg = document.querySelector(".userImg");
+	let signInDiv =document.querySelector(".profileSignDiv");
+	
+	if( formStatus == 1){
+		signInDiv.style.display="flex";
+		formStatus = 0;
+	}
+	else{
+		signInDiv.style.display="none";
+	    formStatus = 1;
+	}
+}
+window.addEventListener("load",function(){
+	let signInDiv =document.querySelector(".profileSignDiv");
+	signInDiv.style.display="none";
+	formStatus = 1;
+})
+
+
+let ChecBalStaDiv =document.querySelector(".ChecBalStaDiv");
+let checBalCard1 =document.querySelector("#checBalCard1");
+let checBalCard2 =document.querySelector("#checBalCard2");
+let checBalCard3 =document.querySelector("#checBalCard3");
+
+ ChecBalStaDiv.addEventListener("mouseover",function(){
+		
+	   checBalCard1.style.transform="scaleX(20px)";
+	   checBalCard2.style.transform="translateX(-60px) rotateY(30deg)";
+	   checBalCard3.style.transform="translateX(60px) rotateY(-30deg)";
+})
+ ChecBalStaDiv.addEventListener("mouseleave",function(){
+		
+	   checBalCard1.style.transform="none";
+	   checBalCard2.style.transform="";
+	   checBalCard3.style.transform="";
+})
+
+
+
+var headerr = document.querySelector(".header");
+var logodiv = document.querySelector(".logoDiv");
+var navList = document.querySelector(".navList");
+
+
+
+
+
+
+function kris(){
+	
+	console.log("hi clicked ")
+	
+	gsap.from(".header",{
+		scale:0,
+		y:-30,
+		duration:0.5,
+		delay:0.5
+	})
+
+}
+kris();
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+	<title th:text="${title}"></title>
+</head>
+<body>
+    <section>
+           <div class="container-fluid loginMainConainer">
+           
+             
+             <div th:if="${param.error}" class="alert alert-danger invalidAlert">Invalid username or password</div>
+             <div th:if="${param.logout}" class="alert alert-success">You have been logged out.</div>
+           
+             <div class="lgpageImgDiv">
+                 <div class="mainImgDiv">
+                     <img src="/image/loginImage-removebg-preview (1).png" alt="" />
+                 </div>
+             </div>
+             <div class="lgImgDivRight">
+                
+            
+                 <div class="card OuterCardDiv">
+                      <h1>Welcome to StarLife Bank</h1>
+               
+                    <div class="loginWithThirdPartyDiv" id="googleLog">
+                       <div class="loginIconDiv">
+                          <i class="fa-brands fa-google"></i>
+                       </div>
+                       <div class="logInTextDiv">
+                          <a href="#" th:href="@{/oauth2/authorization/google}">login with google</a>               
+                       </div>
+                    </div>
+                    <div class="loginWithThirdPartyDiv" id="googleLog">
+                       <div class="loginIconDiv">
+                          <i class="fa-brands fa-github"></i>
+                       </div>
+                       <div class="logInTextDiv">
+                         <a href="#" th:href="@{/oauth2/authorization/github}">login with Github</a>                 
+                       </div>
+                    </div>
+                      <div class="loginWithThirdPartyDiv" id="googleLog">
+                       <div class="loginIconDiv">
+                          <i class="fa-brands fa-facebook"></i>
+                       </div>
+                       <div class="logInTextDiv">
+                          <a href="#" th:href="@{/oauth2/authorization/google}">login with facebook</a>                 
+                       </div>
+                    </div>
+                    <div class="loginWithThirdPartyDiv" id="googleLog">
+                       <div class="loginIconDiv">
+                         <i class="fa-brands fa-twitter"></i>
+                       </div>
+                       <div class="logInTextDiv">
+                         <a href="#" th:href="@{/oauth2/authorization/google}">login with twitter</a>                  
+                       </div>
+                    </div>
+                                                                                                     
+                <h4>Or</h4>
+               <form th:action="@{/dologin}" action="#" method="post">
+                <div class="IdPassLoginDiv">
+                <h2>Login with username and password</h2>
+                <input type="text" name="username" class="form-control usernameInput" placeholder="Enter username"/>
+                <div class="form-control passwordInput">
+                  <input type="password" name="password" class="form-control passwordInput1" placeholder="Enter password"/>
+                  <div class="eyeIconDiv" onclick="k()" ><i class="eyeIconDivi fa-solid fa-eye-slash"></i></div>
+                </div>
+                <div class="Consent_ForgotPasswordDiv form-control">
+                   <input type="checkbox" id="consentDiv"/><label for="consentDiv">Accept terms & conditions !</label>
+                   <a href="" th:href="@{/home/forgetPasswordPage}">Forget password</a>
+                </div>
+               <div class="captureCodeDiv form-control">
+                 <div class="captureDiv">h7AyTh
+                     <div class="captureCover"></div>
+                 </div>
+                 
+               
+                 <div class="refreshDiv" >
+                    <img  class="refreshImage" src="https://static.vecteezy.com/system/resources/previews/015/276/943/original/3d-render-reload-icon-refresh-arrow-icon-on-with-green-color-png.png" alt="" />
+                 </div>
+               
+                <input type="text" class=" form-control captureInput"  placeholder="Enter here"/>
+               </div>
+               <button type="submit" class="btn btn-success btn-block">Login</button>
+               </div>
+               </form>
+               
+             </div>
+             
+              </div>
+           </div>
+    </section>	
+</body>
+</html>
+
+
+
+
+
+@charset "UTF-8";
+
+.mainDiv{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	height:100%;
+	margin-top:6vw;
+	background:rgb(247,252,252);
+}
+
+
+.screenSlider{
+	width:100%;
+	height:70vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border-radius:10px 10px 1500px 1500px/10px 10px 200px 200px;
+    position:relative;
+    box-shadow: 5px 5px 10px rgb(253, 199, 2);
+}
+
+.screenSlider img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	object-position:center;
+	border-radius:10px 10px 1500px 1500px/10px 10px 200px 200px;
+	backdrop-filter: blur(20px);
+}
+
+
+.TaglineDIV{
+	position:absolute;
+	top:15vw;
+	left:27vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+	height:fit-content;
+	width:fit-content;
+}
+
+.TaglineDIV h2{
+	color:white;
+	font-size:4vw;
+	
+}
+
+.TaglineDIV h1{
+	font-size:5vw;
+	color:red;
+}
+
+.TaglineDIV button{
+	font-size:3vw;
+	border:2px solid white;
+	margin-top:1vw;
+	border-radius:10vw;
+	background:rgb(0,0,0,0.356);
+	backdrop-filter:blur(2px);
+	color:white;
+	width:25vw;
+	height:8vw;
+	transition:transform 1s linear, height 1s, width 1s;
+}
+
+
+.TaglineDIV button:hover{
+	height:12vw;
+	width:12vw;
+	font-size:2.5;
+}
+
+
+.dotDivContainer{
+	width:100%;
+	height:3vw;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+    z-index:25;
+}
+
+.dotContainer{
+	width:20vw;
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	padding:0 1.5vw;
+	margin-top:1vw;
+}
+
+.dotDiv{
+	height:1.5vw;
+	width:1.5vw;
+    border-radius:50%;
+    box-shadow:0.01vw 0.01vw 0.3vw #FF6600;
+}
+
+.active{
+	background:#FF6600;
+}
+
+
+.servicess{
+	width:100%;
+	height:20vw;
+	margin-top:1vw;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+    padding:0 2vw;
+}
+
+.ServiceDivLogo{
+	width:20vw;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:space-around;
+}
+
+.servicemainLogoDiv{
+	height:12vw;
+	width:12vw;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius:50%;
+   margin-left:1vw;
+}
+
+.servicemainLogoDiv img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	object-position:center;
+	border-radius:50%;
+}
+
+.DownloadAppPlayStore{
+	width:14vw;
+	height:3vw;
+	margin-left:2vw;
+}
+
+.DownloadAppPlayStore img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	object-position:center;
+}
+
+
+.servicesFeaturee{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	height:100%;
+	width:70vw;
+}
+
+.serviceFeatureCardd{
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+	flex-direction:column;
+	height:90%;
+	width:14vw;
+	box-shadow:0.01vw 0.01vw 0.3vw black;
+	border-radius:5px;
+	margin:0.5vw;
+	transition: transform 0.5s linear;
+}
+
+.serviceFeatureCardd:hover{
+	scale:1.08;
+	transform:rotateY(10deg) skew(5deg);
+	margin:2vw;
+	
+	
+}
+
+.srvsFimgDivv{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:100%;
+	height:55%;
+	border:1px solid green;
+	padding:0.1vw;
+    background:white;
+
+}
+.srvsFimgDivv img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+.srvsFddetailss{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:space-between;
+	width:100%;
+	height:45%;
+	border:1px solid brown;
+	padding-top:1vw;
+	padding:0.2vw;
+}
+
+.srvsFddetailss h1{
+	font-size:1.2vw;
+	color:brown;
+}
+
+.srvsFddetailss button{
+	background:#B7E0FF;
+	font-size:1.1vw;
+	font-weight:500;
+}
+
+
+.homepageSection2{
+	width:100%;
+	height:15vw;
+	display:flex;
+	justify-content:center;
+	align-items:center;	
+	padding:0.5vw;
+}
+
+.openAccountOuterDiv , .balAndStatement{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;	
+  height:12vw;
+  width:60%;
+  border:1px solid rgb(23,144,241);
+  margin:0.5vw;
+  padding:0.5vw;
+  padding-right:0;
+}
+.openAccountOuterDiv{
+	box-shadow:1px 1px 10px rgb(23,144,241);
+}
+.openAccountOuterDiv h1{
+	font-size:3vw;
+	margin-left:2.5vw;
+	color:rgb(23,144,241);
+}
+
+
+
+
+.openAccountinnerIcon{
+	display:flex;
+    justify-content:center;
+    align-items:center;
+	height:12vw;
+	width:15vw;
+	transition:transform 1s;
+	background:rgb(23,144,241);
+}
+.openAccountinnerIcon:hover{
+	padding-left:3vw;
+	transform:translateX(1.2);
+}
+
+.openAccountinnerIcon i{
+	font-size:8vw;
+	color:white;
+}
+.openAccountOuterDiv a{
+	text-decoration:none;
+}
+
+.balAndStatement{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:26%;
+  height:12vw;
+  padding:0;
+  border:none;
+}
+
+.balanceCard , .statementCard{
+	height:100%;
+	width:12vw;
+	border:1px solid rgb(23,144,241);
+	display:flex;
+	flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    border:0.2vw solid rgb(23,144,241);
+    box-shadow:inset 1px 1px 10px rgb(23,144,241);
+    padding:0.5vw;
+    cursor:pointer;
+}
+
+.balanceCard:hover , .statementCard:hover{
+	scale:1.1;
+}
+
+.balanceCard img , .statementCard img{
+	width:100%;
+}
+
+.balanceCard h3 , .statementCard h3{
+	font-size:1.5vw;
+	text-shadow:0.2px 0.2px 10px rgb(23,144,241);
+	
+	
+}
+
+
+.bookingsAndInsurenceOuter{
+	display:flex;
+    justify-content:center;
+    align-items:center;
+	width:100%;
+	height:30vw;
+}
+
+.bookingsAndInsurenceInner{
+	display:flex;
+    justify-content:space-between;
+    align-items:center;
+	width:86%;
+	height:30vw;
+	border:1px solid rgb(23,144,241);
+	padding:0.5vw;
+	border-radius:5px;
+	 box-shadow:inset 1px 1px 10px rgb(23,144,241);
+	
+}
+
+.bookingdiv , .insurenceDiv{
+	display:flex;
+	flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    border:1px solid rgb(23,144,241);
+    border-radius:5px;
+    padding:0.5vw;
+ 
+}
+   
+.bookingdiv h1, .insurenceDiv h1{
+	 font-size:2vw;
+	 margin-bottom:0.5vw;
+}
+.bookingdiv{
+	width:60%;
+	margin-right:0.2vw;
+}
+
+.insurenceDiv{
+	width:40%;
+	margin-left:0.2vw;
+}
+
+
+.ticketBookingContentDiv, .loansArenaDiv{
+	display:flex;
+	flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    border-radius:5px;
+    width:100%; 
+    margin-top:0.5vw;
+    padding:0.2vw 2vw; 
+}
+
+.ticketBookingFirstRow, .ticketBookingSecondRow,.loansArenaFirstRow, .loansArenaSecondRow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:50%;
+    border-radius:5px;
+    width:100%; 
+    padding:0.5vw 0; 
+}
+
+
+
+.loanCard{
+	display:flex;
+	flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+	height:100%;
+	width:12vw;
+	border:1px solid rgb(23,144,241);
+	margin:0.7vw;
+	border-radius:8px;
+	box-shadow:inset 0.5px 0.5px 5px rgb(23,144,241);
+	cursor:pointer;
+}
+
+.loanCard h6{
+	font-size:1.3vw;
+}
+.loancardImgDiv{
+	width:6vw;
+	height:6vw;
+	border-radius:50%;
+}
+
+.loancardImgDiv img{
+	width:100%;
+	height:100%;
+	border-radius:50%;
+	object-fit:cover;
+}
+
+.premiumServicesOuter{
+	width:100%;
+	height:30vw;
+	margin-top:1vw;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.premiumServicesInner{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:86%;
+	height:100%;
+	border:1px solid rgb(44,157,48);
+	padding:0.5vw;
+	box-shadow:inset 1px 1px 10px rgb(44,157,48);
+	border-radius:8px;
+}
+
+.premiumServicesInnermost{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	border:1px solid rgb(44,157,48);
+	height:100%;
+	width:100%;
+	border-radius:8px;	
+}
+
+
+.premiumImagDiv{
+	width:35%;
+	height:100%;
+	margin-left:2vw;
+}
+
+.premiumImagDiv img{	
+    width:100%;
+	height:100%;
+	border-radius:50%;
+	object-fit:cover;
+}
+
+.preiumCardsDiv{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-wrap:wrap;
+	width:65%;
+}
+
+
+.premiumCard{
+		border:1px solid rgb(44,157,48);
+		height:12vw;
+		width:12vw;
+       padding:0.5vw;
+       margin:1vw;
+       border-radius:5px;
+       box-shadow:inset 1px 1px 10px rgb(44,157,48);
+}
+.premiumCardMain{
+	border:1px solid rgb(44,157,48);
+	width:100%;
+	height:100%;
+	border-radius:5px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+	padding:0.3vw;
+}
+
+
+.premiumCardImgDiv{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	height:70%;
+	border-radius:5px;
+
+}
+.premiumCardImgDiv img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+.premiumCardMain h5{
+	font-size:1vw;
+	color:#347928;
+}
+
+.locationDiv{
+	width:100%;
+	height:25vw;
+	padding:1vw;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	margin-top:1vw;
+}
+
+.locaImgDiv{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	height:100%;
+	width:60%;
+}
+
+.locaImgDiv img{
+	width:auto;
+	height:100%;
+	object-fit:cover;
+	
+}
+
+.locTextDiv{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+	width:40%;
+	height:100%;
+}
+
+.locTextDiv h1{
+	font-size:6vw;
+	color:rgb(23,144,241);
+	text-shadow:1px 1px 10px rgb(23,144,241);
+}
+
+.locTextDiv h2{
+	font-size:5vw;
+	color:#4e563e;
+	text-shadow:1px 1px 10px #4e563e;
+}
+
+
+.footer{
+	width:100%;
+	height:fit-content;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.mainfooter{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	width:98%;
+	padding:1vw;
+	border-radius:15px 15px 0 0;
+	background:#B7E0FF;
+}
+
+.left,.rightPart{
+	width:30vw;
+}
+.left h1, .rightPart h1{
+	font-size:1.5vw;
+	color:red;
+}
+.left ul, .rightPart ul{
+	line-height:2vw;
+}
+.left ul li, .rightPart ul li{
+	list-style:none;
+}
+.left a, .rightPart a{
+	color:black;
+	list-style:none;
+}
+
+.socialLinksDiv{
+	height:30vw;
+	width:30vw;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-evenly;
+}
+
+.subNewsLetterDiv{
+	width:100%;
+	height:fit-content;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	
+}
+
+.subNewsLetterDiv h1{
+	color:green;
+	font-size:2vw;
+	
+}
+
+.subNewsLetterDiv input{
+	width:100%;
+	height:3vw;
+	margin-top:0.8vw;
+}
+.subNewsLetterDiv input:focus{
+	box-shadow:none;
+	border:none;
+}
+
+.socialIconsDiv{
+	width:100%;
+	height:fit-content;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;	
+	align-items:center;
+}
+.socialIconsDiv h1{
+	font-size:3vw;
+	color:green;
+	margin-bottom:3vw;
+}
+
+.allsocialIconsContainer{
+	width:100%;
+	height:fit-content;
+	display:flex;
+	justify-content:center;	
+	gap:1.5vw;
+}
+.mainSocialIconBurgerFooter{
+	width:3vw;
+	height:3vw;
+	
+}
+
+.mainSocialIconBurgerFooter img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+   <section>
+   
+      <div class="mainDiv">
+          <div class="screenSlider">
+                <img src="/image/—Pngtree—3d rendered illustration image benefits_5576655.jpg" alt="" />  
+           </div>
+        
+            <div class="TaglineDIV">
+              <h2>A Banking</h2>
+              <h1>Always bring ahead</h1>
+              <button>Explare Now</button>
+           </div>
+           
+             <div class="dotDivContainer">
+             <div class="dotContainer">
+                <div class="dotDiv active"></div>
+                <div class="dotDiv"></div>
+                <div class="dotDiv"></div>
+                <div class="dotDiv"></div>
+                <div class="dotDiv"></div>
+             </div>
+           </div>
+                              
+            <div class="servicess">
+                <div class="ServiceDivLogo">
+                    <div class="servicemainLogoDiv" onclick="kris()" ><img src="/image/startBankLogo.png" alt="" /></div>
+                    <div class="DownloadAppPlayStore"><img src="/image/googl-download-removebg-preview (1).png" alt="" /></div>
+                </div>
+             <div class="servicesFeaturee">
+                     <div class="serviceFeatureCardd">
+                            <div class="srvsFimgDivv">
+                              <img src="https://i.pinimg.com/236x/51/5f/90/515f90750dda9c2329873150a37c83c7.jpg" alt="" />
+                            </div>
+                            <div class="srvsFddetailss">
+                                <h1>Mobile Banking</h1>
+                                <button class="btn btn-block">Start Today</button>
+                            </div>
+                     </div>
+                     <div class="serviceFeatureCardd">
+                            <div class="srvsFimgDivv">
+                              <img src="https://i.pinimg.com/236x/f1/69/cc/f169cc2d764034cd9a66639c9cb6d556.jpg" alt="" />
+                            </div>
+                            <div class="srvsFddetailss">
+                                <h1>Internet Banking</h1>
+                                <button class="btn btn-block">Use Now</button>
+                            </div>
+                     </div>
+                       <div class="serviceFeatureCardd">
+                            <div class="srvsFimgDivv">
+                              <img src="/image/visa image.jpg" alt="" />
+                            </div>
+                            <div class="srvsFddetailss">
+                                <h1>DEBIT CARD SERVICES</h1>
+                                <button class="btn btn-block">Order Now</button>
+                            </div>
+                     </div>
+                       <div class="serviceFeatureCardd">
+                            <div class="srvsFimgDivv">
+                              <img src="https://i.pinimg.com/564x/5e/5e/f4/5e5ef43aab10e0a53871a6ee20e8ff99.jpg" alt="" />
+                            </div>
+                            <div class="srvsFddetailss">
+                                <h1>Customer Support</h1>
+                                <button class="btn btn-block">Take Guidance</button>
+                            </div>
+                     </div>
+               </div> 
+               
+            </div>
+        
+              
+            <div class="homepageSection2">
+                  <div class="openAccountOuterDiv">
+                      <h1>Open new account online</h1>
+                       
+                      <a href="" th:href="@{/home/Open_new_accountt}" >
+                         <div class="openAccountinnerIcon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                         </div>
+                      </a>
+                  </div>
+                  <div class="balAndStatement">
+                        <div class="balanceCard">
+                             <img src="/image/checkbal.jpg" alt="" />
+                             <h3>Check Balance</h3>
+                        </div>
+                        <div class="statementCard">
+                              <img src="/image/checkstate.jpg" alt="" />
+                             <h3>View Statement</h3>
+                        </div>
+                  </div>       
+             </div>
+          
+           <div class="bookingsAndInsurenceOuter">
+                  <div class="bookingsAndInsurenceInner">
+                         <div class="bookingdiv">                           
+                                 <h1>Ticket Booking</h1>
+                                 <div class="ticketBookingContentDiv">
+                                       <div class="ticketBookingFirstRow">
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/aeroplane-removebg-preview.png" alt="" /></div>
+                                                  <h6>Flight Tickets</h6>
+                                             </div>
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/bus-removebg-preview (1).png" alt="" /></div>
+                                                  <h6>Bus Tickets</h6>
+                                             </div>
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/train-removebg-preview (1).png" alt="" /></div>
+                                                  <h6>Train Tickets</h6>
+                                             </div>
+                                               
+                                       </div>
+                                       <div class="ticketBookingSecondRow">
+                                               <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/movieIcn.png" alt="" /></div>
+                                                  <h6>Movie Tickets</h6>
+                                             </div>
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/eventIcon.png" alt="" /></div>
+                                                  <h6>Event Tickets</h6>
+                                             </div>
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/hotelIcon.png" alt="" /></div>
+                                                  <h6>Hotels Booking</h6>
+                                             </div>
+                                       </div>
+                                 </div>                  
+                         </div> 
+                         <div class="insurenceDiv">
+                                 <h1>Loans And Offers</h1>
+                                  <div class="loansArenaDiv">
+                                        <div class="loansArenaFirstRow">
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/goldIcon.png" alt="" /></div>
+                                                  <h6>Loan on Gold</h6>
+                                             </div>
+                                              <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/personalLoanIcon (2).png" alt="" /></div>
+                                                  <h6>Personal Loan</h6>
+                                             </div>                                             
+                                        </div>
+                                        <div class="loansArenaSecondRow">
+                                              <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/aeroplane-removebg-preview.png" alt="" /></div>
+                                                  <h6>Free Credit Score</h6>
+                                             </div>
+                                             <div class="loanCard">
+                                                  <div class="loancardImgDiv"><img src="/image/visa image.jpg" alt="" /></div>
+                                                  <h6>Credit Card Loan</h6>
+                                             </div>                                     
+                                        </div>
+                                 </div>
+                         </div>
+                  </div>
+           </div>
+      
+          <!-- premium services  start here   ..............................  -->
+           
+           <div class="premiumServicesOuter ">
+              <div class="premiumServicesInner">
+                   <div class="premiumServicesInnermost">
+                        <div class="viewYourdashboard">
+                             <div class="premiumImagDiv">
+                              <img src="/image/customerDashBoardIcon.png" alt="customerImage" />
+                             </div>
+                             <div class="viewYourDashHeading">VIEW YOUR DASHBOARD</div>
+                        </div>
+                        
+                        <div class="preiumCardsDiv">
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="/image/Untitled design.jpg" alt="" /></div>
+                                      	<h5>Link Aadhar Card</h5>
+                                </div> 
+                           </div>
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="/image/adhar.png" alt="" /></div>
+                                      	<h5>Check Aadhar Status</h5>
+                                </div> 
+                           </div>
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="/image/pan-card-removebg-preview (1).png" alt="" /></div>
+                                      	<h5>Link Pan Card</h5>
+                                </div> 
+                           </div>
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="https://i.pinimg.com/564x/ce/7d/1e/ce7d1e56a2196210f7164499ba936ff1.jpg" alt="" /></div>
+                                      	<h5>Online E-Kyc</h5>
+                                </div> 
+                           </div>
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="https://sanskritiias.com/uploaded_files/images/npci.jpg" alt="" /></div>
+                                      	<h5>NPCI LINK</h5>
+                                </div> 
+                           </div>
+                           <div class="premiumCard">
+                                <div class="premiumCardMain">
+                                      	<div class="premiumCardImgDiv"><img src="https://khetigaadi.com/news/wp-content/uploads/2022/03/MicrosoftTeams-image56.jpeg" alt="" /></div>
+                                      	<h5>Apply Online KCC</h5>
+                                </div> 
+                           </div>
+                        </div>
+                   </div>
+              </div>
+           
+           
+           </div>
+           
+           
+           <!-- our other branches and locations ......................................... -->
+           
+           <div class="locationDiv">
+                <div class="locaImgDiv">
+                    <img src="https://canarabank.com/assets/images/branch.webp" alt="" />
+                </div>
+                <div class="locTextDiv">
+                    <h1>Our other</h1>
+                    <h2>Branches</h2>
+                </div>
+           </div>
+           <!--footer goes here ..........................................................-->
+          
+          <div class="footer">
+            <div class="mainfooter">
+                <div class="left">
+                   <h1>QUICK ACCESS</h1>
+                   <ul>
+                   	<li><a href="">CAREERS</a></li>
+                   	<li><a href="">CUSTOMER EDUCATION</a></li>
+                   	<li><a href="">COOPERATE BANKING</a></li>
+                   	<li><a href="">PENSIONRS PORTAL</a></li>
+                   	<li><a href="">CALENDER</a></li>
+                   	<li><a href="">HOLIDAY LIST</a></li>
+                   	<li><a href="">VACANT LOCKERS</a></li>
+                   </ul>
+                   
+                   <h1>CUSTOMER SERVICES</h1>
+                   <ul>
+                   	<li><a href="">COMPLAINTS</a></li>
+                   	<li><a href="">DOWNLOAD CENTER</a></li>
+                   	<li><a href="">CONSULTANCY SERVICES</a></li>
+                   	<li><a href="">BROWSER COMPLIBILITY</a></li>
+                   	<li><a href="">SCREEN READER ACCESSIBILITY</a></li>
+                   </ul>
+                </div>
+                <div class="rightPart">
+                    <h1>ONLINE SERVICES</h1>
+                   <ul>
+                   	<li><a href="">ONLINE ACCOUNT OPENING</a></li>
+                   	<li><a href="">GST INVOICE PORTAL</a></li>
+                   	<li><a href="">ONLINE SERVICE REQUEST</a></li>
+                   	<li><a href="">E BIKRAY</a></li>
+                   	<li><a href="">OUR FRENCHISE</a></li>
+                   	<li><a href="">INTERNATIONAL SERVICE</a></li>
+                   	<li><a href="">BECOME A BANK MITRA</a></li>
+                   </ul>
+                   
+                   <h1>IMPORT LINKS</h1>
+                   <ul>
+                   	<li><a href="">RBI KAHTA HAI</a></li>
+                   	<li><a href="">RBI MONETARY MUSEUM</a></li>
+                   	<li><a href="">E-VOTING</a></li>
+                   	<li><a href="">PRADHAN MANTRI JAN DHAN YOJNA</a></li>
+                   	<li><a href="">PRIVACY POLICY FOR LOAN RECOVERY</a></li>
+                   </ul>
+                </div>
+                
+                <div class="socialLinksDiv">
+                    <div class="subNewsLetterDiv">
+                        <h1>Subscribe for our NewsLetter</h1>
+                        <input type="email"  class="form-control" value="starlifebank1@gmail.com"/>
+                    </div>
+                    <div class="socialIconsDiv">
+                        <h1>Follow us</h1>
+                        <div class="allsocialIconsContainer">
+                                <div class="mainSocialIconBurgerFooter"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt=""></div>
+                                <div class="mainSocialIconBurgerFooter"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt=""></div>
+                                <div class="mainSocialIconBurgerFooter"><img src="/image/xsocialIcon-removebg-preview.png" alt=""></div>
+                                <div class="mainSocialIconBurgerFooter"><img src="/image/telesocialicon-removebg-preview.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+      </div>
+            
+   
+   </section>
+
+</body>
+</html>
+
+
+

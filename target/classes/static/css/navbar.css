@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+html
+body{
+	margin:0;
+	padding:0;
+}
+
+.header{
+	width: 100%;
+	background:rgb(23,141,241);
+	z-index: 500;
+	position: fixed;
+	top:0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow:1px 5px 10px black;
+	padding: 0 15px;
+	height: auto;
+}
+.header a{
+	text-decoration: none;
+}
+
+.logoDiv{
+	font-size:1.5vw;
+	color:white;
+	padding:0.5vw 0.8vw;
+	border-radius:30px;
+	font-weight:500;
+	transition:all 0.5s;
+	text-shadow: 0 0 10px rgb(255,255,255);
+}
+
+
+.navList {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	height: fit-content;
+}
+
+.navList .fa-xmark{
+	display: none;
+}
+
+.navList ul {
+	width:100%;
+	cursor: pointer;
+	list-style:none;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.navList li{
+	height: 4vw;
+	display: inline-block;
+}
+
+.navList li a{
+  height: 100%;
+	padding: 0 20px;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	color: white;
+}
+
+.navList li a i{
+	margin-right: 0.5vw;
+}
+.navList li a:hover{
+	text-shadow: 0 0 20px rgb(160, 120, 252);
+}
+
+.btn-grad {background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%)}
+.btn-grad {
+
+	 padding: 10px 20px;
+	 text-align: center;
+	 text-transform: uppercase;
+	 transition: 0.5s;
+	 background-size: 200% auto;
+	 color: white;            
+	 box-shadow: 0 0 20px #eee;
+	 border-radius: 10px;
+	 display: block;
+	 border: none;
+	 font-size: 1vw;
+	 font-weight: 500;
+ }
+
+ .btn-grad:hover {
+	 background-position: right center; /* change the direction of the change here */
+	 color: #fff;
+	 text-decoration: none;
+ }
+
+
+.userImg{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:100%;
+	width: 30px;
+}
+
+.logoutListItem{
+	display: none;
+}
+
+.highlighted{
+	color:white;
+}
+
+
+.profileSignDiv{
+	position:fixed;
+	top:5vw;
+	right:2vw;
+	width:15vw;
+	height:fit-content;
+	background:white;
+	display:none;
+	flex-direction:column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5vw 0;
+  z-index:500;
+	border-radius: 15px;
+	box-shadow: 1px 1px 15px rgba(0,0,0,0.3), -1px -1px 15px rgba(0,0,0,0.3) ;
+}
+
+.profileSignDiv i{
+	text-align: left;
+	color: rgb(247, 14, 45);
+	text-shadow: 0 0 10px rgb(0,255,0);
+	font-size: 2vw;
+	width: 100%;
+	padding-left: 1vw;
+}
+
+.profileImgSignInDiv{
+	height:5vw;
+	width:5vw;
+	border-radius:50%;
+	overflow: hidden;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3), -1px -1px 5px rgba(0,0,0,0.3) ;
+}
+
+.profileImgSignInDiv img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	object-position:top;
+	border-radius:50%;
+}
+
+.details{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	height:fit-content;
+	border-bottom:1px solid green;
+	padding-bottom:1vw;
+}
+
+
+.details h4{
+	color:green;
+	font-size:1.2vw;
+}
+
+.profileSignDiv button{
+	width:80%;
+	height:3vw;
+	margin-top:0.2vw;
+	background:rgb(240, 240, 240);
+	font-size:1.2vw;
+	font-weight:500;
+	
+}
+.details button{
+	background:green;
+	color:white;
+	font-size:1.2vw;
+	padding:0.5vw 2vw;
+	font-weight:500;
+}
+
+.details button:hover{
+	background:white;
+	color:green;
+	border:1px solid green;
+}
+
+.listOpener{
+	display:none;
+	color: rgb(255,255,255);
+	font-size: 6vw;
+	margin-right: 3vw;
+}
+
+.adminPageMainDiv{	
+	display:flex;
+	justify-content:space-between;
+	width:100%;
+	height:fit-content;
+	margin-top:6vw;
+	padding:0.3vw;	
+}
+
+
+.leftSide{	
+  display:flex;
+	align-items:center;
+	flex-direction:column;
+	justify-content:flex-start;
+	width:18vw;
+	height:86vh;
+	border:1px solid rgb(23,144,241);
+	box-shadow:inset 1px 1px 10px rgb(23,144,241);
+	margin-right:0.5vw;
+}
+
+.appIcon{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:8vw;
+	height:8vw;
+	margin-top:2vw;
+	border-radius:50%;
+	box-shadow: 1px 1px 5px rgba(23,141,241,0.5),1px 1px 15px rgba(23,141,241,0.5),1px 1px 25px rgba(23,141,241,0.5);
+	padding:1px;
+}
+
+.appIcon img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	border-radius:50%;
+	object-position: top;
+}
+
+
+.allPageDiv{
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+	justify-content:center;
+	width:100%;
+	height:fit-content;
+	gap:1vw;
+	margin-top:1vw;
+	padding:1vw  0;
+}
+
+
+.admiinHomeAllDiv{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:80%;
+	height:2.7vw;
+	border:1px solid rgb(23,144,241);
+	box-shadow:inset 1px 1px 10px rgb(23,144,241);
+	font-size:1.5vw;
+	color:red;
+	border-radius:10px;
+}
+
+.admiinHomeAllDiv h1{
+	font-size:1vw;
+}
+.admiinHomeAllDiv h1 a{
+	color:rgb(23,144,241);
+	text-decoration:none;
+}
+
+.active{
+	box-shadow:inset 1px 1px 10px rgb(23,144,241);
+	
+	border:1px solid rgb(23,144,241);
+	background-color:rgb(23,144,241);
+}
+
+.active h1 a{
+   color:white;
+}
+
+.rightSide{
+	width:81vw;
+	height:86vh;
+	overflow-y:scroll;
+  position:relative;
+}
+
+.rightSide::-webkit-scrollbar {
+  display: none; 
+}
+
+.row1{
+	width:100%;
+    height:fit-content;
+}
+
+.row1MainContentDiv{
+	display:flex;
+	
+}
+.accountholderDiv{
+	width:100%;
+	height:5vw;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.accountholderDiv h1{
+	color:rgb(23,144,241);
+	font-size:3vw;
+}
+
+
+
+.dashleft, .dashright{
+	width:50%;
+	height:fit-content;
+	padding:1vw;
+	
+}
+
+.otherdetails{
+	display:flex;
+	justify-content:space-between;
+	color:#A66E38;
+	margin-top:1vw;
+	border-right:0.1vw solid #654520;
+}
+.dashright .otherdetails{
+	border-right:none;
+}
+.otherDeLeft{
+	width:40%;
+}
+.otherDeLeft h2, .otherDeRight h2{
+	font-size: 1.2vw;
+	color: rgb(23,144,241);
+}
+.otherDemid{
+	width:10%;
+}
+.otherDeRight{
+	width:40%;
+}
+
+.dashleft h3{
+	color:rgb(23,144,241);
+}
+
+.dashleft h3 span{
+	color:pink;
+	margin-left:2vw;
+}
+
+
+/*update details css ................................*/
+
+.updateDetailsDiv{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	height:6vw;
+	border:0.1vw solid #654520;
+	margin-top:2vw;
+	box-shadow:inset 1px 1px 30px #654520;
+	background-color:rgba(101, 69, 32,0.3);
+}
+
+.updateDetailsDiv h1{
+	font-size:3vw;
+	
+}
+
+
+

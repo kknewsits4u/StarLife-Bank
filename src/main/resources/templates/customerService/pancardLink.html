@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="customerService/CustomerDashborad::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+     <section>
+
+         <div class="container-fluid border border-primary  maincontainerr" th:if="${session.notPanLink}">
+              <div class="alert alert-primary" role="alert" th:if="${session.panAlert}">
+                Pan card has not linked ! Link now 
+              </div>
+
+            <h1>LINK YOUR PAN CARD WITH YOUR ACCOUNT</h1>
+            <div class="linkadharmain">
+                <form action="#" th:action="@{/customer/customerDashboard/panLinkProcess}" method="post">
+                    
+                    <input type="text" placeholder="Enter you pan card no : ABCTY1234D" class="form-control" name="panCard" required>
+                    <input type="text" placeholder="Enter you userid : SLB12345" class="form-control" name="userId" required>
+                    
+                    <button class="btn btn-primary btn-block" type="submit">LINK PAN CARD</button>
+                </form>
+                
+            </div>
+            
+        </div>
+        
+        <div class="container-fluid border border-primary  maincontainerr"  th:if="${session.panlinkDone}" >
+            <h1 >ENTER YOUR PAN CARD NUMBER</h1>
+            <div class="linkadharmain  " style="margin-top: 4vw;"  >
+                  <div class="alert alert-primary" role="alert" th:if="${session.panAlert}">
+                      Pan card has been linked successfully !!!
+                 </div>
+             <form action="#" th:action="@{/CustomerDashborad/checkPanStatus}" method="post">
+                <input type="text" placeholder="Enter you pan card no : ABCTY1234D" class="form-control" name="panCard" required>
+                <button class="btn btn-primary btn-block" type="submit">CHECK STATUS</button>
+            </form>
+        </div>
+        </div>
+
+        <div class="container-fluid border border-primary  maincontainerr"  th:if="${session.showPanStatus}"  >
+
+            <div class="successImagediv"><img src="https://i.pinimg.com/564x/ef/1a/c3/ef1ac3efc97430d7802f538b05906b35.jpg" alt="righticon"></div>
+            <h1 style="text-align: center; margin-top: 4vw;">Your pan card is linked successfully!!!</h1>
+         </div>
+
+    </section>	
+</body>
+</html>

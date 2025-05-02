@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://thymeleaf.org"
+  th:replace="customerService/CustomerDashborad::Layout(~{::section})"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${title}"></title>
+  </head>
+  <body>
+    <section>
+      <div class="container-fluid viewstatementmain">
+        <div class="statementformdiv">
+          <form
+          th:action="@{/customer/customerDashboard/fetch-transactions}"
+          method="post"
+          >
+            <div class="dateWiseFilter">
+
+              <div class="dateWiseFilterRow">
+                <h1>From :</h1>
+                <input
+                  type="date"
+                  name="startDate"
+                  id="startingdate1"
+                  class="form-control"
+                  placeholder="From"
+                />
+              </div>
+              <div class="dateWiseFilterRow">
+                <h1>UPTO :</h1>
+                <input
+                  type="date"
+                  name="endDate"
+                  id="startingdate2"
+                  class="form-control"
+                  placeholder="From"
+                />
+              </div>
+              <div class="dateWiseFilterRow">
+                <button class="btn btn-primary startDateDivBig" type="submit">
+                  Get Statement
+                </button>
+              </div>
+            </div>
+
+            <div class="specificTimeFilter">
+              <button class="btn btn-primary"  name="filter" value="today" type="submit">TODAY</button>
+              <button class="btn btn-dark"  name="filter" value="week" type="submit">THIS WEEK</button>
+              <button class="btn btn-warning"  name="filter" value="month" type="submit">THIS MONTH</button>
+              <button class="btn btn-success"  name="filter" value="6month" type="submit">SIX MONTHS</button>
+            </div>
+          </form>
+        </div>
+
+        <h2>Recent Transactions</h2>
+        <hr>
+
+        <div class="statementHeader">
+          <div class="statementHeaderOuter">
+            <div class="item">
+             Serial No.
+            </div>
+            <div class="item">
+              Date & Time
+            </div>
+            <div class="item">
+             Transaction Amount
+            </div>
+            <div class="item">
+              Current Balance
+            </div>
+            <div class="item">
+               Status
+            </div>
+          </div>
+          <div class="statementHeaderItems"  th:each="t, stats: ${transactions}">
+          <div class="item"  th:text="${stats.count}" >1.</div>
+          <div class="item"  th:text="${t.trans_date}"  >09/11/2024</div>
+          <div class="item" th:text="${t.amount}"  >5000.00</div>
+          <div class="item"  th:text="${t.balance}"  >5000.00</div>
+          <div class="item"  th:text="${t.status}"  th:style="'color:' + (${t.status} == 'Credit' ? 'green' : (${t.status} == 'Debit' ? 'red' : 'orange'))"  >Credit</div>
+        </div>
+       
+     
+   
+       
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

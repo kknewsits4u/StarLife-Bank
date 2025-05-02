@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"  th:fragment="Layout(content2)">
+<head>
+	<meta charset="UTF-8" />
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+       />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="#" th:href="@{/css/home.css}" />
+    <link rel="stylesheet" href="#" th:href="@{/css/navbar.css}" />
+    <link rel="stylesheet" href="#" th:href="@{/css/AdminCssFiles/dashboard.css}" />
+    <title>[[${title}]]</title>
+    </head>
+    <body>
+
+	    <div class="header">
+        <a href="#" th:href="@{/home}"><div class="logoDiv">Star Life Bank</div></a>
+        <div class="navList">
+          <ul>
+            <li class="list-item highlighted"><a href="#" th:href="@{/home}">HOME</a></li>
+          </ul>
+        </div>
+      </div>
+      
+       
+      <div class="adminPageMainDiv">
+         <div class="leftSide">
+            <div class="appIcon">
+                 <img th:src="@{/image/banklogo.jpg}"  alt="customerImage" />
+            </div>
+            <div class="allPageDiv">
+                <div class="admiinHomeAllDiv active" >
+                   <h1><a  th:href="@{/admin/dashboard}">Dashboard</a></h1>
+                 </div>
+                <div class="admiinHomeAllDiv active" >
+                  <h1><a  th:href="@{/admin/viewallcustomers}">View Customers</a></h1>
+                </div>
+                <div class="admiinHomeAllDiv">
+                <h1><a  th:href="@{/admin/viewallbankmitra}">View BankMitra</a></h1>
+                </div>
+                <div class="admiinHomeAllDiv">
+                  <h1> <a th:href="@{/logout}">LOG OUT</a></h1>
+                </div>            
+            </div>
+         </div>
+         <div class="rightSide">
+
+         
+             <div th:replace="${content2}"> 
+                         
+            </div>  
+         </div>         
+      </div>      	   
+	<script src="/js/customerScript.js"></script>
+</body>
+</html>

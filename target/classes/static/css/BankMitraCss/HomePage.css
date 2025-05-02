@@ -1,0 +1,208 @@
+.BankMitraConatiner{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100vh;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+}
+
+
+.bank_mitra_sidebar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height:calc(100vh - 7vw);
+  width: 20rem;
+  background: rgb(23,141,241);
+  position: absolute;
+  left: 0;
+  top: 5vw;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition: 0.5s linear;
+}
+
+
+.bank_mitra_profile_div{
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw;
+  gap: 10px;
+}
+
+.profile_img_div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 7px 15px rgb(255,255,255) , 0px -7px 15px rgb(255,255,255);
+  background: rgb(255,255,255);
+  position: relative;
+}
+
+.messagee{
+  margin-top: 1vw;
+}
+
+.imageUpdateDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 1.5vw;
+  height: 1.5vw;
+  border: 2px solid white;
+  position: absolute;
+  right: -0.3vw;
+  bottom: -0.3vw;
+  overflow: hidden;
+}
+
+.imageUpdateDiv ion-icon{
+  color: rgb(255,255,255);
+}
+
+.profile_img_div img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.bank_mitra_profile_div h1{
+  font-weight: 500;
+  font-size: 1.5rem;
+  color:rgb(255,255,255);
+  white-space: nowrap;
+  margin-top: 1vw;
+}
+
+.bank_mitra_btn_div{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.bank_mitra_btn_div .btn{
+  background: rgb(255,255,255);
+  font-weight: 500;
+  color: rgb(0,0,0);
+}
+
+.bank_mitra_btn_div .btn:hover{
+   box-shadow:1px 1px 5px rgb(255,255,255);
+} 
+
+
+.bank_mitra_list{
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  height: fit-content;
+  justify-content: center;
+  padding: 0.5vw;
+  padding-right:0;
+  color: rgb(255,255,255);
+  gap: 10px;
+  margin-top: 0.7vw;
+}
+.bank_mitra_list a{
+  color: rgb(255,255,255);
+  display: flex;
+  width: 100%;
+  padding-left: 1vw;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  gap: 15px;
+  position: relative;
+  height:2.5vw;
+}
+
+.bank_mitra_list a:hover{
+  text-decoration: none;
+  color: rgb(23,141,241);
+  background: rgb(255,255,255);
+}
+
+.bank_mitra_list a ion-icon{
+  display: block;
+  line-height: 60px;
+  height: 100%;
+  border: none;
+  font-style: 500;
+}
+
+.bank_mitra_list a .bank_mitra_list_item{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  line-height: 45px;
+  height: 100%;
+}
+
+.bank_mitra_list a:hover::before{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px rgb(255,255,255);
+  pointer-events: none;
+}
+
+.bank_mitra_list a:hover::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom:-50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px rgb(255,255,255);
+  pointer-events: none;
+}
+
+.bankMitra_main{
+  display:flex;
+  align-items: right;
+  justify-content:end;
+  width: 100%;
+  height: fit-content;
+  padding: 2vw;
+  padding-top: 5vw;
+  overflow-y: scroll;
+}
+
+.bank_mitra_details_body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width:calc(100% - 20rem);
+  padding:0 1vw;
+  height: fit-content;
+  min-height: calc(100vh - 6.8vw);
+  z-index: 80;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+       th:replace="AdminServices/AdminHomepage::Layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+  <section>
+    <div class="recent-bankmitra" >
+      <div class="recent-bankmitra-header" >
+         <h1>Recent Bank Mitra</h1>
+         <a th:href="@{/admin/viewallbankmitra}">
+         <button type="button" >  View All</button></a>
+      </div>
+      <div   class="recent-bankmitra-body" >
+         <table>
+             <thead>
+                <tr  >
+                  <td>S. No.</td>
+                  <td>Profile</td>
+                  <td>Name</td>
+                  <td>
+                    View Details
+                  </td>
+                  <td>
+                    Remove
+                  </td>
+                </tr>
+             </thead>
+             <tbody>
+              <tr  th:each="bankm, stat: ${bankmitra}"   >
+                <td th:text="${stat.count}"   >1.</td>
+                <td>
+                  <div class="list-profile-div"  >
+                    <img th:src="@{'/image/'+${bankm.bimage}}"  alt="profile-image">
+                  </div>
+                </td>
+                <td th:text="${bankm.fullname}"  >Krishna</td>
+                <td>
+                 
+                  <a th:href="@{/admin/viewbankmitra/{id}/view(id=${bankm.id})}">
+                    <button  type="button"  class="removeBtn" >View</button></a>
+                </td>
+                <td>
+                  <a th:href="@{/admin/bankmitra/{id}/remove(id=${bankm.id})}"
+                  >
+                  <button  type="button"  class="removeBtn" >Remove</button></a>
+                </td>
+              </tr>
+             </tbody>
+         </table>
+      </div>
+</div>
+  </section>
+</body>
+</html>

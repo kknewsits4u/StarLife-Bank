@@ -1,0 +1,236 @@
+.customerSupportMianDiv{
+  width: 100%;
+  height: 43vw;
+  border: 0.1vw solid rgb(23,144,241);
+  margin-top: 6.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 2px 2px 15px rgb(23,144,241);
+  padding: 0.5vw;
+}
+
+.customerSupportInner{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border: 0.1vw solid rgb(23,144,241);
+  position: relative;
+  animation: slide 2s linear alternate;
+}
+
+.customerSupportInner h1{
+   font-size: 2.5vw;
+   color: rgb(23,144,241);
+   font-family: verdana;
+   font-weight: 700;
+   margin: 1vw 0;
+   text-shadow: 0.1vw 0.1vw 0.3vw rgb(23,144,241);
+}
+
+.imgDiv{
+  width: 100%;
+  height:30vw;
+  border: 0.1vw solid rgb(23,144,241);
+  display: flex;
+  position: relative;
+  align-items:center ;
+  align-items: center;
+}
+.cover{
+  position: absolute;
+  background-color:rgba(23,144,241,.256);
+  width: 100%;
+  height: 100%;
+
+}
+
+.imgDiv img{
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.iconContainer{
+  width: 100%;
+  height: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4vw;
+}
+
+.whatsappicon, .callIcon{
+  width: 5vw;
+  height:5vw;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border-radius: 50%;
+  transition: transform .5s linear;
+}
+
+
+.whatsappicon:hover, .callIcon:hover{
+   transform: scale(1.2);
+}
+
+
+.whatsappicon img, .callIcon img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.chatIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15vw;
+  height: 8vw;
+  position: fixed;
+  bottom: 1vw;
+  right: 2vw;
+}
+
+.chatInner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.chatInner img{
+  position: absolute;
+  bottom:-0.8vw;
+  right: 0;
+  width: 8vw;
+  height: 14vw;
+  z-index:100;
+}
+.queryInput{
+  border: 0.15vw solid rgb(23,144,241);
+  border-radius: 10px;
+  border-top-left-radius: 20px;
+  position: absolute;
+  right:5vw;
+  bottom: 0.5vw;
+  padding-left:5vw;
+  padding: 0.3vw;
+  color: rgb(23,144,241);
+  font-weight: 400;
+  box-shadow: 1px 1px 5px rgb(23,144,241);
+  width: fit-content;
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+.queryInput h3{
+  font-size: 1.3vw;
+}
+
+.queryInput:focus{
+  outline: none;
+  color: rgb(23,144,241);
+}
+
+.queryInput::placeholder{
+  color: rgb(23,144,241);
+}
+
+
+
+/* chat bot body div outer ................................*/
+
+.chatDiv{
+  height:42vw;
+  width: 25vw;
+  border: 0.1vw solid rgb(23,144,241);
+  box-shadow: inset 1px 1px 10px rgb(23,144,241);
+  padding: 0.5vw;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5vw;
+  border-radius: 10px;
+  position: relative;
+}
+.chatDiv img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 96%;
+  width: 96%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.256;
+}
+
+.chatDivInner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1vw solid rgb(23,144,241);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+
+}
+
+.serchBar{
+  width: 100%;
+  height: 3vw;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  z-index: 200;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 0 0.6vw;
+  background: transparent;
+}
+
+.serchBar input{
+   width: 14vw;
+   border: 0.1vw solid rgb(23,144,241);
+   height: 80%;
+   border-radius: 30px;
+   padding-left:1.5vw;
+   box-shadow: 1px 1px 5px rgb(23,144,241);
+   color: rgb(23,144,241);
+   background: transparent;
+}
+.serchBar input::placeholder{
+  color: rgb(23,144,241);
+}
+
+
+.serchBar input:focus{
+  outline: none;
+  color: rgb(23,144,241);
+}
+.sentQueryDiv{
+  width: 2.3vw;
+  height: 2.3vw;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgb(23,144,241);
+  padding: 0.1vw;
+  position: relative;
+}
+/* 
+.sentQueryDiv img{
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   z-index: 500;
+   box-shadow: 1px 1px 5px rgb(23,144,241);
+} */

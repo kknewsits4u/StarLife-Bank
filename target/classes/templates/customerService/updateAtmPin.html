@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="customerService/CustomerDashborad::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+     <section>
+        
+        <div class="container-fluid updatepinmain">
+          
+            <h1>UPDATE YOUR ATM PIN</h1>
+            
+            <div class="updatePinDiv" >
+                <div th:if="${session.message1}" th:classAppend="${session.message1.type}"  class="alert" role="alert"   style="width: 100%;" >
+                   <p>[[${session.message1.message}]]</p>
+                </div>
+
+                <form action="#" th:action="@{/customer/customerDashboard/atmpinchangeGetOTP}" method="get">
+                <input type="password" placeholder="Enter atm's last six digit " th:value="${lastSixDigit}"  name="atmNumber" class="form-control" required>
+                
+                <button type="submit" class="btn btn-primary btn-block">GET OTP</button>
+                </form>
+               
+                <form action="#" th:action="@{/customer/customerDashboard/UpdateAtnPinOtpVerify}" method="post" th:if="${session.showOtpTakeForm}">
+                    <input type="password" placeholder="Enter otp" th:value="${currOtp}"  name="newOtp" class="form-control" required>
+                    <button type="submit" class="btn btn-primary btn-block">Verify</button>
+                </form>
+                
+                <form action="#" th:action="@{/customer/customerDashboard/updateAtmPin}" method="post" th:if="${session.showUpdateform}">
+                    <input type="password" placeholder="New Pin"  name="newPin" class="form-control" required>
+                    <input type="password" placeholder="Confirm Pin"  name="ConfirmPin" class="form-control" required>
+                    <button type="submit" class="btn btn-primary btn-block">UPDATE PIN</button>
+                </form>
+                </div>
+
+        </div>
+    </section>	
+</body>
+</html>

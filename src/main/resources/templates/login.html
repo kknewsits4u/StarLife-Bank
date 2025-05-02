@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <head>
+      <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeJu3gqAAAAAMOIhkOf4eaHa4EsEyEziN4oRjnr"></script>
+      <!-- Your code -->
+    </head>
+	<title th:text="${title}"></title>
+</head>
+<body>
+    <section>
+           <div class="container-fluid loginMainConainer">
+           
+             
+             <!-- <div th:if="${param.error}" class="alert alert-danger invalidAlert">Invalid username or password</div>
+             <div th:if="${param.logout}" class="alert alert-success">You have been logged out.</div> -->
+           
+             <div class="lgpageImgDiv">
+                 <div class="mainImgDiv">
+                     <img src="/image/loginImage-removebg-preview (1).png" alt="" />
+                 </div>
+             </div>
+             <div class="lgImgDivRight">
+                
+            
+                 <div class="card OuterCardDiv">
+                      <h1>Welcome to StarLife Bank</h1>
+               
+                    <div class="loginWithThirdPartyDiv" id="googleLog1">
+                       <div class="loginIconDiv">
+                          <i class="fa-brands fa-google"></i>
+                       </div>
+                       <div class="logInTextDiv">
+                          <a href="#" th:href="@{/oauth2/authorization/google}">login with google</a>               
+                       </div>
+                    </div>
+                    <div class="loginWithThirdPartyDiv" id="googleLog2">
+                       <div class="loginIconDiv">
+                          <i class="fa-brands fa-github"></i>
+                       </div>
+                       <div class="logInTextDiv">
+                         <a href="#" th:href="@{/oauth2/authorization/github}">login with Github</a>                 
+                       </div>
+                    </div>
+                      <div class="loginWithThirdPartyDiv" id="googleLog3">
+                       <div class="loginIconDiv">
+                          <i class="fa-brands fa-facebook"></i>
+                       </div>
+                       <div class="logInTextDiv">
+                          <a href="#" th:href="@{/oauth2/authorization/google}">login with facebook</a>                 
+                       </div>
+                    </div>
+                    <div class="loginWithThirdPartyDiv" id="googleLog4">
+                       <div class="loginIconDiv">
+                         <i class="fa-brands fa-twitter"></i>
+                       </div>
+                       <div class="logInTextDiv">
+                         <a href="#" th:href="@{/oauth2/authorization/google}">login with twitter</a>                  
+                       </div>
+                    </div>
+                                                                                                     
+                <h4>Or</h4>
+                
+               <form th:action="@{/dologin}" action="#" method="post">
+                <div class="IdPassLoginDiv">
+                <h2>Login with username and password</h2>
+                <input type="text" name="username" class="form-control usernameInput" placeholder="Enter username"/>
+                <div class="form-control passwordInput">
+                  <input type="password" name="password" class="form-control passwordInput1" placeholder="Enter password"/>
+                  <div class="eyeIconDiv" onclick="k()" ><i class="eyeIconDivi fa-solid fa-eye-slash"></i></div>
+                </div>
+                <!-- <input type="hidden" name="role" value="CUSTOMER" /> -->
+                <div class="Consent_ForgotPasswordDiv form-control">
+                   <input type="checkbox" id="consentDiv"/><label for="consentDiv">Accept terms & conditions !</label>
+                   <a href="" th:href="@{/home/forgetPasswordPage}">Forget password</a>
+                </div>
+               <div class="captureCodeDiv form-control">
+               
+                 <div class="captureDiv" >[[${capture}]]
+                     <div class="captureCover"></div>
+                 </div>
+                             
+                 <div class="refreshDiv" >
+                    <img  class="refreshImage" src="https://static.vecteezy.com/system/resources/previews/015/276/943/original/3d-render-reload-icon-refresh-arrow-icon-on-with-green-color-png.png" alt="" />
+                 </div>
+               
+                <input type="text" class=" form-control captureInput" name="captureInput"  placeholder="Enter here"/>
+               </div>
+               <button type="submit" class="btn btn-success btn-block">Login</button>
+               </div>
+               </form>
+               
+             </div>
+             
+              </div>
+           </div>
+    </section>	
+</body>
+</html>

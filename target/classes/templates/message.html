@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+    <section>
+           <div class="container-fluid containerr d-flex justify-content-center p-4">
+               <div class="row messageContainer">
+                  <div class="col-sm-6 mesContaLeft"><img src="#" th:src="@{/image/mickey_mouse.png}" alt="" /></div>
+                  <div class="col-sm-6 mesContaERight">
+                     <div class="messageDiv">
+                       <div class="HeadingDiv"><p>Your account created successfully</p></div>
+                       
+                       <!-- <h1>Hello Mr. Krishna Kant Sharma </span></h1> -->
+                       <h1>Hello Mr. <span th:text="${customer.name}"></span></h1>
+                       <!-- <h4 >Acc. no. 546545465465454></span></h4> -->
+                       <h4 >Acc. no. <span th:text="${customer.accountNo}"></span></h4>
+                       <h3>-: User id :-</h3>
+                       <!-- <h4 >SLB12345</h4> -->
+                       <h4 ><span th:text="${customer.userId}"></span></h4>
+                       <p id="NoteAlert">Note: Please saved this account number and userid</p>
+                     </div>
+                  </div>
+               </div>
+           </div>
+    </section>	
+</body>
+</html>

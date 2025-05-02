@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+    <section>
+      <!-- css error.css file  -->
+           <div class="container-fluid containerr d-flex justify-content-center p-4">
+               <div class="row messageContainer">
+                  <div class="col-sm-6 mesContaLeft"><img src="#" th:src="@{/image/incomple_image-removebg-preview (1).png}" alt="" /></div>
+                  <div class="col-sm-6 mesContaERight" style="display: flex; flex-direction: column; align-items: center;  justify-content:center; ">
+                     <h1 style="font-size: 6vw; text-align: center; color: rgb(247, 207, 4); text-shadow: 1px 1px 5px black;">Incomplete work</h1>
+                     <h2 style="font-size: 3vw; margin-top: 2.5vw; color: rgb(2, 182, 253); text-shadow: 1px 1px 3px black;">This feature will be activated soon</h2>
+                     <a href="#" style="text-decoration: none; font-size: 5vw;" th:href="@{/home}"><div style="height: fit-content; width: fit-content; padding: 1vw 5vw; border: 0.1vw solid rgb(23,144,241); margin-top: 1.5vw; border-radius: 10vw;  box-shadow: 1px 1px 10px rgb(23,144,241);" class="errorPageGoToHomeDiv ">Go to home </div></a>
+                  </div>
+               </div>
+           </div>
+    </section>	
+</body>
+</html>

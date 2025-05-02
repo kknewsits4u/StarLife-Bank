@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="customerService/CustomerDashborad::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+   <section>
+    <div class="container-fluid newAcMnCtnr">
+    <div class="row updateOuter">
+
+      <div class="alert alert-primary" style="width: 100%;" role="alert" th:if="${session.message}">
+        Your details has been updated successfully !!
+      </div>
+        <h1>UPDATE YOUR DETAILS</h1>
+     
+
+      <div class="OpenAccountDiv">
+          <form action="#" 
+                th:action="@{/customer/customerDashboard/updatedetails}" 
+                        enctype='multipart/form-data'
+                        method="POST">
+            <div class="row p-3 d-flex justify-content-center">
+              <div class="col">
+                <div class="form-group">
+                  <label for="firstName">Enter Your Name</label> <input type="Text"
+                    class="form-control" id="firstName" placeholder="Enter name"
+                    name="name" th:value="${customer.name}" />
+                </div>
+              </div>
+            </div>
+            <div class="row p-3 d-flex justify-content-center">
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <label for="emailid">Email Id</label> <input type="email"
+                    class="form-control" id="emailid"
+                    placeholder="Enter email id" name="cEmail"  th:value="${customer.cEmail}"/>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="phoneNo">Phone No.</label> <input type="text"
+                    class="form-control" id="phoneNo"
+                    placeholder="Enter phone no." name="cPhone" th:value="${customer.cPhone}" />
+                </div>
+              </div>
+            </div>
+            <div class="row p-3 d-flex justify-content-center">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="adharNo">Adhar No.</label> <input type="text"
+                    class="form-control" id="adharNo"
+                    placeholder="Enter aadhar no" name="cAadhar" th:value="${customer.cAadhar}" />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="accounttype">Choose account type </label><br /> <select
+                    class="form-select" aria-label="Default select example"
+                    id="accounttype" name="cAccType" th:value="${customer.cAccType}">
+                    <option selected>Choose account type</option>
+                    <option value="saving" name="saving">saving</option>
+                    <option value="current" name="current">current</option>
+                    <option value="saving/current" name="saving/current">saving/current</option>
+                  </select>
+                </div>
+              </div>
+              
+    
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="filee">Upload Image</label> 
+                  <input type="file"
+                       class="form-control imageinpu" 
+                       id="filee" 
+                       placeholder="Upload image"
+                       name="filename" 
+                       />
+                </div>
+              </div>
+              
+              
+              
+            </div>
+            <div class="row p-3 d-flex justify-content-center">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="fatherN">Father's Name</label> <input type="text"
+                    class="form-control" id="fatherN"
+                    placeholder="Enter father's name" name="cFathername" th:value="${customer.cFathername}" />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="MotherN">Mother's Name</label> <input type="text"
+                    class="form-control" id="MotherN"
+                    placeholder="Enter mother's name" name="cMothername" th:value="${customer.cMothername}"/>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <label for="nomineeN">Nominee</label> <input type="text"
+                    class="form-control" id="nomineeN"
+                    placeholder="Enter nominee name" name="cNomineename" th:value="${customer.cNomineename}" />
+                </div>
+              </div>
+            </div>
+            <div class="row p-3 d-flex justify-content-center">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <button type="reset" class="form-control btn btn-danger"
+                    id="confirmr" placeholder="Confirm password" >Reset</button>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <button type="submit" class="form-control btn btn-primary"
+                    id="confirmu" placeholder="Confirm password" >Update</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+    </div>
+  </div>
+
+</section>	
+</body>
+</html>

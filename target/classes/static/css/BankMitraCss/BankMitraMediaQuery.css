@@ -1,0 +1,600 @@
+
+@media (max-width:1440px){
+
+  .BankMitraheader{
+    height:5vw;
+  }
+
+  .BankMitraheader ul li{
+    font-size:1.4vw;
+  }
+  
+ 
+  
+  .bank_mitra_sidebar{
+    height:fit-content;
+    top: 6vw;
+  }
+  
+
+  .imageUpdateDiv{
+    width: 2.2vw;
+    height: 2.2vw;
+    right: -1vw;
+    bottom: -1vw;
+  }
+
+  .bank_mitra_list a{
+    font-size: 1.5rem;
+    height:3vw;
+  }
+
+  .bankMitra_main{
+    padding-top: 6vw;
+  }
+
+
+  .bankMitra_main::-webkit-scrollbar{
+    display: none;
+  }
+  
+  .bank_mitra_insight_div{
+    margin-top:2vw;
+  }
+  
+  .insight_card h1{
+    font-size: 1.6rem;
+  }
+  
+  .insight_card_details{
+    width: 100%;
+  }
+
+  .customer_service_card{
+    font-size:2vw;
+  }
+  .bankmitraupadate{
+  
+    max-height:fit-content;
+  }
+
+
+   .updateImageAndNameHeading{
+    font-size: 1.8vw;
+    margin-top: 1.5vw;
+   }
+
+  
+}
+
+@media (max-width:1024px){
+  
+  .BankMitraheader{
+    height: 8vw;
+  }
+  .BankMitraheaderlogoDiv{
+    font-size: 3vw;
+    padding:1vw  4vw;
+  }
+  .BankMitraspinnerDiv{
+    display: block;
+  }
+  .BankMitraheader .navList{
+    display: none;
+  }
+  
+  .bank_mitra_sidebar{
+    height:fit-content;
+    width: 25rem;
+    left: 0;
+    top:9.5vw;
+    z-index: 120;
+  }
+  
+  
+  .bank_mitra_profile_div{
+    padding: 5vw;
+  }
+  
+  .profile_img_div{
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .imageUpdateDiv{
+    width: 7vw;
+    height:7vw;
+    right: -5vw;
+    bottom: -5vw;
+  }
+  .imageUpdateDiv ion-icon{
+    font-size: 4vw;
+  }
+  
+  .bank_mitra_profile_div h1{
+    font-size: 2.5rem;
+    margin-top: 5vw;
+  }
+  
+  .bank_mitra_list{
+    margin-top: 2vw;
+  }
+  
+  .bank_mitra_list a{
+    padding-left: 5vw;
+    font-size: 1.5rem;
+    gap:15px;
+    height:7vw;
+  }
+
+  .bankMitra_main{
+    width: 100%;
+    max-height:fit-content;
+    padding-top: 10vw;
+    overflow-y: visible;
+  }
+  
+  .bank_mitra_details_body{
+    width:100%;
+    height: fit-content;
+    z-index: 80;
+  }
+
+  .inputDiv label{
+    margin-top: 2vw;
+  }
+  .inputDiv  input{
+    height: 3.5vw;
+  }
+  
+
+}
+
+
+@media (max-width:768px){
+
+.BankMitraheader{
+    height: 15vw;
+}
+
+  .BankMitraheaderlogoDiv{
+    font-size: 5vw;
+    padding:1vw  4vw;
+  }
+
+.bank_mitra_sidebar{
+  height:fit-content;
+  width: 25rem;
+  left: -100%;
+  top:18vw;
+  z-index: 500;
+  box-shadow: 1px 1px 5px rgb(0,0,0);
+}
+
+
+.bank_mitra_profile_div{
+  padding: 5vw;
+}
+
+.profile_img_div{
+  width: 7rem;
+  height: 7rem;
+}
+
+.imageUpdateDiv{
+  width: 8vw;
+  height:8vw;
+  right: -7vw;
+  bottom: -5vw;
+}
+
+.bank_mitra_profile_div h1{
+  font-size: 1.5rem;
+  margin-top: 5vw;
+}
+
+.bank_mitra_list a{
+  padding-left: 5vw;
+  font-size: 1.6rem;
+  gap:20px;
+  height:12vw;
+}
+
+.bank_mitra_list a .bank_mitra_list_item{
+  line-height: 70px;
+
+}
+
+
+.bankMitra_main{
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  padding:0;
+  padding-top: 15vw;
+}
+
+.bankMitra_main::-webkit-scrollbar{
+  display: none;
+}
+
+.bank_mitra_details_body{
+  width:100%;
+}
+
+.bank_mitra_insight_div{
+  grid-template-columns:1fr;
+  gap: 25px;
+  padding: 1.5vw;
+}
+
+.insight_card{
+  height:10rem;
+  padding:0 5vw ;
+}
+
+.insight_card h1{
+  font-size: 2rem;
+}
+
+.recent_customer_main{
+  margin-top: 5vw;
+  padding: 3vw;
+}
+
+.recent_customer_main .heading_div{
+  font-size: 6vw;
+  justify-content: center;
+}
+
+.customer_list_div{
+  width: 100%;
+  max-width: 100%;
+  height: fit-content;
+  overflow-x: scroll;
+}
+.customer_list_div::-webkit-scrollbar{
+  display: none;
+}
+
+.list_item_div_header{
+  width: fit-content;
+  padding:0;
+}
+
+.list_item_div_header table thead tr td{
+
+  padding:15px  45px; 
+  padding-left: 5px;
+  white-space: nowrap;
+}
+
+
+/*  update details responsive .... */
+
+.inputDiv label{
+  margin-top: 2vw;
+  font-size: 4vw;
+}
+.inputDiv  input{
+  height: 8vw;
+}
+
+/*  account open div here /...................................................... */
+
+
+.newAccount_main_container{
+  border-radius: 15px;
+  margin-top: 2vw;
+}
+
+.addProduct_container{
+  grid-template-columns: 1fr;
+
+}
+
+.addProduct_container .add_item_detail_card{
+     gap: 20px;
+}
+
+
+/*   left part / details part ............................................. */
+
+.addProduct_container_left h1{
+  font-size: 1.8rem;
+  z-index: 120;
+}
+
+.detail_line{
+  gap: 20px;
+  padding: 0;
+}
+
+.detail_line button {
+  font-size: 1.4rem;
+  order: 2;
+}
+
+.add_image_div{
+display: none;
+}
+
+.chooseImage_btn{
+  width: 100%;
+  height: 60px;
+  font-size: 1.2rem;
+  order: 1;
+}
+
+.chooseImage_btn label{
+  font-size: 1.4rem;
+}
+
+
+
+
+/* e kyc ....................................... */
+
+
+.ekyc_container{
+  padding-top: 2vw;
+}
+
+
+.adhar_number_inputs{
+  margin-top: 10vw;
+}
+.adhar_number_inputs input{
+  width: 25vw;
+}
+
+
+.eyc_btn_div, .eyc_btn_div2
+{
+  flex-direction: column;
+  margin-top: 10vw;
+  padding: 5vw;
+}
+
+.eyc_btn_div button{
+  width: 100%;
+}
+
+
+.adhar_number_inputs_otp input{
+  width: 10vw;
+  height: 10vw;
+}
+
+.eyc_btn_div2 button{
+  width: 100%;
+}
+
+
+
+/* customer services ............................................................. */
+
+
+.customer_services_container{
+  margin-top: 3vw;
+}
+
+.customer_service_card_container{
+
+  grid-template-columns:1fr;
+  gap: 20px;
+}
+
+.customer_service_card{
+  height: 30vw;
+  font-size: 5vw;
+}
+
+.customer_service_default , .customer_service_divs{
+  margin-top: 10vw;
+  font-size: 4rem;
+}
+
+.customer_service_default ion-icon{
+  font-size: 20rem;
+}
+
+
+.customer_service_divs{
+  margin-top: 5vw;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.customer_service_divs label{
+  font-size: 2rem;
+  margin-top: 6vw;
+  text-align: center;
+  width: 100%;
+}
+
+.customer_service_divs input{
+  width: 100%;
+  margin-top: 6vw;
+}
+
+
+.customer_service_divs button, .eyc_btn_div2 button{
+  margin-top: 4vw;
+  width: 100%;
+}
+
+
+.service_content_div_otp_inpu input{
+  width: 10vw;
+  height: 10vw;
+
+}
+
+
+/* deposit money ........................................... */
+
+
+
+.money_div{
+  padding: 5vw;
+}
+
+.money_div input{
+  width: 100%;
+}
+
+
+/* money transfer   ........................................... */
+
+
+.moneyTransMain h1{
+  font-size: 9vw;
+  margin-top: 4vw;
+}
+
+
+.firstimageDiv, .midimagediv{
+  height: 20vw;
+  width: 20vw;
+  margin-top: 5vw;
+}
+
+
+
+
+.formDivv{
+ padding: 5vw;
+ gap: 30px;
+}
+
+.formDivv input{
+  width:100%;
+  margin-top: 6vw;
+}
+
+.formDivv button{
+  margin-top: 10vw;
+  width: 100%;
+}
+
+
+/*  update bank mitra details ........................................ */
+
+.bankmitraupadate{
+  margin-top: 5vw;
+}
+.heading_div{
+  border-radius: 5px;
+  font-size: 1.5rem;
+  padding: 2vw 1vw;
+}
+.inputDivInner{
+  flex-direction: column;
+}
+
+.updateImageAndNameright{
+  display: none;
+}
+
+
+
+
+/*  bank mitra image update ..................................................... */
+
+.updateImageAndNameContainer{
+  grid-template-columns:1fr;
+}
+
+
+.updateImageAndNameleft .inputDiv button{
+  margin-top: 5vw;
+}
+.updateImageAndNameleft input,.updateImageAndNameImage{
+  margin-top: 6vw;
+}
+
+
+.updateImageAndNameright{
+  display: none;
+
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+@media (max-width:400px){
+
+
+.bank_mitra_sidebar{
+  width: 18rem;
+}
+
+
+
+.imageUpdateDiv{
+  width: 10vw;
+  height:10vw;
+  right: -5vw;
+
+}
+
+.bank_mitra_list{
+  margin-top: 2vw;
+}
+
+.bank_mitra_list a{
+  font-size: 1.5rem;
+}
+
+
+.bankMitra_main{
+  padding-top: 25vw;
+}
+
+.recent_customer_main .heading_div{
+  font-size: 8vw;
+}
+
+/*  update details responsive .... */
+
+.inputDiv label{
+  margin-top: 4vw;
+  font-size: 6vw;
+}
+.inputDiv  input{
+  height: 10vw;
+}
+
+
+
+/*   left part / details part ............................................. */
+
+.addProduct_container_left h1{
+  top: -2vw;
+}
+
+
+
+/* customer services ............................................................. */
+
+
+.customer_services_container{
+  margin-top: 3vw;
+}
+
+
+.customer_service_card{
+  height: 40vw;
+}
+
+
+}

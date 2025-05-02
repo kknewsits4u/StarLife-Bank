@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>[[${title}]]</title>
+	<!-- Add Bootstrap validation script -->
+
+
+</head>
+<body>
+	<section>
+	
+
+		<div class="container-fluid newAcMnCtnr">
+			<div class="row openAccRow">
+			  <div class="row openAccRowInner">
+				<div class="col-lg-4 openYourAc">
+					<h1>Open Your</h1>
+					<h1>New Account</h1>
+				</div>
+				<div  th:if="${session.alertt}" class="alert accountAlert" th:classappend="${session.alertt.type}"  role="alert">          
+					<p>[[${session.alertt.message}]]</p>
+				</div>
+
+				<div class="col-lg-8">
+					<div class="OpenAccountDiv">
+						<form action="#" 
+						      th:action="@{/createAccount/self}" 
+		                      enctype='multipart/form-data'
+		                      method="POST"
+							  class="needs-validation" 
+							  novalidate
+							  >
+							<div class="row p-3 d-flex justify-content-center">
+								<div class="col">
+									<div class="form-group">
+										<label for="firstName">Enter Your Name</label> <input type="Text"
+											class="form-control" id="firstName" placeholder="Enter name"
+											name="name" minlength="3" maxlength="20" required/>
+											<div class="invalid-feedback">
+												Name should be minimum three latters.
+											</div>
+									</div>
+								</div>
+							</div>
+							<div class="row p-3 d-flex justify-content-center">
+								<div class="col-sm-8">
+									<div class="form-group">
+										<label for="emailid">Email Id</label> <input type="email"
+											class="form-control" id="emailid"
+											placeholder="Enter email id" name="cEmail" required />
+											<div class="invalid-feedback">
+												Invalid Email !!!.
+											</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label for="phoneNo">Phone No.</label> <input type="text"
+											class="form-control" id="phoneNo"
+											placeholder="Enter phone no." name="cPhone" required minlength="10" maxlength="10" />
+											<div class="invalid-feedback">
+												Phone no. must be 10 digits long.
+											</div>
+									</div>
+								</div>
+							</div>
+							<div class="row p-3 d-flex justify-content-center">
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label for="adharNo">Adhar No.</label> <input type="text"
+											class="form-control  " id="adharNo"
+											placeholder="Enter aadhar no" name="cAadhar"  required minlength="12" maxlength="12" />
+											<div class="invalid-feedback">
+												Aadhar no. must be 12 digits long.
+											</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label for="accounttype"  class="form-label"  >Choose account type </label><br>
+										 <select
+											class="form-select" aria-label="Default select example"
+											id="accounttype" name="cAccType">
+											<option selected>Account Type</option>
+											<option value="saving" name="saving">saving</option>
+											<option value="current" name="current">current</option>
+											<option value="saving/current" name="saving/current">saving/current</option>
+										</select>
+										<div class="invalid-feedback">
+											Choose valid account type.
+										</div>
+									</div>
+								</div>
+								
+			
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label for="filee">Upload Image</label> 
+										<input type="file"
+											   class="form-control" 
+											   id="filee" 
+											   placeholder="Upload image"
+											   name="filename" 
+											   />
+									</div>
+								</div>
+								
+							</div>
+							<div class="row p-3 d-flex justify-content-center">
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label for="fatherN">Father's Name</label> <input type="text"
+											class="form-control" id="fatherN"
+											placeholder="Enter father's name" name="cFathername" required minlength="3" maxlength="20" />
+											<div class="invalid-feedback">
+												Father Name should be minimum three latters.
+											</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label for="MotherN">Mother's Name</label> <input type="text"
+											class="form-control" id="MotherN"
+											placeholder="Enter mother's name" name="cMothername" required maxlength="20" minlength="3" />
+											<div class="invalid-feedback">
+											Mother Name should be minimum three latters.
+											</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label for="nomineeN">Nominee</label> <input type="text"
+											class="form-control" id="nomineeN"
+											placeholder="Enter nominee name" name="cNomineename" />
+									</div>
+								</div>
+							</div>
+							<div class="row p-3 d-flex justify-content-center">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="password">Create password</label> <input
+											type="password" class="form-control" id="password"
+											placeholder="Enter password" name="cpassword"  required minlength="8" maxlength="15" />
+											<div class="invalid-feedback">
+												Password must be minimum 8 latters.
+											</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="confirmP">Confirm password</label> <input
+											type="password" class="form-control" id="confirmP"  name="confiemPassword"
+											placeholder="Enter Confirm password" required minlength="8" maxlength="15" />
+											
+											<div class="invalid-feedback">
+												Password and confirm password does not match.
+											</div>
+									</div>
+								</div>
+							</div>
+							<div class="row p-3 d-flex justify-content-center">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<input type="reset" class="form-control btn btn-danger"
+											 value="Reset" />
+									</div>
+								</div>
+
+								<div class="col-sm-6">
+									<div class="form-group">
+
+										<input type="submit" class="form-control btn btn-primary"
+										    value="Submit" />
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+</body>
+</html>

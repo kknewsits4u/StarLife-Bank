@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <head>
+      <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeJu3gqAAAAAMOIhkOf4eaHa4EsEyEziN4oRjnr"></script>
+      <!-- Your code -->
+    </head>
+	<title th:text="${title}"></title>
+</head>
+<body>
+   <section>
+    <div class="container">
+       <div class="nestedContainer" >
+        <div class="left">
+          <div class="logo">
+            <div class="logo-shape"></div>
+            <div class="logo-shape"></div>
+            <div class="logo-shape">
+              <div class="logo-shape-i"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+          <h1>Unity Bank</h1>
+          <div class="decor decor1"></div>
+          <div class="decor decor2"></div>
+          <div class="decor decor3"></div>
+          <div class="decor decor4"></div>
+          <div class="decor decor5"></div>
+          <div class="footer-links">
+            <span>About</span>
+            <span>Privacy</span>
+            <span>Terms of use</span>
+            <span>FAQ</span>
+          </div>
+        </div>
+        <div class="right  login-otp-h2"> 
+          <form th:action="@{/proceedOtp}"  method="post" >
+            <h2 class="mb-4">Enter OTP</h2>
+            <div class="otp-container">
+              <input type="text" name="d1"  title="otp-input"  class="otp-input" maxlength="1" />
+              <input type="text" name="d2" title="otp-input"   class="otp-input" maxlength="1" />
+              <input type="text" name="d3"  title="otp-input"  class="otp-input" maxlength="1" />
+              <input type="text" name="d4"  title="otp-input"  class="otp-input" maxlength="1" />
+            </div>
+            <div  class="login-otp-process-div" >
+               <button type="submit" class="btn btn-primary mt-4">Verify OTP</button>
+               <button id="resendBtn" type="button" th:href="@{/resend-otp}" class="btn text-primary mt-4 pointer"   role="button" disabled >05:00</button>
+            </div>
+   
+     
+        </form>
+  
+        
+        </div>
+       </div>
+    </div>
+   </section>
+</body>
+</html>

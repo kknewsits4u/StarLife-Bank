@@ -1,0 +1,101 @@
+.fileUploadMain{
+  display: flex;
+  min-height: 86vh;
+  width: 100vw;
+  margin-top: 6vw;
+}
+
+.c-left,.c-right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 85vh;
+}
+
+.image-container{
+  width: 40vw;
+  height: 40vw;
+
+}
+
+.image-container>img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+}
+
+
+.fileUploaderBoxOuter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vw;
+  width: 40vw;
+  border: 0.1vw solid rgb(23,144,241);
+  border-radius: 10px;
+  box-shadow:1px 1px 5px black;
+  padding: 0.8vw;
+}
+
+.fileUploaderBoxInner{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 0.1vw solid rgb(23,144,241);
+  box-shadow:1px 1px 20px rgb(23,144,241);
+  padding:1vw;
+}
+
+.headingDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 0.1px 2px 5px rgb(23,144,241);
+  border-radius: 10px;
+}
+
+.headingDiv h1{
+  font-size: 2.2vw;
+  color: rgb(23,144,241);
+  font-weight: 700;
+}
+
+.formFiled{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2vw;
+  width: 100%;
+  height:15vw;
+}
+
+.formFiled form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-file{
+   margin-top: 2vw;
+   width: 100%;
+}
+
+
+.formFiled button{
+  color: white;
+  font-size: 1.5vw;
+  font-weight: 600;
+
+}
+

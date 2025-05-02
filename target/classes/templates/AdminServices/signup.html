@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org"  >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Signup</title>
+  <link rel="stylesheet" th:href="@{/css/AdminCssFiles/LoginPage.css}" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+</head>
+<body>
+  <div class="container">
+
+    <div class="left-section-s">
+      <div class="left-content-s">
+        <div class="logo-wrapper">
+          <img th:src="@{/image/banklogo.jpg}" alt="company-logo" class="logo-image" />
+        </div>
+        <h1 class="title">Star Life Bank</h1>
+        <p class="subtitle">Easy Banking</p>
+        <button class="signup-button" type="submit"   >
+          <a th:href="@{/adminLogin}"> Login</a>
+        </button>
+      </div>
+    </div>
+    <div class="right-section-s">
+      <!-- Replace with your actual login card HTML -->
+      <div class="login-card">
+        <div class="logo-section">
+          <div class="logo-wrapper">
+            <img th:src="@{/image/banklogo.jpg}" alt="jkk" class="logo-image" />
+          </div>
+          <div  class="bank-name-tagline"  >
+            <h2 class="title">Star Life Bank</h2>
+            <p class="subtitle" > Easy Banking </p>
+           
+          </div>
+        </div>
+    
+        <div class="form-section">
+          <form class="login-form"  th:action="@{/adminregister}" action="#" method="post"    >
+            <input type="text" placeholder="Admin Name" name="name" class="input-field" minlength="3" maxlength="20"  required />
+            <input type="email" placeholder="Admin email" name="email" class="input-field" required   />
+            <input type="text" placeholder="Admin Phone" name="phone" class="input-field"  minlength="10" maxlength="10"  required />
+            <input type="password" placeholder="Password" name="password" class="input-field" maxlength="15" minlength="8" required />
+            <button type="submit" class="login-button">Signup</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+   
+  </div>
+</body>
+</html>

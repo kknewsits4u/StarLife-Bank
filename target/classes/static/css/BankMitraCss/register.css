@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+.bank_mitra_register_container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: start;
+  background: rgb(255,255,255);
+  font-family: "Poppins", serif;
+  font-style: normal;
+  padding: 2vw;
+}
+
+.bank_mitra_register_container h1{
+  font-size: 5rem;
+  color: rgb(23,141,241);
+  text-shadow: 1px 1px 3px rgb(23,141,241) , -1px -1px 3px rgb(23,141,241);
+}
+
+
+
+.form_div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  margin-top: 1.5vw;
+  flex-direction: column;
+}
+
+.messagee{
+  width: 50vw;
+  display: flex;
+  align-items: center;
+}
+.messagee p{
+  margin-top: 0.5vw;
+}
+
+
+.fileUploaderBoxOuter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 50vw;
+  border: 0.1vw solid rgb(23,144,241);
+  border-radius: 10px;
+  box-shadow:1px 1px 5px black;
+  padding: 0.5vw;
+}
+
+.fileUploaderBoxInner{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 0.1vw solid rgb(23,144,241);
+  box-shadow:1px 1px 20px rgb(23,144,241);
+  padding:1vw;
+}
+
+.headingDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.headingDiv h2{
+  font-size: 1.8vw;
+  color: rgb(23,144,241);
+  font-weight: 500;
+}
+
+.formFiled{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2vw;
+  width: 100%;
+  height:fit-content;
+}
+
+.formFiled form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  gap: 12px;
+}
+
+
+.formFiled form input{
+  color: rgb(23,141,241);
+  border: 1px solid rgb(23,141,241);
+}
+
+.formFiled form input:focus{
+  color: rgb(23,141,241);
+}
+
+.formFiled form input::placeholder{
+  color: rgb(23,141,241);
+}
+
+
+.custom-file{
+   margin-top: 2vw;
+   width: 100%;
+}
+
+
+.formFiled button{
+  color: white;
+  font-size: 1.2vw;
+  font-weight: 500;
+
+}
+
+.formFiled p{
+  margin-top: 1vw;
+}
+
+.formFiled p a:hover{
+  text-decoration: none;
+}

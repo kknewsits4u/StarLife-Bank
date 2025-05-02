@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+       th:replace="AdminServices/AdminHomepage::Layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+  <section>
+    <div class="customer-container"  >
+      <div  class="customer-profile-div" >
+          <div class="profile-container" >
+            <img th:src="@{'/image/'+${customer.cImage}}" alt="profile-image">
+          </div>
+      </div>
+      <div class="customer-details-div"  >
+           <p><span>Name</span>: <span>[[${customer.name}]]</span></p>
+           <p><span>email</span>: <span>[[${customer.cEmail}]]</span></p>
+           <p><span>phone</span>: <span>[[${customer.cPhone}]]</span></p>
+           <p><span>account no.</span>: <span>[[${customer.accountNo}]]</span></p>
+           <p><span>customer id</span>: <span>[[${customer.userId}]]</span></p>
+           <p><span>father name</span>: <span>[[${customer.cFathername}]]</span></p>
+           <p><span>mother Name</span>: <span>[[${customer.cMothername}]]</span></p>
+           <p><span>nominee</span>: <span>[[${customer.cNomineename}]]</span></p>
+           <p><span>account type</span>: <span>[[${customer.cAccType}]]</span></p>
+           <p><span>adhar number</span>: <span>[[${customer.cAadhar}]]</span></p>
+           <p><span>Current Balance</span>: <span>[[${customer.balance}]]</span></p>
+           <p><span>Acount Open Date</span>: <span>[[${customer.date}]]</span></p>
+           <p><span>adhar Link Status</span>: <span>[[${customer.adharLinkStatus}]]</span></p>
+           <p><span>NPCI Status</span>: <span>[[${customer.npcistatus}]]</span></p>
+           <p><span>E-Kyc Status</span>: <span>[[${customer.ekycstatus}]]</span></p>
+           <p><span>Pan Card Number</span>: <span>[[${customer.panCard}]]</span></p>
+           <p><span>ATM Pin</span>: <span>[[${customer.atmPin}]]</span></p>
+           <p><span>ATM number</span>: <span>[[${customer.atmNumber}]]</span></p>
+          
+      </div>
+      <div class="btn-div" >
+        <a th:href="@{/admin/customer/{id}/remove(id=${customer.Cid})}"
+        >
+        <button  type="button"  class="removeBtn" >Remove</button></a>
+        <a th:href="@{/admin/customer/{id}/block(id=${customer.Cid})}"
+                  >
+                  <button  type="button"  class="removeBtn" >Block</button></a>
+      </div>
+     
+</div>
+  </section>
+</body>
+</html>

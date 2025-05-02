@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://thymeleaf.org"
+  th:replace="navbar::Layout(~{::section})"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${title}"></title>
+  </head>
+  <body>
+    <section>
+      <div class="mainDiv">
+        <div class="screenSlider">
+          <img src="/image/homepageimage.jpg" alt="homepage" />
+        </div>
+
+        <div class="TaglineDIV">
+          <h2>A Banking</h2>
+          <h1>Always bring ahead</h1>
+          <button>Explore Now</button>
+        </div>
+
+        <div class="dotDivContainer">
+          <div class="dotContainer">
+            <div class="dotDiv active"></div>
+            <div class="dotDiv"></div>
+            <div class="dotDiv"></div>
+            <div class="dotDiv"></div>
+            <div class="dotDiv"></div>
+          </div>
+        </div>
+
+        <div class="servicess">
+          <div class="ServiceDivLogo">
+            <div class="servicemainLogoDiv" onclick="kris()">
+              <img src="/image/startBankLogo.png" alt="" />
+            </div>
+            <div class="DownloadAppPlayStore">
+              <img
+                src="/image/googl-download-removebg-preview (1).png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="servicesFeaturee">
+            <div class="serviceFeatureCardd">
+              <div class="srvsFimgDivv">
+                <img
+                  src="https://i.pinimg.com/236x/51/5f/90/515f90750dda9c2329873150a37c83c7.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="srvsFddetailss">
+                <h1>Mobile Banking</h1>
+                <a href="#" th:href="@{/home/incomplete_task_page}"
+                  ><button type="button" class="btn btn-block">Start Today</button></a
+                >
+              </div>
+            </div>
+            <div class="serviceFeatureCardd">
+              <div class="srvsFimgDivv">
+                <img
+                  src="https://i.pinimg.com/236x/f1/69/cc/f169cc2d764034cd9a66639c9cb6d556.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="srvsFddetailss">
+                <h1>Internet Banking</h1>
+                <a href="#" th:href="@{/home/incomplete_task_page}"
+                  ><button class="btn btn-block" type="button"   >Use Now</button></a
+                >
+              </div>
+            </div>
+            <div class="serviceFeatureCardd">
+              <div class="srvsFimgDivv">
+                <img src="/image/visa image.jpg" alt="" />
+              </div>
+              <div class="srvsFddetailss">
+                <h1>CARD SERVICES</h1>
+                <a href="#" th:href="@{/home/incomplete_task_page}"
+                  ><button class="btn btn-block" type="button"   >Explore & Order</button></a
+                >
+              </div>
+            </div>
+
+            <div class="serviceFeatureCardd">
+              <div class="srvsFimgDivv">
+                <img
+                  src="https://i.pinimg.com/564x/5e/5e/f4/5e5ef43aab10e0a53871a6ee20e8ff99.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="srvsFddetailss">
+                <h1>Customer Support</h1>
+                <a href="#" th:href="@{/home/Customer_Support}"
+                  ><button class="btn btn-block"  type="button"    >Take Guidance</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="homepageSection2">
+          <div class="openAccountOuterDiv">
+            <h1>Open new account online</h1>
+
+            <a href="" th:href="@{/home/Open_new_accountt}">
+              <div class="openAccountinnerIcon">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+
+          <div class="balAndStatement">
+            <a href="" th:href="@{/customer/customerDashboard/checkbalance}">
+              <div class="balanceCard">
+                <img src="/image/checkbal.jpg" alt="" />
+                <h3>Check Balance</h3>
+              </div></a
+            >
+            <a href="" th:href="@{/customer/customerDashboard/viewStatement}">
+              <div class="statementCard">
+                <img src="/image/checkstate.jpg" alt="" />
+                <h3>View Statement</h3>
+              </div></a
+            >
+          </div>
+        </div>
+
+        <!--Customer service section  ...................................... .....................................  -->
+
+        <div class="bookingsAndInsurenceOuter">
+          <div class="bookingsAndInsurenceInner">
+            <div class="bookingdiv">
+              <h1>Customer Service</h1>
+              <div class="ticketBookingContentDiv">
+                <div class="ticketBookingFirstRow">
+                  <a th:href="@{/home/incomplete_task_page}">
+                    <div class="loanCard">
+                      <div class="loancardImgDiv">
+                        <img
+                          src="https://i.pinimg.com/736x/b8/00/72/b80072a4114068410657e29c58585580.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h6>Apply for New ATM</h6>
+                    </div>
+                  </a>
+                  <a th:href="@{/home/incomplete_task_page}">
+                    <div class="loanCard">
+                      <div class="loancardImgDiv">
+                        <img
+                          src="https://i.pinimg.com/736x/38/45/1b/38451bc6c3d09c45e1bc1216dd6f2cf4.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <h6>Apply Credit Card</h6>
+                    </div>
+                  </a>
+
+                  <a th:href="@{/home/incomplete_task_page}">
+                    <div class="loanCard">
+                      <div class="loancardImgDiv">
+                        <img src="/image/goldIcon.png" alt="" />
+                      </div>
+                      <h6>Gold Loan</h6>
+                    </div>
+                  </a>
+                </div>
+                <div class="ticketBookingSecondRow">
+                  <a th:href="@{/home/incomplete_task_page}">
+                    <div class="loanCard">
+                      <div class="loancardImgDiv">
+                        <img src="/image/personalLoanIcon (2).png" alt="" />
+                      </div>
+                      <h6>Personal Loan</h6>
+                    </div>
+                  </a>
+
+                  <a th:href="@{/home/incomplete_task_page}">
+                    <div class="loanCard">
+                      <div class="loancardImgDiv">
+                        <img
+                          src="https://i.pinimg.com/736x/9a/4c/19/9a4c199c1a5b0f1254c461715f9236e5.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <h6>Property Loan</h6>
+                    </div>
+                  </a>
+
+                  <a th:href="@{/home/incomplete_task_page}">
+                    <div class="loanCard">
+                      <div class="loancardImgDiv">
+                        <img
+                          src="https://i.pinimg.com/736x/38/45/1b/38451bc6c3d09c45e1bc1216dd6f2cf4.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h6>Check credit score</h6>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="insurenceDiv">
+              <div class="loansArenaDiv">
+                <a th:href="@{/bank_mitra_guideline_page}">
+                  <div class="bank_Mitra_Img_Div">
+                    <img src="/image/bank mitra.png" alt="" />
+                  </div>
+                  <h1>Become a Bank Mitra</h1>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--   Money Transfer div ................................................................................  -->
+
+        <div class="money_transfer_div">
+          <a th:href="@{/customer/customerDashboard/money_transfer}" >
+            <div class="money_transfer_div_inner">
+              <div class="money_transfer_div_innermost">
+                Send Money
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- premium services  start here   ......................................................................  -->
+
+        <div class="premiumServicesOuter">
+          <div class="premiumServicesInner">
+            <div class="premiumServicesInnermost">
+              <div class="viewYourdashboard">
+                <div class="premiumImagDiv">
+                  <img
+                    src="/image/customerDashBoardIcon.png"
+                    alt="customerImage"
+                  />
+                </div>
+                <a href="#" th:href="@{/customer/customerDashboard/homepage}"
+                  ><div class="viewYourDashHeading">VIEW YOUR DASHBOARD</div></a
+                >
+              </div>
+
+              <div class="preiumCardsDiv">
+                <a href="" th:href="@{/customer/customerDashboard/adharlink}">
+                  <div class="premiumCard">
+                    <div class="premiumCardMain">
+                      <div class="premiumCardImgDiv">
+                        <img src="/image/Untitled design.jpg" alt="" />
+                      </div>
+
+                      <h5>Link Aadhar Card</h5>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="" th:href="@{/customer/customerDashboard/adharstatusForm}">
+                  <div class="premiumCard">
+                    <div class="premiumCardMain">
+                      <div class="premiumCardImgDiv">
+                        <img src="/image/adhar.png" alt="" />
+                      </div>
+                      <h5>Check Aadhar Status</h5>
+                    </div>
+                  </div></a
+                >
+
+                <a
+                  href=""
+                  th:href="@{/customer/customerDashboard/pancard_stat}"
+                >
+                  <div class="premiumCard">
+                    <div class="premiumCardMain">
+                      <div class="premiumCardImgDiv">
+                        <img
+                          src="/image/pan-card-removebg-preview (1).png"
+                          alt=""
+                        />
+                      </div>
+                      <h5>Link Pan Card</h5>
+                    </div>
+                  </div></a
+                >
+
+                <a href="" th:href="@{/customer/customerDashboard/Kyc_status}">
+                  <div class="premiumCard">
+                    <div class="premiumCardMain">
+                      <div class="premiumCardImgDiv">
+                        <img
+                          src="https://i.pinimg.com/564x/ce/7d/1e/ce7d1e56a2196210f7164499ba936ff1.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <h5>Online E-Kyc</h5>
+                    </div>
+                  </div></a
+                >
+
+                <a href="" th:href="@{/customer/customerDashboard/npciopener}">
+                  <div class="premiumCard">
+                    <div class="premiumCardMain">
+                      <div class="premiumCardImgDiv">
+                        <img
+                          src="https://sanskritiias.com/uploaded_files/images/npci.jpg"
+                          alt="npciImg"
+                        />
+                      </div>
+                      <h5>NPCI Status</h5>
+                    </div>
+                  </div></a
+                >
+
+                <a href="#" th:href="@{/home/incomplete_task_page}">
+                  <div class="premiumCard">
+                    <div class="premiumCardMain">
+                      <div class="premiumCardImgDiv">
+                        <img
+                          src="https://khetigaadi.com/news/wp-content/uploads/2022/03/MicrosoftTeams-image56.jpeg"
+                          alt=""
+                        />
+                      </div>
+                      <h5>Apply Online KCC</h5>
+                    </div>
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- our other branches and locations ......................................... -->
+
+        <div class="locationDiv">
+          <div class="locaImgDiv">
+            <img th:src="@{/image/branchLocation.png}" alt="location image" />
+          </div>
+          <div class="locTextDiv">
+            <h1>Our Branches</h1>
+            <h2>Location</h2>
+          </div>
+        </div>
+
+        <!--footer goes here ..........................................................-->
+
+        <div class="footer">
+          <div class="mainfooter">
+            <div class="leftpart">
+              <h1>QUICK ACCESS</h1>
+              <ul>
+                <li><a href="">CAREERS</a></li>
+                <li><a href="">CUSTOMER EDUCATION</a></li>
+                <li><a href="">COOPERATE BANKING</a></li>
+                <li><a href="">PENSIONRS PORTAL</a></li>
+                <li><a href="">CALENDER</a></li>
+                <li><a href="">HOLIDAY LIST</a></li>
+                <li><a href="">VACANT LOCKERS</a></li>
+              </ul>
+
+              <h1>CUSTOMER SERVICES</h1>
+              
+              <ul>
+                <li><a href="">COMPLAINTS</a></li>
+                <li><a href="">DOWNLOAD CENTER</a></li>
+                <li><a href="">CONSULTANCY SERVICES</a></li>
+                <li><a href="">BROWSER COMPLIBILITY</a></li>
+                <li><a href="">SCREEN READER ACCESSIBILITY</a></li>
+              </ul>
+            </div>
+            <div class="rightPart">
+              <h1>ONLINE SERVICES</h1>
+              <ul>
+                <li><a href="">ONLINE ACCOUNT OPENING</a></li>
+                <li><a href="">GST INVOICE PORTAL</a></li>
+                <li><a href="">ONLINE SERVICE REQUEST</a></li>
+                <li><a href="">E BIKRAY</a></li>
+                <li><a href="">OUR FRENCHISE</a></li>
+                <li><a href="">INTERNATIONAL SERVICE</a></li>
+                <li><a href="">BECOME A BANK MITRA</a></li>
+              </ul>
+
+              <h1>IMPORT LINKS</h1>
+              <ul>
+                <li><a href="">RBI KAHTA HAI</a></li>
+                <li><a href="">RBI MONETARY MUSEUM</a></li>
+                <li><a href="">E-VOTING</a></li>
+                <li><a href="">PRADHAN MANTRI JAN DHAN YOJNA</a></li>
+                <li><a href="">PRIVACY POLICY FOR LOAN RECOVERY</a></li>
+              </ul>
+            </div>
+
+            <div class="socialLinksDiv">
+              <div class="subNewsLetterDiv">
+                <h1>Subscribe for our NewsLetter</h1>
+                <form action="">
+                  <input
+                  type="email"
+                  class="form-control"
+                  placeholder="starlifebank1@gmail.com"
+                  />
+                  <button class="btn btn-primary" type="submit" >Subscribe</button>
+                </form>
+              </div>
+              <div class="socialIconsDiv">
+                <h1>Follow us</h1>
+                <div class="allsocialIconsContainer">
+                  <div class="mainSocialIconBurgerFooter">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mainSocialIconBurgerFooter">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="mainSocialIconBurgerFooter">
+                    <img src="/image/xsocialIcon-removebg-preview.png" alt="" />
+                  </div>
+                  <div class="mainSocialIconBurgerFooter">
+                    <img
+                      src="/image/telesocialicon-removebg-preview.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

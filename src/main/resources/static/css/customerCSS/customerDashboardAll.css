@@ -1,0 +1,621 @@
+/* css  for   check balance page */
+
+
+.maincontainerr, .newAcMnCtnr, .moneyTransMain, .updatepinmain, .debitcardMain, .viewstatementmain{
+  min-height:86vh;
+  box-shadow: inset 1px 1px 30px rgb(23,144,241);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:start;  
+  padding: 2vw;
+  height: fit-content;
+
+} 
+
+.main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height:calc(100vh - 6.7vw);
+
+}
+
+.alert{
+  width: 100%;
+}
+
+.maincontainerr h1 , .updatepinmain h1, .debitcardMain h1{
+  font-family: verdana;
+  font-size: 3vw;
+  font-weight: bold;
+  color: rgb(23,144,241);
+  text-shadow: 0.1px 0.1px 5px rgb(23,144,241);
+}
+
+.formDiv{
+  width:38vw;
+  height: fit-content;
+  padding: 1.5vw;
+  margin-top: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+}
+
+.sideBarSlider{
+	display:none;
+	color: rgb(255,255,255);
+	font-size: 6vw;
+	margin-right: 3vw;
+}
+
+.formDiv h1{
+  color:red;
+  font-size: 1vw;
+  text-shadow: none;
+}
+
+.formDiv input{
+  border: 0.1vw solid rgb(23,144,241);
+  color: rgb(23,144,241);
+}
+
+.formDiv input::placeholder{
+  color: rgb(23,144,241);
+}
+
+.formDiv button{
+  font-size: 1vw;
+  font-weight: 700;
+}
+
+.formDiv button:hover{
+  background: rgb(8, 172, 8);
+  border:0.1vw solid rgb(8, 172, 8);
+}
+
+
+/* update profile css .................................................*/
+
+.newAcMnCtnr{
+  height: fit-content;
+  padding: 1.5vw;
+}
+
+
+.updateOuter{
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.updateOuter h1{
+  font-family: verdana;
+  font-size: 3vw;
+  font-weight: bold;
+  color: rgb(23,144,241);
+  text-shadow: 0.1px 0.1px 5px rgb(23,144,241);
+}
+.updateDetailsDiv{
+  box-shadow: none;
+  background: none;
+  border: 1px solid rgb(23,144,241);
+}
+
+.updateDetailsDiv:hover{
+  box-shadow: 1px 1px 10px rgb(23,144,241),-1px -1px 10px rgb(23,144,241);
+}
+.updateDetailsDiv a{
+  text-decoration: none;
+  color: RGB(23,141,241);
+}
+
+.OpenAccountDiv{
+  border: none;
+}
+
+.OpenAccountDiv label{
+  color: rgb(23,144,241);
+}
+
+.OpenAccountDiv input{
+  border: 0.1vw solid rgb(23,144,241);
+  color: rgb(23,144,241);
+}
+
+.OpenAccountDiv input::placeholder{
+  color: rgb(23,144,241);
+}
+
+
+
+
+/* money transfer css goes here .......................................*/
+
+.moneyTransMain h1{
+  font-family: verdana;
+  font-size: 3vw;
+  font-weight: bold;
+  color: rgb(23,144,241);
+  text-shadow: 0.1px 0.1px 5px rgb(23,144,241);
+}
+
+.graphicsDiv{
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+  width: 70%;
+}
+
+.firstimageDiv, .midimagediv{
+  height: 10vw;
+  width: 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.firstimageDiv img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.midimagediv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:15vw;
+  height: 50%;
+}
+.midimagediv img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.formDivv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: fit-content;
+  margin-top: -10px;
+}
+
+.formDivv form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.formDivv input{
+  width:35vw;
+  margin-top: 1vw;
+}
+
+.formDivv button{
+  margin-top: 1vw;
+}
+
+.formDivv input::placeholder{
+  color: rgb(23,144,241);
+}
+
+
+
+
+/* update pin css  */
+
+
+
+.updatePinDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 50%;
+  height: fit-content;
+  padding: 1vw;
+  gap:1vw;
+  margin-top: 1.5vw;
+  border-radius: 10px;
+  border: 0.1vw solid rgb(23,144,241);
+  box-shadow: 1px 1px 5px rgb(23,144,241);
+}
+
+.updatePinDiv input{
+  margin-top: 1.5vw;
+  border:0.1vw solid rgb(23,144,241);
+}
+.updatePinDiv input:focus{
+  box-shadow: none;
+}
+.updatePinDiv button{
+  margin-top: 1.5vw;
+}
+
+.updatePinDiv form{
+  width: 100%;
+}
+
+/* debit card css ..................................................................*/
+
+.notGenerateDebitCardDiv{
+  width: 70%;
+  height: fit-content;
+  margin-top: 2vw;
+  border-radius: 10px;
+  border: 0.1vw solid rgb(23,144,241);
+  box-shadow: 1px 1px 5px rgb(23,144,241);
+  padding:1vw ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notGenerateDebitCardDiv button{
+  margin-top: 1.5vw;
+  font-size: 1.5vw;
+  font-family: verdana;
+  font-weight: 500
+}
+
+.card{
+  width: 15vw;
+  height: 9vw;
+  border: 0.1vw solid rgb(23,144,241);
+  box-shadow: 1px 1px 5px rgb(23,144,241);
+  border-radius: 10px;
+  background:url("/image/atmbg.png");
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0.8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.atmbankname{
+  text-align: end;
+  width: 100%;
+}
+.atmbankname h1{
+  color: white;
+  font-size: 0.8vw;
+}
+
+.atmichidiv{
+  width: 100%;
+  display: flex;
+  align-items: start;
+}
+
+.atmichidiv img{
+  width: 3vw;
+  height: 2vw;
+}
+
+.atmNumDiv{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:start;
+
+  margin-top: 0.5vw;
+  color: white;
+  font-weight: 700;
+  gap: 0.7vw;
+  font-size: 1vw;
+}
+
+.validUpto{
+  width: 100%;
+  text-align: end;
+  color: white;
+  font-weight: 500;
+  font-family: verdana;
+  font-size: 0.8vw;
+}
+
+.cardHolder{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardHolder p{
+  color: white;
+  font-size: 0.8vw;
+  font-family: verdana;
+  font-weight: 500;
+}
+.debitcardDiv{
+  width: 70%;
+  height: fit-content;
+  margin-top: 2vw;
+  border-radius: 10px;
+  border: 0.1vw solid rgb(23,144,241);
+  box-shadow: 1px 1px 5px rgb(23,144,241);
+  padding:1vw ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.debitcardDiv form{
+  width: 100%;
+}
+
+
+/*view statement css ...........................................................*/
+
+.viewstatementmain{
+  height: fit-content;
+  min-height: 86vh;
+  justify-content: start;
+}
+
+
+.viewstatementmain h2{
+  font-size: 2vw;
+  color: rgb(23,144,241);
+  width: 100%;
+  text-align: center;
+}
+
+.dateWiseFilter{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  padding-bottom:2vw;
+}
+
+.dateWiseFilterRow{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.dateWiseFilterRow h1{
+  font-size: 1.5vw;
+  color: rgb(23,144,241);
+  width: 30%;
+}
+
+.dateWiseFilterRow input{
+  font-size: 1.5vw;
+  color: rgb(23,144,241);
+  width: 70%;
+}
+
+.dateWiseFilterRow button{
+  width: 100%;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.statementformdiv{
+  width:100%;
+  display:flex ;
+  justify-content:center ;
+  align-items: center;
+  height:fit-content;
+}
+
+
+
+.statementformdiv form{
+  width: 100%;
+  justify-content:center ;
+  align-items: center;
+  height:fit-content;
+  gap: 10vw;
+}
+
+.specificTimeFilter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  margin-bottom: 5vw;
+  width: 100%;
+  padding: 1vw 0;
+  gap: 15px;
+}
+
+.specificTimeFilter button{
+  width: 25%;
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: rgb(255,255,255);
+}
+
+
+.statementHeader{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100vw;
+  height:fit-content;
+  padding: 1vw 2vw;
+  margin-bottom: 0.5vw;
+  overflow-x:scroll;
+  border-radius: 10px;
+}
+
+.statementHeader::-webkit-scrollbar{
+  display: none;
+}
+
+.statementHeaderOuter, .statementHeaderItems{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 1vw;
+  box-shadow: 1px 1px 3px rgb(0,0,0),  -1px -1px 3px rgb(0,0,0);
+  border-radius: 10px;
+}
+
+.statementHeaderItems{
+  box-shadow: 1px 1px 3px rgb(23,141,241),  -1px -1px 3px rgb(23,141,241);
+}
+.statementHeaderOuter .item , .statementHeaderItems .item{
+  height: 100%;
+  width:20%;
+  display: flex;
+  align-items: center;
+  justify-content:start;
+  padding:1vw;
+  padding-left: 2vw;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+
+/* fetch balance css */
+
+.successImagediv{
+  height: 12vw;
+  width: 12vw;
+  border-radius: 50%;
+  margin-top: 1vw;
+}
+
+.successImagediv img{
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.maincontainerr h2{
+  margin-top: 2vw;
+  color: rgb(23,144,241);
+  font-size: 5vw;
+  width: 100%;
+  text-align: center;
+}
+
+
+.adDiv{
+  width: 100%;
+  height: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 3vw;
+}
+.adDiv a{
+ text-decoration: none;
+}
+
+.sendmoney, .investMoney{
+  background: rgb(23,144,241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius:15px;
+  font-size: 1rem;
+  font-family: verdana;
+  font-weight: 600;
+  padding: 1vw;
+}
+
+.balanceFetched h1{
+  width: 100%;
+  text-align: center;
+}
+
+
+/* css for aadhar link page  start here    ........................*/
+
+
+.linkadharmain{
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 1vw;
+  box-shadow: 1px 1px 10px rgb(23,144,241);
+  border-radius: 10px;
+  margin-top: 2vw;
+}
+.linkadharmain form{
+  width: 100%;
+
+}
+
+
+.linkadharmain input{
+  margin-top: 2vw;
+  border: 0.1vw solid rgb(23,144,241);
+  color: rgb(23,144,241);
+}
+.linkadharmain input:focus{
+  color: rgb(23,144,241);
+}
+
+.linkadharmain input::placeholder{
+  color: rgb(23,144,241);
+}
+
+.linkadharmain button{
+  margin-top: 2vw;
+  height: 2.5vw;
+}
+
+.checkadharstausinlink{
+  width: 100%;
+  margin-top: 2vw;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.checkadharstausinlink button{
+  height: 3vw;
+  font-size: 1vw;
+  font-family: verdana;
+  font-weight: 700;
+}
+
+.linkadharmain .alert{
+  width: 100%;
+}
+
+
+
+/* CHECK AADHAR STATUS   */
+
+.checkadharstausinlink h3{
+  font-size: 2vw;
+  color: rgb(23,144,241);
+}
+
+.checkadharstausinlinkK button{
+  width:44vw;
+}

@@ -1,0 +1,169 @@
+.bankmitraupadate{
+  width: 100%;
+  /* max-height:calc(100vh - 7vw); */
+  height: fit-content;
+  border: 2px solid rgb(23,141,241);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  box-shadow: 2px 2px 5px rgb(23,141,241),-2px -2px 5px rgb(23,141,241) ;
+  margin-top: 0.5vw;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.updateImageAndName{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  height: fit-content;
+}
+
+.heading_div{
+  border-radius: 5px;
+}
+
+.allInputField{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  height: fit-content;
+}
+
+.inputDiv{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputDiv label{
+  width: 100%;
+  text-align: left;
+  color: rgb(23,141,241);
+  font-weight: 500;
+  font-size: 1rem;
+}
+.inputDiv button{
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1vw;
+}
+
+.inputDiv  input{
+  width:100%;
+  height: 2.5vw;
+}
+
+
+
+.inputDivInner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+
+
+
+.updateImageAndNameContainer{
+
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1vw;
+  border-radius: 5px;
+  gap: 30px;
+}
+
+
+
+.updateImageAndNameleft{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 0;
+}
+.updateImageAndNameleft .inputDiv{
+  margin-bottom:0;
+}
+
+.updateImageAndNameleft .inputDiv button{
+  padding: 0.7vw;
+  font-size: 1.5rem;
+}
+
+.updateImageAndNameImage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75%;
+  border: 1px solid rgb(23,141,241);
+  box-shadow: 0.5px 0.5px 5px rgb(23,141,241), 0.5px 0.5px 5px rgb(23,141,241) ;
+  border-radius: 5px;
+}
+
+.updateImageAndNameImage ion-icon{
+  font-size: 15rem;
+  opacity: 0.5;
+  color: rgb(23,141,241);
+}
+
+
+.updateImageAndNameright{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  min-height:calc(100vh - 15vw );
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.updateImageAndNameImage2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30vw;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 5px rgb(23,141,241), 0.5px 0.5px 5px rgb(23,141,241) ;
+  overflow: hidden;
+
+}
+.updateImageAndNameImage2 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.updateImageAndNameHeading{
+  width: 100%;
+  font-size: 2rem;
+  height: fit-content;
+  padding: 0.5vw;
+ text-align: center;
+  border-radius: 5px;
+  background: rgb(23,141,241);
+  color: rgb(255,255,255);
+  font-weight: 500;
+}

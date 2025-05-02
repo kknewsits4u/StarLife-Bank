@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="BankMitraServices/BankMitraHome::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+  <section>
+    <div class="ekyc_container">
+        <div class="heading_div">
+             Withdrawl Money
+        </div>
+        <form action="">
+           <div class="adhar_number_inputs">
+            <input type="text" class="form-control" placeholder="XXXX" maxlength="4"  required  >
+            <input type="text" class="form-control" placeholder="XXXX" maxlength="4" required>
+            <input type="text" class="form-control" placeholder="XXXX" maxlength="4" required>
+          </div>
+          <div class="money_div">
+             <input type="text" class="form-control" placeholder="₹ 00.00" id="deposit" maxlength="4" required>
+
+           </div>
+
+           <div class="eyc_btn_div">
+            <button class="btn btn-primary" type="submit">Proceed</button>
+            <button class="btn btn-danger" type="reset">Reset</button>
+           </div>
+        </form>
+       <form action=""    th:if="${session.message}"  >
+          <div class="adhar_number_inputs_otp">
+           <input type="text" class="form-control" placeholder="0" maxlength="1"  required >
+           <input type="text" class="form-control" placeholder="0" maxlength="1" required >
+           <input type="text" class="form-control" placeholder="0" maxlength="1" required>
+           <input type="text" class="form-control" placeholder="0" maxlength="1" required >
+           <input type="text" class="form-control" placeholder="0" maxlength="1" required >
+           <input type="text" class="form-control" placeholder="0" maxlength="1" required>
+          </div>
+
+          <div class="eyc_btn_div2">
+           <button class="btn btn-primary" type="submit">Validate Otp And Proceed</button>
+          </div>
+       </form>
+
+    </div>
+  </section>
+
+
+ 
+</body>
+</html>

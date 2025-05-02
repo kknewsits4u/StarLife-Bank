@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="BankMitraServices/BankMitraHome::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+  <section>
+     <div class="newAccount_main_container">
+        <form action="#"  th:action="@{/createAccount/bankmitra}"  method="post" enctype="multipart/form-data" >
+             <div class="addProduct_container">
+                    <div class="addProduct_container_left add_item_detail_card">
+                         <h1>Fill Your Details</h1>
+                         <div  th:if="${session.alertt}" class="alert accountAlert" th:classappend="${session.alertt.type}"  role="alert">          
+                          <p>[[${session.alertt.message}]]</p>
+                        </div>
+                         <div class="row detail_line ">
+                            <input type="text" class="form-control" aria-label="Sizing example input"   aria-describedby="inputGroup-sizing-default"    minlength="3" maxlength="20"   
+                             name="name"
+                             placeholder="Enter Name"
+                            >                     
+                         </div>
+                         <div class="row detail_line">
+                           <div class="col-xl-6 col-sm-12  d-flex">
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="cFathername"   minlength="3" maxlength="20"   placeholder="Enter Father Name"   > 
+                           </div>
+                           <div class="col-xl-6 col-sm-12  d-flex">
+                         
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="cMothername"   minlength="3" maxlength="20" placeholder="Enter Mother Name"  > 
+                           </div>                         
+                       </div>
+    
+                       <div class="row detail_line">
+                        
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"  name="cEmail" required  
+                        placeholder="Enter Email" >                     
+                     </div>
+          
+
+                     <div class="row detail_line">
+                      <div class="col-xl-6 col-sm-12  d-flex">
+                       
+                      <input type="text" class="form-control" aria-label="Sizing example input"  aria-describedby="inputGroup-sizing-default"  name="cPhone"  required  minlength="10" maxlength="10" placeholder="Enter Phone No."  >  
+                    
+                      </div>
+                      <div class="col-xl-6 col-sm-12 d-flex ">
+                       <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="cAadhar"  minlength="12" maxlength="12"  placeholder="Enter Aadhar No." > 
+                      </div>                         
+                  </div>
+    
+                     <div class=" row detail_line">
+                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="cNomineename"  minlength="3" maxlength="20"  placeholder="Enter Nominee Name" >                     
+                     </div>
+    
+                     <div class="row detail_line">
+                      <div class="col-xl-6 col-sm-12 d-flex ">
+                       
+                       <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"  name="cpassword"   minlength="8" maxlength="15" placeholder="Enter Password"  >
+        
+                      </div>
+                      <div class="col-xl-6 col-sm-12 d-flex  ">
+                       <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="confiemPassword"  minlength="3" maxlength="20" placeholder="Confirm Password"  > 
+                
+                      </div>                         
+                  </div>
+    
+                     <div class="detail_line">
+                  
+                      <button class="btn btn-primary  " type="submit">Register</button>                    
+                     </div>
+                   
+                    </div>
+
+                    <div class="addProduct_container_right add_item_detail_card">
+                        <div class="add_image_div">
+                          <ion-icon name="image-outline"></ion-icon>
+                        </div>
+                        <div class="chooseImage_btn">
+                          <label for="formFileDisabled"> Choose File
+                              <input class="form-control" type="file" id="formFileDisabled" name="filename">
+                        </label>
+                        </div>
+                    </div>
+    
+            </div>
+        </form>
+           
+
+      </div>
+  </section>
+
+</body>
+</html>
+

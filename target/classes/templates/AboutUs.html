@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://thymeleaf.org"
+  th:replace="navbar::Layout(~{::section})"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${title}"></title>
+    
+  </head>
+  <body>
+      <section  class=" mt-5 " >
+        <div class="container mt-5 pt-5 ">
+          <h1>About Us</h1>
+          <p>Welcome to Star Life Bank, your trusted partner in financial success. We have been serving our customers with excellence, innovation, and reliability for over two decades.</p>
+          
+          <div class="mission">
+            <h2>Our Mission</h2>
+            <p>To empower individuals and businesses by providing secure, innovative, and customer-centric banking solutions. We are dedicated to fostering financial growth, ensuring trust and transparency, and delivering exceptional service. Our commitment is to leverage advanced technology, enhance accessibility, and create financial products that meet the evolving needs of our customers. Through integrity, sustainability, and community engagement, we strive to build lasting relationships and contribute positively to society.</p>
+        </div>
+          
+        <div class="vision">
+          <h2>Our Vision</h2>
+          <p>To be a leading financial institution recognized for integrity, excellence, and cutting-edge digital banking services. We aim to revolutionize the banking experience by embracing technological advancements, ensuring seamless financial solutions, and prioritizing customer satisfaction. Our vision is to create a future where banking is more accessible, inclusive, and secure for individuals and businesses alike. We are committed to fostering long-term financial stability, promoting innovation, and supporting economic growth through responsible and sustainable banking practices. We strive to build a banking ecosystem that is transparent, reliable, and responsive to the changing financial landscape. Our goal is to set new standards in banking excellence, ensuring financial well-being for our customers while contributing to the broader economic development of communities worldwide.</p>
+      </div>
+          
+          <div class="values">
+              <h2>Our Core Values</h2>
+              <ul>
+                  <li>Customer Commitment</li>
+                  <li>Integrity & Transparency</li>
+                  <li>Innovation & Growth</li>
+                  <li>Community Development</li>
+                  <li>Security & Trust</li>
+              </ul>
+          </div>
+          
+          <div class="contact">
+              <h2>Contact Us</h2>
+              <p><strong>Address:</strong> Sector 16, Krishna Tower, Greater Noida, Uttar Pradesh  </p>
+              <p><strong>Email:</strong>  support@starlifebank.com</p>
+              <p><strong>Phone:</strong>  +91 - 9368238692</p>
+          </div>
+          
+          <div class="social-links">
+              <h2>Follow Us</h2>
+              <a href="#">Facebook</a>
+              <a href="#">Twitter</a>
+              <a href="#">LinkedIn</a>
+              <a href="#">Instagram</a>
+          </div>
+      </div>
+      <div class="footer">&copy; 2025 XYZ Bank. All rights reserved.</div>
+  
+      </section>
+  </body>
+</html>

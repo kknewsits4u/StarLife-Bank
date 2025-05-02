@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+.loginMainConainer{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	width:100%;
+	height:87.5vh;
+	margin-top:6vw;
+}
+
+.lgpageImgDiv{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	height:90%;
+	width:50vw;
+}
+
+.mainImgDiv{
+	height:100%;
+	width:30vw;
+}
+
+.mainImgDiv img{
+	width:auto;
+	height:100%;
+	object-fit:cover;
+	
+}
+
+.lgImgDivRight{
+	display:flex;
+	align-items:center;
+	flex-direction: column;
+	justify-content:center;
+	height:90%;
+	width:50vw;
+}
+
+.OuterCardDiv{
+	border:1px solid rgb(23,144,241);
+	width:25vw;
+	height:fit-content;
+	box-shadow:inset 1px 1px 10px rgb(23,144,241);
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	flex-direction:column;
+	padding:1vw;
+}
+
+.OuterCardDiv h1{
+	font-size:1.7vw;
+	color:red;
+}
+
+.loginWithThirdPartyDiv{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:100%;
+	height:2.5vw;
+	padding:1vw 1vw;
+	gap:0.5vw;
+	margin-top:1vw;
+}
+
+.logInTextDiv, .loginIconDiv{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:80%;
+	height:2.3vw;
+	border:1px solid rgb(23,144,241);
+	padding:0 1vw;
+}
+
+.logInTextDiv{
+	box-shadow:inset 1px 1px 10px rgb(23,144,241);
+}
+
+.logInTextDiv a{
+	font-size:1vw;
+	color:rgb(23,144,241);
+	text-decoration:none;
+}
+
+
+.loginIconDiv{
+	width:12%;
+	box-shadow:inset 1px 1px 10px rgb(23,144,241);
+}
+
+.loginIconDiv i{
+	font-size:1.2vw;
+}
+
+.IdPassLoginDiv{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:space-between;
+	width:100%;
+	height:fit-content;
+	padding:1vw;
+	gap:0.5vw;	
+	text-align:justify;
+}
+
+.IdPassLoginDiv h2{
+   text-align:center;
+   font-size:1.2vw;
+   color:green;
+}
+.passwordInput{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+    height:2.1vw;
+    width:100%;
+    padding:0.5vw;
+}
+
+.passwordInput input{
+	width:100%;
+	border:none;
+}
+
+.passwordInput input:focus{
+	box-shadow:none;
+	border:none;
+}
+.eyeIconDiv{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:3vw;
+	height:2vw;
+}
+
+.eyeIconDiv i{
+	font-size:0.8vw;
+}
+
+.Consent_ForgotPasswordDiv{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+}
+
+.Consent_ForgotPasswordDiv label{
+	font-size:0.8vw;
+	color:green;
+	margin-top:0.4vw;
+}
+
+
+.captureCodeDiv{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	width:100%;
+	height:100%;
+	border:none;
+}
+
+.captureDiv{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	height:2vw;
+	width:40%;
+	border:1px solid green;
+	letter-spacing:0.2vw;
+	padding:0 1vw;
+	border-radius:10px;
+	position:relative;
+}
+.captureCodeDiv input{
+	float:right;
+	margin-left:2vw;
+}
+
+
+
+.captureCover{
+	width:98%;
+	height:98%;
+	background-color:rgba(64,64,64,0.5);
+	backdrop-filter:blur(0.8px);
+	position:absolute;
+	border-radius:10px;
+	padding:0 1vw;
+}
+
+.refreshDiv{
+	width:fit-content;
+	height:2.5vw;
+	margin-left:2vw;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transition:transform 2s ease;
+}
+
+.refreshDiv img{
+	width:auto;
+	height:100%;
+	
+}

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="BankMitraServices/BankMitraHome::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+  <section >
+
+    <!--  insight section ............................ -->
+
+       <div class="bank_mitra_insight_div">
+         <div class="totalAccount_Card insight_card">
+                    <h1>Total Accounts</h1>
+                    <div class="insight_card_details">
+                      <h3>1021</h3>
+                      <a href=""><div class="btn insight_viewAll ">
+                         <h2>View All</h2>
+                        <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+                      </div>
+                      </a>
+                    </div>
+         </div>
+         <div class="totalAccount_Card insight_card">
+          <h1>Pending Applications</h1>
+          <div class="insight_card_details">
+            <h3>12</h3>
+            <a href=""><div class="btn insight_viewAll ">
+               <h2>View All</h2>
+              <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            </div>
+            </a>
+          </div>
+         </div>
+         <div class="totalAccount_Card insight_card">
+          <h1>Pending Transactions</h1>
+          <div class="insight_card_details">
+            <h3>3</h3>
+            <a href=""><div class="btn insight_viewAll ">
+               <h2>View All</h2>
+              <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            </div>
+            </a>
+          </div>
+         </div>
+    
+       </div>
+
+    <!--  recent customer   .......................... -->
+
+
+
+    <div class="recent_customer_main">
+
+        <div class="heading_div">
+            Recent Customers 
+        </div>
+        <div class="customer_list_div">
+  
+            <div class="list_item_div_header">
+            
+              <table>
+                <thead>
+                  <tr>
+                    <td>Sr. N.</td>
+                    <td>Customer Name</td>
+                    <td>Phone No.</td>
+                    <td>Application Status</td>
+                    <td>View Details</td>
+                    <td>Update Details</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01. </td>
+                    <td>Krishna Kant Sharma</td>
+                    <td>9368238692</td>
+                    <td>Pending</td>
+                    <td><button class="btn btn-primary " type="button">View Details</button></td>
+                    <td><button class="btn btn-success " type="button">Update </button></td>
+                  </tr>
+                  <tr>
+                    <td>02. </td>
+                    <td>Krishna Kant Sharma</td>
+                    <td>9368238692</td>
+                    <td>Complete</td>
+                    <td><button class="btn btn-primary " type="button">View Details</button></td>
+                    <td><button class="btn btn-success " type="button">Update </button></td>
+                  </tr>
+                  <tr>
+                    <td>03. </td>
+                    <td>Krishna Kant Sharma</td>
+                    <td>9368238692</td>
+                    <td>Pending</td>
+                    <td><button class="btn btn-primary " type="button">View Details</button></td>
+                    <td><button class="btn btn-success " type="button">Update </button></td>
+                  </tr>
+                  <tr>
+                    <td>04.</td>
+                    <td>Krishna Kant Sharma</td>
+                    <td>9368238692</td>
+                    <td>Completed</td>
+                    <td><button class="btn btn-primary " type="button">View Details</button></td>
+                    <td><button class="btn btn-success " type="button">Update </button></td>
+                  </tr>
+                  <tr>
+                    <td>05. </td>
+                    <td>Krishna Kant Sharma</td>
+                    <td>9368238692</td>
+                    <td>Rejected</td>
+                    <td><button class="btn btn-primary " type="button">View Details</button></td>
+                    <td><button class="btn btn-success " type="button">Update </button></td>
+                  </tr>
+           
+                </tbody>
+              </table>
+    
+            
+
+            </div>
+      
+          
+       
+        </div>
+
+        <nav aria-label="...">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item " aria-current="page">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">5</a></li>
+            <li class="page-item"><a class="page-link" href="#">6</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+
+    </div> 
+
+
+  </section>
+
+
+ 
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="customerService/CustomerDashborad::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+     <section>   
+        <div class="container-fluid debitcardMain">
+            <div class="notGenerateDebitCardDiv"  th:if="${session.notAtm}" >
+                <h1>! You don't have debit card !</h1>
+                <form action="#" th:action="@{/customer/customerDashboard/generateDebitcard}" method="post">
+                <button class="btn btn-primary btn-block" type="submit">Generate Virtual Debit Card</button>
+                </form>
+            </div>
+            <div class="debitcardDiv"  th:if="${session.yesAtm}">
+                <h1>YOUR VIRTUAL DEBIT CARD</h1>
+                <div class="card">
+                    <div class="atmbankname"><h1>Star Life Bank</h1></div>
+                    <div class="atmichidiv"><img src="/image/atmchip-removebg-preview.png" alt=""></div>
+                    <div class="atmNumDiv"><span>[[${atmnum1}]]</span><span>[[${atmnum2}]]</span><span>[[${atmnum3}]]</span><span>[[${atmnum4}]]</span></div>
+                    <div class="validUpto">Valid Up To</div>
+                    <div class="cardHolder"><p>[[${customer.name}]]</p><p>09/36</p></div>
+                </div>
+                <form action="#" th:action="@{/downloadAtm}" method="post">
+                <button class="btn btn-primary btn-block" type="submit">DOWNLOAD</button>
+               </form>
+            </div>
+        </div>
+    </section>	
+</body>
+</html>

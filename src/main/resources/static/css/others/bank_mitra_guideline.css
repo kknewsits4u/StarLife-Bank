@@ -1,0 +1,97 @@
+.bank_mitra_guideline_container{
+  width: 100%;
+  height: fit-content;
+  align-items: start;
+  justify-content: start;
+  margin-top: 7vw;
+  padding: 2vw;
+  min-height: calc(100vh - 6vw);
+  background: red;
+  display:flex;
+	flex-direction:column;
+	width:100%;
+	background:rgb(255,255,255);
+  position: relative;
+}
+
+.bank_mitra_guideline_container h1{
+  font-size: 3rem;
+  color: rgb(23,141,241);
+  position: sticky;
+  top: 6.5vw;
+  left: 0;
+  background: rgb(255,255,255);
+}
+
+.bank_mitra_guideline_container h2{
+  margin-top: 1vw;
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(23,141,241);
+}
+
+.bank_mitra_guideline_container p{
+  margin-top: 0.5vw;
+}
+
+
+
+.checkbox_div{
+  margin-top: 3vw;
+  font-size: 2rem;
+}
+
+
+.guide_proceed_btn{
+  background:rgb(253, 153, 3);
+  margin-top: 1.5vw;
+  width: 10vw;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(255,255,255);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guide_proceed_btn:focus{
+  box-shadow: none;
+}
+
+
+
+.innerdiv{
+  height: 0vw;
+  width: 0vw;
+  background: rgb(23,141,241);
+  position: absolute;
+  top: -2vw;
+  right: -2vw;
+  transition: 1s all;
+  border-radius: 50%;
+}
+
+
+.guide_proceed_btn:hover .innerdiv {
+   width: 20vw;
+   height: 8vw;
+   z-index: 2;
+}
+
+.guide_proceed_btn:hover {
+  color: rgb(255,255,255);
+  
+}
+
+.guide_proceed_btn p{
+  position: relative;
+  z-index: 5;
+}
+
+.guide_proceed_btn ion-icon{
+  z-index: 5;
+  --ionicon-stroke-width: 2vw;
+}

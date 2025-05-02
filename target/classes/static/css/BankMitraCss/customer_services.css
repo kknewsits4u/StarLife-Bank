@@ -1,0 +1,114 @@
+.customer_services_container{
+  width: 100%;
+  max-height: calc(100vh - 7vw);
+  min-height: calc(100vh - 7vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin-top: 0.2vw;
+  overflow-y: scroll;
+}
+
+.customer_services_container::-webkit-scrollbar{
+  display: none;
+}
+
+.customer_service_card_container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+  padding: 0 0.5vw;
+}
+
+.customer_service_card{
+  height: 8vw;
+  box-shadow: 0 7px 15px rgb(0,0,0,0.3);
+  border-radius:10px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgb(23,141,241);
+  font-weight: 500;
+  cursor: pointer;
+  border-top: 5px solid rgb(23,141,241);
+}
+
+.customer_service_card:hover{
+  box-shadow: 0 7px 15px rgb(164, 211, 252);
+}
+
+.messagee{
+ width: 100%;
+ font-size: 1.2rem;
+}
+
+
+.customer_service_default , .customer_service_divs{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height:calc(100vh - 17vw);
+  margin-top: 1.5vw;
+  font-size: 4rem;
+  color: rgb(23,141,241);
+  opacity: 0.3;
+  font-weight: 500;
+}
+
+.customer_service_default ion-icon{
+  font-size: 20rem;
+}
+
+
+
+
+.customer_service_divs{
+  margin-top: 1.5vw;
+  justify-content: start;
+  opacity: 1;
+}
+
+.customer_service_divs label{
+  font-size: 1.2rem;
+  margin-top: 2vw;
+  text-align: left;
+  width: 20vw;
+}
+
+.customer_service_divs input{
+  width: 20vw;
+
+}
+
+.service_content_div_otp_inpu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 1vw;
+}
+
+.service_content_div_otp_inpu input{
+  width: 3vw;
+  height: 3vw;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-align: center;
+  color: rgb(23,141,241);
+}
+
+.customer_service_divs button{
+  margin-top: 1vw;
+  width: 20vw;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgb(255,255,255);
+
+}

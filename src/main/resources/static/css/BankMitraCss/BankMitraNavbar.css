@@ -1,0 +1,140 @@
+
+.BankMitraheader{
+	width: 100%;
+	height:4vw;
+	background:rgb(72, 75, 78);
+	z-index: 500;
+	position: fixed;
+	top:0.2vw;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding:1.5vw;
+	box-shadow:1px 5px 10px black;
+}
+
+.BankMitraheaderlogoDiv{
+	font-size:1.5vw;
+	color:white;
+	border:2px solid white;
+	padding:0.5vw 0.8vw;
+	border-radius:30px;
+	box-shadow:inset 4px 4px 10px white;
+	font-weight:500;
+}
+
+.BankMitraheaderlogoDiv:hover{
+	scale:0.96;
+}
+
+.BankMitraheader a{
+	text-decoration:none;
+}
+
+.BankMitraheader .navList ul{
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap:1.5vw;
+}
+
+.BankMitraheader ul li{
+	list-style:none;
+	font-size:1vw;
+	cursor: pointer;
+	font-weight: 500;
+	color:rgb(255,255,255);
+}
+
+.BankMitraheader ul li a{
+
+	color:rgb(255,255,255);
+}
+
+.highlighted{
+	color:white;
+}
+
+.BankMitraprofileSignDiv{
+	position:fixed;
+	top:7vw;
+	right:2vw;
+	width:15vw;
+	height:fit-content;
+	background:white;
+	display:none;
+	flex-direction:column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5vw 0;
+  z-index:500;
+	border-radius: 15px;
+	box-shadow: 1px 1px 15px rgba(0,0,0,0.3), -1px -1px 15px rgba(0,0,0,0.3) ;
+}
+
+.BankMitraprofileImgSignInDiv{
+	height:5vw;
+	width:5vw;
+	border-radius:50%;
+	overflow: hidden;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3), -1px -1px 5px rgba(0,0,0,0.3) ;
+}
+
+.BankMitraprofileImgSignInDiv img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	object-position:top;
+	border-radius:50%;
+}
+
+.BankMitradetails{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	height:fit-content;
+	border-bottom:1px solid green;
+	padding-bottom:1vw;
+}
+
+
+.BankMitradetails h4{
+	color:green;
+	font-size:1.2vw;
+}
+
+.BankMitraprofileSignDiv button{
+	width:80%;
+	height:3vw;
+	margin-top:0.2vw;
+	background:rgb(240, 240, 240);
+	font-size:1.2vw;
+	font-weight:500;
+	
+}
+.BankMitradetails button{
+	background:green;
+	color:white;
+	font-size:1.2vw;
+	padding:0.5vw 2vw;
+	font-weight:500;
+}
+
+.BankMitradetails button:hover{
+	background:white;
+	color:green;
+	border:1px solid green;
+}
+
+.BankMitraspinnerDiv{
+	display:none;
+	color: rgb(255,255,255);
+	font-size: 6vw;
+	margin-right: 3vw;
+}
+
+
+

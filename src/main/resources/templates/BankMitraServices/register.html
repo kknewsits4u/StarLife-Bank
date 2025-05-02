@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+      >
+<head>
+	<meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="#" th:href="@{/css/BankMitraCss/register.css}" >
+  <link rel="stylesheet" href="#" th:href="@{/css/mediaQuery.css}" >
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>
+	<title >[[${title}]]</title>
+</head>
+<body>
+ <section>
+
+  <div class="bank_mitra_register_container">
+    <h1>STAR LIFE BANK PVT. LTD. </h1>
+
+       
+      <div class="form_div">
+
+                 <div  th:if="${session.register}" class="alert  messagee" th:classappend="${session.register.type}"  role="alert">          
+                <p>[[${session.register.message}]]</p>
+              </div>
+               <div class="fileUploaderBoxOuter">
+                  <div class="fileUploaderBoxInner">
+                    <div class="headingDiv">
+                       <h2>Registration Process</h2>
+                    </div>
+                    <div class="formFiled" >
+                       <form action="#" th:action="@{/doregister}"  enctype='multipart/form-data' method="POST">
+                       
+                        <input type="text" class="form-control" minlength="3" maxlength="20"  placeholder="Full Name" aria-label="Add Detail" aria-describedby="basic-addon1"  name="fullname">
+                        <input type="email" class="form-control" placeholder="Email Address" aria-label="Add Detail" aria-describedby="basic-addon1"  name="email">
+                        <input type="text" class="form-control" maxlength="10" minlength="10" placeholder="Phone No." aria-label="Add Detail" aria-describedby="basic-addon1"  name="phoneno">
+                        <input type="text" class="form-control" placeholder="Pan No." aria-label="Add Detail" aria-describedby="basic-addon1"  name="panno">
+                        <input type="text" class="form-control" placeholder="Aadhar No." aria-label="Add Detail" aria-describedby="basic-addon1"  name="addharno">
+                        <input type="text" class="form-control" placeholder="Account No." aria-label="Add Detail" aria-describedby="basic-addon1"  name="accountno">
+                        <input type="text" class="form-control" placeholder="Father's Name" aria-label="Add Detail" aria-describedby="basic-addon1"  name="fathername">
+                        <input type="text" class="form-control" placeholder="Mother's Name" aria-label="Add Detail" aria-describedby="basic-addon1"  name="mothername">
+                        <input type="file" class="form-control" placeholder="Choose file" aria-label="Add Detail" aria-describedby="basic-addon1"   name="filename">
+                       
+                       
+                        <button class="btn btn-primary btn-block"  type="submit" >REGISTER</button>
+ 
+                       </form>
+
+                         <P>If you have already account ? <a th:href="@{/bankmitraLogin}">Login Here</a> </P>
+
+
+                    </div>
+
+                  </div>
+               </div>
+
+      </div>
+
+  </div>
+
+ </section>
+</body>
+</html>

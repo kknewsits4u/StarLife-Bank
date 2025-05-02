@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="customerService/CustomerDashborad::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+     <section>
+
+         <div class="container-fluid border border-primary  maincontainerr"  th:if="${session.notEyc}" >
+
+
+            <h1> E-KYC  : ENTER YOUR DETAILS </h1>
+            <div class="linkadharmain">
+               <div class="alert alert-danger" role="alert" th:if="${session.kycerror}">
+                  Some Error occured !!!
+            </div>
+            
+           <form action="#" th:action="@{/customer/customerDashboard/ekycdone}" method="post">
+            <input type="text" placeholder="Enter your name" class="form-control" name="name" required>
+            <input type="text" placeholder="Enter your email" class="form-control" name="cEmail" required>
+            <input type="text" placeholder="Enter your phone no" class="form-control" name="cPhone" required>
+            <input type="text" placeholder="Enter your aadhar no" class="form-control" name="cAadhar" required>
+
+            <button class="btn btn-primary btn-block" type="submit">SUBMIT</button>
+           </form>
+          </div>
+
+         </div>
+<!--  -->
+ <!---->
+
+         <div class="container-fluid border border-primary  maincontainerr"  th:if="${session.yesKyc}"  >
+            <div class="successImagediv"><img src="https://i.pinimg.com/564x/ef/1a/c3/ef1ac3efc97430d7802f538b05906b35.jpg" alt="righticon"></div>
+            <h1 style="text-align: center; margin-top: 4vw;">You have already done your kyc  !!!</h1>
+         </div>
+
+    </section>	
+</body>
+</html>

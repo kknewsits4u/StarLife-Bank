@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="navbar::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="#" th:href="@{/css/uploadFilepage.css}" >
+	<title th:text="${title}"></title>
+</head>
+<body>
+    <section>
+         <div class="fileUploadMain">
+             <div class="c-left">
+                <div class="image-container">
+                   <img src="/image/wallBrokenboy.jpg" alt="brokenWallImg">
+                </div>
+             </div>
+             <div class="c-right">
+              <div  th:if="${session.fileAlert}" class="alert  messagee" th:classappend="${session.fileAlert.type}"  role="alert">
+                <p th:text="${session.fileAlert.message}"></p>
+              </div>
+               <div class="fileUploaderBoxOuter">
+                  <div class="fileUploaderBoxInner">
+                    <div class="headingDiv">
+                      <h1>UPLOAD FILE ANY TYPE HERE</h1>
+                    </div>
+                    <div class="formFiled">
+                       <form action="#" th:action="@{/proceedUploadImageForm}"  enctype='multipart/form-data'
+                       method="POST">
+                        <div class="custom-file  custonInput">
+                          <input type="file" class="custom-file-input" id="customFile"  name="filen">
+                          <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Add Detail" aria-label="Add Detail" aria-describedby="basic-addon1"  name="detail">
+                        <button class="btn btn-primary btn-block"  type="submit" >
+                                        UPLOAD FILE NOW
+                        </button>
+
+                       </form>
+                    </div>
+
+                  </div>
+               </div>
+             </div>
+         </div>
+    </section>	
+</body>
+</html>

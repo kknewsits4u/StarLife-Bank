@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="customerService/CustomerDashborad::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+     <section>
+     
+      <div class="main">
+         <div class="row1">
+            <div class="accountholderDiv">
+                 <h1>Account Holder  <span>:</span> [[${customer.name}]]</h1>
+            </div>
+            <div class="row1MainContentDiv">
+                <div class="dashleft" th:object="${customer}">
+                 <div class="otherdetails">
+                    <div class="otherDeLeft"><h2>Father's name </h2></div>
+                    <div class="otherDemid">:</div>
+                    <div class="otherDeRight"><h2>[[*{cFathername}]]</h2></div>
+                 </div>
+                  <div class="otherdetails">
+                    <div class="otherDeLeft"><h2>Mother's name </h2></div>
+                    <div class="otherDemid">:</div>
+                    <div class="otherDeRight"><h2>[[*{cMothername}]]</h2></div>
+                 </div>
+                  <div class="otherdetails">
+                    <div class="otherDeLeft"><h2>Nominee name </h2></div>
+                    <div class="otherDemid">:</div>
+                    <div class="otherDeRight"><h2>[[*{cNomineename}]]</h2></div>
+                 </div>
+                  <div class="otherdetails">
+                    <div class="otherDeLeft"><h2>Phone No. </h2></div>
+                    <div class="otherDemid">:</div>
+                    <div class="otherDeRight"><h2>[[*{cPhone}]]</h2></div>
+                 </div>
+                 <div class="otherdetails">
+                    <div class="otherDeLeft"><h2>Email Id </h2></div>
+                    <div class="otherDemid">:</div>
+                    <div class="otherDeRight"><h2>[[*{cEmail}]]</h2></div>
+                 </div>
+                 
+           </div>
+                <div class="dashright" th:object="${customer}">
+                 <div class="otherdetails">
+                    <div class="otherDeLeft"><h2>User Id </h2></div>
+                    <div class="otherDemid">:</div>
+                    <div class="otherDeRight"><h2>[[*{userId}]]</h2></div>
+                 </div>
+                  <div class="otherdetails">
+                    <div class="otherDeLeft"><h2>Account No. </h2></div>
+                    <div class="otherDemid">:</div>
+                    <div class="otherDeRight"><h2>[[*{accountNo}]]</h2></div>
+                 </div>
+                  <div class="otherdetails">
+                    <div class="otherDeLeft"><h2>Account Open Date </h2></div>
+                    <div class="otherDemid">:</div>
+                    <div class="otherDeRight"><h2>[[*{date}]]</h2></div>
+                 </div>
+                  <div class="otherdetails">
+                    <div class="otherDeLeft"><h2>Account Type </h2></div>
+                    <div class="otherDemid">:</div>
+                    <div class="otherDeRight"><h2>[[*{cAccType}]]</h2></div>
+                 </div>
+                 <div class="otherdetails">
+                    <div class="otherDeLeft"><h2>Aadhar No.</h2></div>
+                    <div class="otherDemid">:</div>
+                    <div class="otherDeRight"><h2>[[*{cAadhar}]]</h2></div>
+                 </div>
+                 
+           </div>
+           </div>
+        </div>
+
+        <!-- update details div goes here ................ -->
+        <div class="updateDetailsDiv">
+          <a href="#" th:href="@{/customer/customerDashboard/updateProfile}"><h1>Update Your Details</h1></a>
+        </div>
+      </div>
+
+
+    </section>	
+</body>
+</html>

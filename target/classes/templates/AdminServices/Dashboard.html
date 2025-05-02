@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+       th:replace="AdminServices/AdminHomepage::Layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+  <section>
+      <div class="dashboard-container"  >
+            <div class="state-div" >
+               <div class="state-card" >
+                 <div  class="state-card-left" >
+                    <h1>Total Bank Mitra</h1>
+                    <p  th:text="${totalCountbm}"  >2563</p>
+                 </div>
+                 <div  class="state-card-right"  >
+                    <div class="dummy-image-div"  >
+                        <img src="https://i.pinimg.com/736x/6a/a8/61/6aa8613ff65b47a37d3490f168ad766b.jpg" alt="customer-dummy">
+                    </div>
+                 </div>
+               </div>
+               <div class="state-card" >
+                 <div  class="state-card-left" >
+                    <h1>Total Customers</h1>
+                    <p th:text="${totalCountc}" ></p>
+                 </div>
+                 <div  class="state-card-right"  >
+                    <div class="dummy-image-div"  >
+                        <img src="https://i.pinimg.com/736x/e8/7a/b0/e87ab0a15b2b65662020e614f7e05ef1.jpg" alt="customer-dummy">
+                    </div>
+                 </div>
+               </div>
+            </div>
+            <div  class="recent-stats" >
+              <div class="recent-bankmitra" >
+                    <div class="recent-bankmitra-header" >
+                       <h1>Recent Bank Mitra</h1>
+                       <a  th:href="@{/admin/viewallbankmitra}">
+                       <button type="button"   >View All</button>
+                      </a>
+                    </div>
+                    <div   class="recent-bankmitra-body" >
+                       <table>
+                           <thead>
+                              <tr>
+                                <td>S. No.</td>
+                                <td>Profile</td>
+                                <td>Name</td>
+                                <td>
+                                  View Details
+                                </td>
+                                <td>
+                                  Remove
+                                </td>
+                              </tr>
+                           </thead>
+                           <tbody>
+                            <tr  th:each="bankm, stat: ${bankmitra}"   >
+                              <td th:text="${stat.count}"   >1.</td>
+                              <td>
+                                <div class="list-profile-div"  >
+                                  <img th:src="@{'/image/'+${bankm.bimage}}" alt="profile-image">
+                                </div>
+                              </td>
+                              <td  th:text="${bankm.fullname}"  >Krishna</td>
+                              <td>
+                                <a th:href="@{/admin/viewbankmitra/{id}/view(id=${bankm.id})}">
+                                   <button  type="button"  class="removeBtn" >View</button></a>
+                              </td>
+                              <td>
+                                <a th:href="@{/admin/bankmitra/{id}/remove(id=${bankm.id})}">
+                                  <button  type="button"  class="removeBtn" >Remove</button>
+                                </a>
+                              </td>
+                            </tr>
+                           </tbody>
+                       </table>
+                    </div>
+              </div>
+              <div class="recent-bankmitra" >
+                <div class="recent-bankmitra-header" >
+                   <h1>Recent Customers</h1>
+                   <a  th:href="@{/admin/viewallcustomers}">
+                   <button type="button"   >View All</button>
+                  </a>
+                </div>
+                <div   class="recent-bankmitra-body" >
+                   <table>
+                       <thead>
+                          <tr>
+                            <td>S. No.</td>
+                            <td>Profile</td>
+                            <td>Name</td>
+                            <td>
+                              View Details
+                            </td>
+                            <td>
+                              Remove
+                            </td>
+                          </tr>
+                       </thead>
+                       <tbody>
+                        <tr th:each="cust, stat : ${customer}"   >
+                          <td  th:text="${stat.count}"   >1.</td>
+                          <td>
+                            <div class="list-profile-div"  >
+                              <img th:src="@{'/image/'+${cust.cImage}}" alt="profile-image">
+                            </div>
+                          </td>
+                          <td th:text="${cust.name}"    >Krishna</td>
+                          <td>
+                            <a th:href="@{/admin/viewcustomer/{id}/view(id=${cust.Cid})}">
+                              <button type="button" >View</button>
+                              </a>
+                          </td>
+                         
+                          <td>
+                            <form th:action="@{/admin/customer/{Cid}/remove(Cid=${cust.Cid})}"  method="post">
+                              
+                              <button  type="submit"  class="removeBtn" >Remove</button>
+                            </form>
+                           
+                          </td>
+                        </tr>
+                       </tbody>
+                   </table>
+                </div>
+          </div>
+            </div>
+      </div>
+  </section>
+</body>
+</html>

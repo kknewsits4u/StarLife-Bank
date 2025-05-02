@@ -1,0 +1,168 @@
+section{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  justify-content: center;
+}
+
+.bank_mitra_insight_div{
+  display: grid;
+  align-items: center;
+  min-width: 100%;
+  height: fit-content;
+  align-items: center;
+  grid-template-columns: repeat(3 , 1fr);
+  margin-top:0.5vw;
+  gap: 25px;
+}
+
+.insight_card{
+  height:12rem;
+  box-shadow: 0 7px  15px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5vw 1vw;
+  color: rgb(23,141,241);
+  border-top: 7px solid rgb(23,141,241);
+}
+
+.insight_card h1{
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.insight_card_details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: fit-content;
+}
+
+.insight_card_details h3{
+  font-size: 3rem;
+  color: rgb(0,0,0);
+  font-weight: 500;
+}
+
+.insight_card_details a{
+  width: fit-content;
+  height: fit-content;
+}
+
+.insight_card_details a:hover{
+  text-decoration: none;
+}
+
+.insight_viewAll{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: rgb(23,141,241);
+  border: 1px solid rgb(23,141,241);
+  color: rgb(255,255,255);
+}
+
+.insight_viewAll h2{
+  font-size: 1.5rem;
+
+}
+.insight_viewAll ion-icon{
+  font-size: 1.5rem;
+  --ionicon-stroke-width: 3rem;
+}
+
+.insight_viewAll:hover{
+  color: rgb(23,141,241);
+  border: 1px solid rgb(23,141,241);
+  background: rgb(255,255,255);
+}
+
+.insight_card:hover{
+  box-shadow: 0 7px  15px rgba(23,141,241,0.3);
+}
+
+.recent_customer_main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+  min-height: 58vh;
+  height: fit-content;
+  align-items: center;
+  margin-top: 1vw;
+  box-shadow: 0 7px  15px rgba(0,0,0,0.3);
+  background: rgb(255,255,255);
+  border-radius: 5px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.recent_customer_main .heading_div{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.5vw 1vw;
+  color: rgb(246, 247, 248);
+  font-size: 2.2vw;
+}
+
+.customer_list_div{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.list_item_div_header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  padding:0 1vw;
+  margin:0.5vw 0;
+  font-weight: 500;
+}
+
+.list_item_div_header table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 20px;
+
+}
+
+.list_item_div_header table thead{
+  width: 100%;
+  padding: 0.5vw;
+
+}
+.list_item_div_header table thead tr{
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(23,141,241);
+}
+.list_item_div_header table thead tr td{
+  border-bottom: 1px solid rgb(23,141,241);
+  padding-bottom: 10px; 
+}
+
+nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5vw;
+}

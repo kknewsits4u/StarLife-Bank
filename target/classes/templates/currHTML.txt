@@ -1,0 +1,7 @@
+
+		// .or(() -> candidateRepo.findByUsername(username))
+
+	// 	return customerRepo.findByUsername(username)
+	// 	.or(() -> bankMitraRepo.findByUsername(username))
+	// 	.orElseThrow(() -> new UsernameNotFoundException("User not found"));
+	// 

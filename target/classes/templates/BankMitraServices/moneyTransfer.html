@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="BankMitraServices/BankMitraHome::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+  <section>
+    <div class="container-fluid moneyTransMain">
+        
+      <h1>MONEY TRANSFER</h1>
+
+      <div class="graphicsDiv">
+          <div class="firstimageDiv"><img src="https://i.pinimg.com/564x/61/b7/19/61b719ea9f911ff42f377ba64788650c.jpg" alt=""></div>
+          <div class="midimagediv"><img src="https://i.pinimg.com/564x/8f/34/36/8f34360bb7a1a91b4b0ba9452f11ae08.jpg" alt=""></div>
+
+          <div class="firstimageDiv"><img src="https://i.pinimg.com/564x/41/e0/39/41e0398984b0f1a0c79acfb0694bfcce.jpg" alt=""></div>
+      </div>
+      
+      <div class="formDivv">
+          
+          <form action="/moneyTransfer"  method="get">
+
+              <input type="text" placeholder="Sender account number"  name="senderAcc" class="form-control" required>
+
+              <input type="text" placeholder="Sender name"  name="senderName" class="form-control" required>
+
+              <input type="text" placeholder="Sender aadhar name"  name="senderAdhar" class="form-control" required>
+
+              <input type="text" placeholder="Recipient's account number"  name="recipientAcc" class="form-control" required>
+
+              <input type="text" placeholder="Recipient's name"  name="recipientName" class="form-control" required>
+
+              <input type="text" placeholder="₹ 00.00"  name="amount" class="form-control" required>
+
+              <button type="submit" class="btn btn-primary btn-block">Transfer Money</button>
+          </form>
+              
+          </div>
+          
+    </div>
+</section>	
+
+
+ 
+</body>
+</html>

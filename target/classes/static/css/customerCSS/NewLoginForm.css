@@ -1,0 +1,271 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.nestedContainer{
+  width: 800px;
+  height: fit-content;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.left {
+  width: 50%;
+  background-color: #f2f1f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 40px;
+  overflow: hidden;
+  height: 500px;
+}
+
+.left h1 {
+  font-size: 28px;
+  color: #ff9a44;
+  margin-top: 20px;
+}
+
+.logo{
+  transform: rotate(-35deg);
+}
+.logo-shape {
+  width: 60px;
+  height: 10px;
+  background-color: #1a1a3d;
+  margin: 6px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;justify-content: space-between;
+  gap: 3;
+}
+.logo-shape:nth-child(3){
+  background: transparent;
+}
+.logo-shape-i{
+  width: 60%;
+  height: 100%;
+  background-color: #ff9a44;
+  border-radius: 5px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #3ce1d3;
+  border-radius: 50%;
+}
+
+.decor {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.decor1 {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to bottom right, #02aab0, #00cdac);
+  bottom: 20px;
+  left: -40px;
+  z-index: 5;
+}
+.decor4 {
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(to bottom right, #02aab0, #00cdac);
+  top: -25px;
+  right: -25px;
+}
+
+.decor2 {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to bottom right, #fc6076, #ff9a44);
+  top: -30px;
+  right: 100px;
+  z-index: 10;
+}
+
+.decor3 {
+  width: 30px;
+  height: 30px;
+  background: #ff9a44;
+  bottom: 20px;
+  right: 20px;
+  animation: loginAnim3 10s linear infinite;
+}
+
+@keyframes loginAnim3 {
+  0%   { bottom: 20px; left: 20px; }
+  20%  { bottom: 100px; left: 300px; }
+  40%  { bottom: 300px; left: 150px; }
+  60%  { bottom: 300px; left: 300px; }
+  80%  { bottom: 140px; left: 50px; }
+  100% { bottom: 20px; left: 40px; }
+}
+
+
+.decor5{
+  width: 30px;
+  height: 30px;
+  background: #3ce1d3;
+  animation: loginAnim5 10s linear infinite;
+  bottom: 20px;
+  right: 20px;
+}
+
+@keyframes loginAnim5 {
+  0%   { top: 20px; left: 20px; }
+  20%  { top: 100px; left: 200px; }
+  40%  { top: 200px; left: 100px; }
+  60%  { top: 300px; left: 300px; }
+  80%  { top: 150px; left: 50px; }
+  100% { top: 20px; left: 20px; }
+}
+
+
+.footer-links {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: #333;
+}
+
+.right {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 500px;
+}
+
+.right h2 {
+  margin-bottom: 30px;
+  color: #1a1a3d;
+  font-weight: 500;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #3ce1d3;
+}
+
+.checkbox {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.login-btn {
+  background-color: #a3f3ef;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 20px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  border: #000;
+
+}
+
+.forgot {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+}
+
+.Consent_ForgotPasswordDiv{
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  cursor: pointer;
+  display: flex;
+  align-items: center;justify-content: center;
+}
+.Consent_ForgotPasswordDiv a{
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+
+/*  otp process */
+
+.login-otp-h2 h2{
+  font-size: 2rem;
+}
+.otp-container {
+  display: flex;
+  justify-content: left;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.otp-input:focus {
+  border-color: #ff9a44;
+  box-shadow: 0 0 5px rgb(255, 154, 68);
+}
+
+.login-otp-process-div{
+  display: flex;
+  align-items: center;
+  justify-content:start;
+  width: 100%;
+  gap: 10px;
+}
+
+.login-otp-process-div p{
+  border: 1px solid red;
+
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="customerService/CustomerDashborad::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+     <section>
+         <div class="container-fluid border border-primary  maincontainerr">
+
+            <h1>CHECK AADHAR STATUS </h1>
+            <div class="linkadharmain">
+              
+               <div class="alert alert-primary" role="alert" th:if="${session.error}">
+                   Some error occured !!!!
+               </div>
+               <div class="alert alert-primary" role="alert" th:if="${session.alertt}">
+                Aadhar has been link successfully !!
+              </div>
+               <div class="alert alert-primary" role="alert" th:if="${session.otp}">
+                AOtp Sent successfully !!!
+              </div>
+               
+           <form action="#" th:action="@{/customer/customerDashboard/LinkAdhar_getOtp}" method="post">
+               <input type="text" placeholder="Enter you aadhar no : 1234 1234 1234" class="form-control" name="cAadhar" required>
+               
+               <button class="btn btn-primary btn-block" type="submit">GET OTP</button>
+            </form>
+
+            <form action="#" th:action="@{/customer/customerDashboard/adharStatus}" method="post"  th:if="${session.showProcessForm}">
+               <input type="text" placeholder="Enter otp : 1234" class="form-control" name="newOtp" required>
+               <button class="btn btn-primary btn-block" type="submit">PROCEED</button>
+            </form>
+    
+
+           <div class="checkadharstausinlink"   th:if="${session.linkeddd}">
+                <h3>Your aadhar is linked with your account !!! </h3>   
+           </div>
+           <div class="checkadharstausinlink   checkadharstausinlinkK"  th:if="${session.notlinked}" >
+            <h3>Aadhar is not linked !!!</h3>
+            <a href="#"  th:href="@{/customer/customerDashboard/adharlink}">
+                <button class="btn btn-primary btn-block" type="submit">LINK AADHAR NOW </button>
+            </a>
+           </div>
+          </div>
+         </div>
+    </section>	
+</body>
+</html>

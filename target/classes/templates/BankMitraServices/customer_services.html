@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org"
+       th:replace="BankMitraServices/BankMitraHome::Layout(~{::section})">
+<head>
+	<meta charset="UTF-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+	<title th:text="${title}"></title>
+</head>
+<body>
+  
+  <section>
+     <div class="customer_services_container">
+        <div class="customer_service_card_container">
+          <div class="customer_service_card"  onclick="window.location.href='/bank_mitra/open_pan_card_link'" >Link Pan Card </div>
+          <div class="customer_service_card"  onclick="window.location.href='/bank_mitra/open_atm_card_apply_link'"  >Apply For ATM Card</div>
+          <div class="customer_service_card"  onclick="window.location.href='/bank_mitra/open_npci_enable_link'"  >Enable NPCI</div>
+        </div>
+
+
+        <div  th:if="${session.open_default}"   class="customer_service_default">
+          <ion-icon name="help-outline"></ion-icon>
+          NO SERVICE SELECTED
+        </div>
+  <!-- th:if="${session.open_pan}" -->
+        <div    class="customer_service_pan_div customer_service_divs"  >
+            <div class="heading_div">
+              Fill Details
+            </div>
+            
+            <div  th:if="${session.message}" class="alert  messagee" th:classappend="${session.message.type}"  role="alert">          
+               <p>[[${session.message.message}]]</p>
+             </div>
+
+
+            <div class="service_content_div  "  >
+                <form action=""   th:action="@{/bank_mitra/pan_card_link_otp}"  method="post" th:if="${session.open_pan}"   >
+                 <label for="pancard_no">Enter Pan Card Number  </label>
+                 <input type="text" class="form-control" placeholder="OQYPS4589T" name="panCard"  id="pancard_no">
+                 <label for="adhar_no">Enter Aadhar Number  </label>
+                 <input type="text" class="form-control"  placeholder="XXXX XXXX XXXX" name="cAadhar"  id="adhar_no">
+                 <button  type="submit" class="btn btn-primary" >Proceed For OTP </button>
+                </form>
+                 <!-- th:if="${session.generate_otp}"  -->
+                <form action=""    th:action="@{/bank_mitra/pan_card_link_proceed}" th:if="${session.generate_otp}"  method="post"   >
+                  <div class="service_content_div_otp_inpu" >
+                   <input type="text" class="form-control" placeholder="0" maxlength="1"  required  name="otp1" >
+                   <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp2">
+                   <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp3">
+                   <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp4">
+                   <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp5">
+                   <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp6">
+                  </div>
+        
+                  <div class="eyc_btn_div2">
+                   <button class="btn btn-primary" type="submit">Validate Otp And Proceed</button>
+                  </div>
+               </form>
+            </div>
+
+            <!-- th:if="${session.open_atm}"  -->
+
+            <div class="service_content_div"   th:if="${session.open_atm}"  >
+                <form action=""  th:action="@{/bank_mitra/atm_card_apply}"  method="post"  >
+                 <label for="name">FullName  </label>
+                 <input type="text" class="form-control" placeholder="SLB pvt ltd." name="name"  id="name">
+                 <label for="cAadhar"> Aadhar Number  </label>
+                 <input type="text" class="form-control"  placeholder="XXXX XXXX XXXX" name="cAadhar"  id="cAadhar">
+                 <label for="accountNo">Account Number  </label>
+                 <input type="text" class="form-control"  placeholder="XXXX XXXX XXXX" name="accountNo"  id="accountNo">
+                 <label for="cPhone">Phone No.  </label>
+                 <input type="text" class="form-control"  placeholder="XXXX XXXX XX" name="cPhone"  id="cPhone">
+            
+                 <button  type="submit" class="btn btn-primary" >Submit For Apply ATM Card </button>
+                </form>
+            </div>
+         <!--   th:if="${session.open_npci}"  -->
+            <div class="service_content_div"   th:if="${session.open_npci}"  >
+                <form action=""   th:action="@{/bank_mitra/make_npci_link_otp}"  method="post"   >
+                 <label for="accountNo">Enter Account Number  </label>
+                 <input type="text" class="form-control" placeholder="XXXXXXXXXXXXXXXXX" name="accountNo"  id="accountNo">
+                 <label for="adhar_no">Enter Aadhar Number  </label>
+                 <input type="text" class="form-control"  placeholder="XXXX XXXX XXXX" name="cAadhar"  id="adhar_no">
+                 <button  type="submit" class="btn btn-primary" >Proceed For OTP </button>
+                </form>
+
+                <form action="" th:if="${session.generate_otp1}"   th:action="@{/bank_mitra/make_npci_link_process}"  method="post"   >
+                  <div class="service_content_div_otp_inpu"  >
+                     <input type="text" class="form-control" placeholder="0" maxlength="1"  required  name="otp1" >
+                     <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp2">
+                     <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp3">
+                     <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp4">
+                     <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp5">
+                     <input type="text" class="form-control" placeholder="0" maxlength="1" required   name="otp6">
+                    </div>
+                    
+                    <div class="eyc_btn_div2">
+                      <button class="btn btn-primary" type="submit">Validate Otp And Enable NPCI</button>
+                    </div>
+                  </div>
+               </form>
+            </div>
+
+
+        </div>
+
+     
+
+
+     </div>
+    
+  </section>
+
+
+ 
+</body>
+</html>
